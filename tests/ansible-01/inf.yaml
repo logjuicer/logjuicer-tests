@@ -1,0 +1,3 @@
+anomalies:
+    - lines: |
+        fatal: [localhost]: FAILED!

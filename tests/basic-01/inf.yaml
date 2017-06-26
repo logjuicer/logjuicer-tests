@@ -1,0 +1,5 @@
+anomalies:
+    - lines: |
+        02: Bootloader failure
+    - lines: |
+        07: Tests FAILED

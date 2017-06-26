@@ -1,0 +1,20 @@
+Using /etc/ansible/ansible.cfg as config file
+
+PLAYBOOK: deploy.yml **************************************************************************************************************************************************************************************************************************
+1 plays in deploy.yml
+
+PLAY [localhost] ******************************************************************************************************************************************************************************************************************************
+
+TASK [Gathering Facts] ************************************************************************************************************************************************************************************************************************
+ok: [localhost]
+META: ran handlers
+
+TASK [Command with long output] ***************************************************************************************************************************************************************************************************************
+task path: /home/fedora/deploy.yml:3
+changed: [localhost] => {"changed": true, "cmd": "head /proc/cpuinfo && true", "delta": "0:00:00.024975", "end": "2017-06-25 04:16:30.056277", "rc": 0, "start": "2017-06-25 04:16:30.031302", "stderr": "", "stderr_lines": [], "stdout": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 60\nmodel name\t: Intel Core Processor (Haswell, no TSX)\nstepping\t: 1\nmicrocode\t: 0x1\ncpu MHz\t\t: 2299.996\ncache size\t: 4096 KB\nphysical id\t: 0", "stdout_lines": ["processor\t: 0", "vendor_id\t: GenuineIntel", "cpu family\t: 6", "model\t\t: 60", "model name\t: Intel Core Processor (Haswell, no TSX)", "stepping\t: 1", "microcode\t: 0x1", "cpu MHz\t\t: 2299.996", "cache size\t: 4096 KB", "physical id\t: 0"]}
+META: ran handlers
+META: ran handlers
+
+PLAY RECAP ************************************************************************************************************************************************************************************************************************************
+localhost                  : ok=2    changed=1    unreachable=0    failed=0   
+

@@ -1,0 +1,416 @@
+Started by user anonymous
+Building remotely on bare-centos-7-rdo-cloud-159680 (bare-centos-7) in workspace /home/jenkins/workspace/DLRN-rpmbuild
+[DLRN-rpmbuild] $ /bin/sh -xe /tmp/hudson6779313571064183861.sh
++ echo 'Use default for ZUUL_BRANCH and ZUUL_REF if needed'
+Use default for ZUUL_BRANCH and ZUUL_REF if needed
++ export ZUUL_BRANCH=master
++ ZUUL_BRANCH=master
++ export ZUUL_REF=refs/zuul/master/Z6546b192211a4531859db9d8b9375154
++ ZUUL_REF=refs/zuul/master/Z6546b192211a4531859db9d8b9375154
++ '[' refs/zuul/master/Z6546b192211a4531859db9d8b9375154 = master ']'
++ echo 'Clean workspace'
+Clean workspace
++ rm -Rf './*'
++ echo 'Clone openstack/python-openstackclient'
+Clone openstack/python-openstackclient
++ [[ openstack-check-verified =~ openstack- ]]
++ zuul-cloner -v https://git.openstack.org openstack/python-openstackclient
+INFO:zuul.CloneMapper:Workspace path set to: /home/jenkins/workspace/DLRN-rpmbuild
+DEBUG:zuul.CloneMapper:Using openstack/python-openstackclient as destination (unmatched)
+INFO:zuul.CloneMapper:Mapping projects to workspace...
+INFO:zuul.CloneMapper:  openstack/python-openstackclient -> /home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient
+DEBUG:zuul.CloneMapper:Checking overlap in destination directories...
+INFO:zuul.CloneMapper:Expansion completed.
+INFO:zuul.Cloner:Preparing 1 repositories
+INFO:zuul.Cloner:Creating repo openstack/python-openstackclient from upstream https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient
+DEBUG:zuul.Repo:Cloning from https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient to /home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient', '/home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient'], cwd=/home/jenkins/workspace/DLRN-rpmbuild, universal_newlines=False, shell=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient', '/home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient'])'s unused stdout: Cloning into '/home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient'...
+
+2017-06-24 13:35:53,937 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.alarming.v2'
+2017-06-24 13:35:53,943 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.key_manager.v1'
+2017-06-24 13:35:53,943 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.congressclient.v1'
+2017-06-24 13:35:53,943 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.dns.v1'
+2017-06-24 13:35:53,946 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.metric.v1'
+2017-06-24 13:35:53,950 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.orchestration.v1'
+2017-06-24 13:35:53,950 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal.v1'
+2017-06-24 13:35:53,951 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal_introspection.v1'
+2017-06-24 13:35:53,957 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_protection.v1'
+2017-06-24 13:35:53,957 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.workflow_engine.v2'
+2017-06-24 13:35:53,958 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.neutronclient.v2'
+2017-06-24 13:35:54,273 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_processing.v1'
+2017-06-24 13:35:54,279 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.search.v1'
+2017-06-24 13:35:54,279 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.clustering.v1'
+2017-06-24 13:35:54,279 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.database.v1'
+2017-06-24 13:35:54,282 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.messaging.v2'
+2017-06-24 13:35:54,297 INFO:dlrn-build:DEBUG: reading sources... [ 88%] configuration/index
+2017-06-24 13:35:54,337 INFO:dlrn-build:DEBUG: reading sources... [ 89%] contributor/command-beta
+2017-06-24 13:35:54,355 INFO:dlrn-build:DEBUG: reading sources... [ 90%] contributor/command-errors
+2017-06-24 13:35:54,372 INFO:dlrn-build:DEBUG: reading sources... [ 91%] contributor/command-logs
+2017-06-24 13:35:54,382 INFO:dlrn-build:DEBUG: reading sources... [ 92%] contributor/command-options
+2017-06-24 13:35:54,423 INFO:dlrn-build:DEBUG: reading sources... [ 92%] contributor/command-wrappers
+2017-06-24 13:35:54,433 INFO:dlrn-build:DEBUG: reading sources... [ 93%] contributor/developing
+2017-06-24 13:35:54,469 INFO:dlrn-build:DEBUG: reading sources... [ 94%] contributor/humaninterfaceguide
+2017-06-24 13:35:54,525 INFO:dlrn-build:DEBUG: reading sources... [ 95%] contributor/index
+2017-06-24 13:35:54,531 INFO:dlrn-build:DEBUG: reading sources... [ 96%] contributor/plugins
+2017-06-24 13:35:54,566 INFO:dlrn-build:DEBUG: reading sources... [ 97%] contributor/specs/command-objects/example
+2017-06-24 13:35:54,582 INFO:dlrn-build:DEBUG: reading sources... [ 98%] contributor/specs/commands
+2017-06-24 13:35:54,593 INFO:dlrn-build:DEBUG: reading sources... [ 99%] contributor/specs/network-topology
+2017-06-24 13:35:54,602 INFO:dlrn-build:DEBUG: reading sources... [100%] index
+2017-06-24 13:35:54,622 INFO:dlrn-build:DEBUG: looking for now-outdated files... none found
+2017-06-24 13:35:54,622 INFO:dlrn-build:DEBUG: pickling environment... /builddir/build/BUILD/python-openstackclient-3.11.1.dev52/doc/source/contributor/index.rst:5: WARNING: toctree contains reference to nonexisting document u'contributor/api/modules'
+2017-06-24 13:35:54,658 INFO:dlrn-build:DEBUG: done
+2017-06-24 13:35:54,658 INFO:dlrn-build:DEBUG: checking consistency... done
+2017-06-24 13:35:54,660 INFO:dlrn-build:DEBUG: preparing documents... done
+2017-06-24 13:35:54,660 INFO:dlrn-build:DEBUG: writing output... [  0%] cli/authentication
+2017-06-24 13:35:54,789 INFO:dlrn-build:DEBUG: writing output... [  1%] cli/backwards-incompatible
+2017-06-24 13:35:54,844 INFO:dlrn-build:DEBUG: writing output... [  2%] cli/command-list
+2017-06-24 13:35:54,953 INFO:dlrn-build:DEBUG: writing output... [  3%] cli/command-objects/access-token
+2017-06-24 13:35:54,968 INFO:dlrn-build:DEBUG: writing output... [  4%] cli/command-objects/address-scope
+2017-06-24 13:35:54,991 INFO:dlrn-build:DEBUG: writing output... [  5%] cli/command-objects/aggregate
+2017-06-24 13:35:55,018 INFO:dlrn-build:DEBUG: writing output... [  6%] cli/command-objects/availability-zone
+2017-06-24 13:35:55,033 INFO:dlrn-build:DEBUG: writing output... [  7%] cli/command-objects/backup
+2017-06-24 13:35:55,054 INFO:dlrn-build:DEBUG: writing output... [  7%] cli/command-objects/catalog
+2017-06-24 13:35:55,067 INFO:dlrn-build:DEBUG: writing output... [  8%] cli/command-objects/command
+2017-06-24 13:35:55,082 INFO:dlrn-build:DEBUG: writing output... [  9%] cli/command-objects/complete
+2017-06-24 13:35:55,096 INFO:dlrn-build:DEBUG: writing output... [ 10%] cli/command-objects/compute-agent
+2017-06-24 13:35:55,114 INFO:dlrn-build:DEBUG: writing output... [ 11%] cli/command-objects/compute-service
+2017-06-24 13:35:55,134 INFO:dlrn-build:DEBUG: writing output... [ 12%] cli/command-objects/configuration
+2017-06-24 13:35:55,148 INFO:dlrn-build:DEBUG: writing output... [ 13%] cli/command-objects/consistency-group
+2017-06-24 13:35:55,172 INFO:dlrn-build:DEBUG: writing output... [ 14%] cli/command-objects/consistency-group-snapshot
+2017-06-24 13:35:55,192 INFO:dlrn-build:DEBUG: writing output... [ 15%] cli/command-objects/console-log
+2017-06-24 13:35:55,205 INFO:dlrn-build:DEBUG: writing output... [ 15%] cli/command-objects/console-url
+2017-06-24 13:35:55,219 INFO:dlrn-build:DEBUG: writing output... [ 16%] cli/command-objects/consumer
+2017-06-24 13:35:55,237 INFO:dlrn-build:DEBUG: writing output... [ 17%] cli/command-objects/container
+2017-06-24 13:35:55,260 INFO:dlrn-build:DEBUG: writing output... [ 18%] cli/command-objects/credential
+2017-06-24 13:35:55,282 INFO:dlrn-build:DEBUG: writing output... [ 19%] cli/command-objects/domain
+2017-06-24 13:35:55,301 INFO:dlrn-build:DEBUG: writing output... [ 20%] cli/command-objects/ec2-credentials
+2017-06-24 13:35:55,324 INFO:dlrn-build:DEBUG: writing output... [ 21%] cli/command-objects/endpoint
+2017-06-24 13:35:55,394 INFO:dlrn-build:DEBUG: writing output... [ 22%] cli/command-objects/extension
+2017-06-24 13:35:55,410 INFO:dlrn-build:DEBUG: writing output... [ 23%] cli/command-objects/federation-protocol
+2017-06-24 13:35:55,430 INFO:dlrn-build:DEBUG: writing output... [ 23%] cli/command-objects/flavor
+2017-06-24 13:35:55,459 INFO:dlrn-build:DEBUG: writing output... [ 24%] cli/command-objects/floating-ip
+2017-06-24 13:35:55,487 INFO:dlrn-build:DEBUG: writing output... [ 25%] cli/command-objects/floating-ip-pool
+2017-06-24 13:35:55,499 INFO:dlrn-build:DEBUG: writing output... [ 26%] cli/command-objects/group
+2017-06-24 13:35:55,530 INFO:dlrn-build:DEBUG: writing output... [ 27%] cli/command-objects/host
+2017-06-24 13:35:55,546 INFO:dlrn-build:DEBUG: writing output... [ 28%] cli/command-objects/hypervisor
+2017-06-24 13:35:55,561 INFO:dlrn-build:DEBUG: writing output... [ 29%] cli/command-objects/hypervisor-stats
+2017-06-24 13:35:55,574 INFO:dlrn-build:DEBUG: writing output... [ 30%] cli/command-objects/identity-provider
+2017-06-24 13:35:55,594 INFO:dlrn-build:DEBUG: writing output... [ 30%] cli/command-objects/image
+2017-06-24 13:35:55,656 INFO:dlrn-build:DEBUG: writing output... [ 31%] cli/command-objects/ip-availability
+2017-06-24 13:35:55,671 INFO:dlrn-build:DEBUG: writing output... [ 32%] cli/command-objects/ip-fixed
+2017-06-24 13:35:55,685 INFO:dlrn-build:DEBUG: writing output... [ 33%] cli/command-objects/ip-floating
+2017-06-24 13:35:55,707 INFO:dlrn-build:DEBUG: writing output... [ 34%] cli/command-objects/ip-floating-pool
+2017-06-24 13:35:55,719 INFO:dlrn-build:DEBUG: writing output... [ 35%] cli/command-objects/keypair
+2017-06-24 13:35:55,736 INFO:dlrn-build:DEBUG: writing output... [ 36%] cli/command-objects/limits
+2017-06-24 13:35:55,751 INFO:dlrn-build:DEBUG: writing output... [ 37%] cli/command-objects/mapping
+2017-06-24 13:35:55,769 INFO:dlrn-build:DEBUG: writing output... [ 38%] cli/command-objects/module
+2017-06-24 13:35:55,781 INFO:dlrn-build:DEBUG: writing output... [ 38%] cli/command-objects/network
+2017-06-24 13:35:55,825 INFO:dlrn-build:DEBUG: writing output... [ 39%] cli/command-objects/network-agent
+2017-06-24 13:35:55,848 INFO:dlrn-build:DEBUG: writing output... [ 40%] cli/command-objects/network-auto-allocated-topology
+2017-06-24 13:35:55,865 INFO:dlrn-build:DEBUG: writing output... [ 41%] cli/command-objects/network-flavor
+2017-06-24 13:35:55,891 INFO:dlrn-build:DEBUG: writing output... [ 42%] cli/command-objects/network-flavor-profile
+2017-06-24 13:35:55,959 INFO:dlrn-build:DEBUG: writing output... [ 43%] cli/command-objects/network-meter
+2017-06-24 13:35:55,977 INFO:dlrn-build:DEBUG: writing output... [ 44%] cli/command-objects/network-meter-rule
+2017-06-24 13:35:55,998 INFO:dlrn-build:DEBUG: writing output... [ 45%] cli/command-objects/network-qos-policy
+2017-06-24 13:35:56,021 INFO:dlrn-build:DEBUG: writing output... [ 46%] cli/command-objects/network-qos-rule
+2017-06-24 13:35:56,046 INFO:dlrn-build:DEBUG: writing output... [ 46%] cli/command-objects/network-qos-rule-type
+2017-06-24 13:35:56,059 INFO:dlrn-build:DEBUG: writing output... [ 47%] cli/command-objects/network-rbac
+2017-06-24 13:35:56,082 INFO:dlrn-build:DEBUG: writing output... [ 48%] cli/command-objects/network-segment
+2017-06-24 13:35:56,105 INFO:dlrn-build:DEBUG: writing output... [ 49%] cli/command-objects/network-service-provider
+2017-06-24 13:35:56,118 INFO:dlrn-build:DEBUG: writing output... [ 50%] cli/command-objects/object
+2017-06-24 13:35:56,144 INFO:dlrn-build:DEBUG: writing output... [ 51%] cli/command-objects/object-store-account
+2017-06-24 13:35:56,160 INFO:dlrn-build:DEBUG: writing output... [ 52%] cli/command-objects/policy
+2017-06-24 13:35:56,178 INFO:dlrn-build:DEBUG: writing output... [ 53%] cli/command-objects/port
+2017-06-24 13:35:56,224 INFO:dlrn-build:DEBUG: writing output... [ 53%] cli/command-objects/project
+2017-06-24 13:35:56,256 INFO:dlrn-build:DEBUG: writing output... [ 54%] cli/command-objects/project-purge
+2017-06-24 13:35:56,271 INFO:dlrn-build:DEBUG: writing output... [ 55%] cli/command-objects/quota
+2017-06-24 13:35:56,305 INFO:dlrn-build:DEBUG: writing output... [ 56%] cli/command-objects/region
+2017-06-24 13:35:56,323 INFO:dlrn-build:DEBUG: writing output... [ 57%] cli/command-objects/request-token
+2017-06-24 13:35:56,340 INFO:dlrn-build:DEBUG: writing output... [ 58%] cli/command-objects/role
+2017-06-24 13:35:56,378 INFO:dlrn-build:DEBUG: writing output... [ 59%] cli/command-objects/role-assignment
+2017-06-24 13:35:56,397 INFO:dlrn-build:DEBUG: writing output... [ 60%] cli/command-objects/router
+2017-06-24 13:35:56,437 INFO:dlrn-build:DEBUG: writing output... [ 61%] cli/command-objects/security-group
+2017-06-24 13:35:56,457 INFO:dlrn-build:DEBUG: writing output... [ 61%] cli/command-objects/security-group-rule
+2017-06-24 13:35:56,531 INFO:dlrn-build:DEBUG: writing output... [ 62%] cli/command-objects/server
+2017-06-24 13:35:56,620 INFO:dlrn-build:DEBUG: writing output... [ 63%] cli/command-objects/server-backup
+2017-06-24 13:35:56,636 INFO:dlrn-build:DEBUG: writing output... [ 64%] cli/command-objects/server-event
+2017-06-24 13:35:56,650 INFO:dlrn-build:DEBUG: writing output... [ 65%] cli/command-objects/server-group
+2017-06-24 13:35:56,667 INFO:dlrn-build:DEBUG: writing output... [ 66%] cli/command-objects/server-image
+2017-06-24 13:35:56,682 INFO:dlrn-build:DEBUG: writing output... [ 67%] cli/command-objects/service
+2017-06-24 13:35:56,704 INFO:dlrn-build:DEBUG: writing output... [ 68%] cli/command-objects/service-provider
+2017-06-24 13:35:56,727 INFO:dlrn-build:DEBUG: writing output... [ 69%] cli/command-objects/snapshot
+2017-06-24 13:35:56,751 INFO:dlrn-build:DEBUG: writing output... [ 69%] cli/command-objects/subnet
+2017-06-24 13:35:56,796 INFO:dlrn-build:DEBUG: writing output... [ 70%] cli/command-objects/subnet-pool
+2017-06-24 13:35:56,830 INFO:dlrn-build:DEBUG: writing output... [ 71%] cli/command-objects/token
+2017-06-24 13:35:56,844 INFO:dlrn-build:DEBUG: writing output... [ 72%] cli/command-objects/trust
+2017-06-24 13:35:56,863 INFO:dlrn-build:DEBUG: writing output... [ 73%] cli/command-objects/usage
+2017-06-24 13:35:56,879 INFO:dlrn-build:DEBUG: writing output... [ 74%] cli/command-objects/user
+2017-06-24 13:35:56,909 INFO:dlrn-build:DEBUG: writing output... [ 75%] cli/command-objects/user-role
+2017-06-24 13:35:56,922 INFO:dlrn-build:DEBUG: writing output... [ 76%] cli/command-objects/volume
+2017-06-24 13:35:56,968 INFO:dlrn-build:DEBUG: writing output... [ 76%] cli/command-objects/volume-backup
+2017-06-24 13:35:56,994 INFO:dlrn-build:DEBUG: writing output... [ 77%] cli/command-objects/volume-host
+2017-06-24 13:35:57,010 INFO:dlrn-build:DEBUG: writing output... [ 78%] cli/command-objects/volume-qos
+2017-06-24 13:35:57,034 INFO:dlrn-build:DEBUG: writing output... [ 79%] cli/command-objects/volume-service
+2017-06-24 13:35:57,102 INFO:dlrn-build:DEBUG: writing output... [ 80%] cli/command-objects/volume-snapshot
+2017-06-24 13:35:57,132 INFO:dlrn-build:DEBUG: writing output... [ 81%] cli/command-objects/volume-transfer-request
+2017-06-24 13:35:57,152 INFO:dlrn-build:DEBUG: writing output... [ 82%] cli/command-objects/volume-type
+2017-06-24 13:35:57,189 INFO:dlrn-build:DEBUG: writing output... [ 83%] cli/commands
+2017-06-24 13:35:57,274 INFO:dlrn-build:DEBUG: writing output... [ 84%] cli/decoder
+2017-06-24 13:35:57,513 INFO:dlrn-build:DEBUG: writing output... [ 84%] cli/index
+2017-06-24 13:35:57,628 INFO:dlrn-build:DEBUG: writing output... [ 85%] cli/interactive
+2017-06-24 13:35:57,651 INFO:dlrn-build:DEBUG: writing output... [ 86%] cli/man/openstack
+2017-06-24 13:35:57,712 INFO:dlrn-build:DEBUG: writing output... [ 87%] cli/plugin-commands
+2017-06-24 13:35:57,754 INFO:dlrn-build:DEBUG: writing output... [ 88%] configuration/index
+2017-06-24 13:35:57,789 INFO:dlrn-build:DEBUG: writing output... [ 89%] contributor/command-beta
+2017-06-24 13:35:57,808 INFO:dlrn-build:DEBUG: writing output... [ 90%] contributor/command-errors
+2017-06-24 13:35:57,837 INFO:dlrn-build:DEBUG: writing output... [ 91%] contributor/command-logs
+2017-06-24 13:35:57,852 INFO:dlrn-build:DEBUG: writing output... [ 92%] contributor/command-options
+2017-06-24 13:35:57,892 INFO:dlrn-build:DEBUG: writing output... [ 92%] contributor/command-wrappers
+2017-06-24 13:35:57,907 INFO:dlrn-build:DEBUG: writing output... [ 93%] contributor/developing
+2017-06-24 13:35:57,938 INFO:dlrn-build:DEBUG: writing output... [ 94%] contributor/humaninterfaceguide
+2017-06-24 13:35:57,985 INFO:dlrn-build:DEBUG: writing output... [ 95%] contributor/index
+2017-06-24 13:35:58,001 INFO:dlrn-build:DEBUG: writing output... [ 96%] contributor/plugins
+2017-06-24 13:35:58,035 INFO:dlrn-build:DEBUG: writing output... [ 97%] contributor/specs/command-objects/example
+2017-06-24 13:35:58,052 INFO:dlrn-build:DEBUG: writing output... [ 98%] contributor/specs/commands
+2017-06-24 13:35:58,068 INFO:dlrn-build:DEBUG: writing output... [ 99%] contributor/specs/network-topology
+2017-06-24 13:35:58,083 INFO:dlrn-build:DEBUG: writing output... [100%] index
+2017-06-24 13:35:58,317 INFO:dlrn-build:DEBUG: writing additional files... genindex search
+2017-06-24 13:35:58,335 INFO:dlrn-build:DEBUG: copying static files... done
+2017-06-24 13:35:58,335 INFO:dlrn-build:DEBUG: copying extra files... done
+2017-06-24 13:35:58,375 INFO:dlrn-build:DEBUG: dumping search index... done
+2017-06-24 13:35:58,389 INFO:dlrn-build:DEBUG: dumping object inventory... done
+2017-06-24 13:35:58,389 INFO:dlrn-build:DEBUG: build succeeded, 1 warning.
+2017-06-24 13:35:58,451 INFO:dlrn-build:DEBUG: + sphinx-build -b man doc/source man
+2017-06-24 13:35:58,654 INFO:dlrn-build:DEBUG: Making output directory...
+2017-06-24 13:35:58,654 INFO:dlrn-build:DEBUG: Running Sphinx v1.2.3
+2017-06-24 13:35:58,760 INFO:dlrn-build:DEBUG: loading stevedore.sphinxext
+2017-06-24 13:35:58,760 INFO:dlrn-build:DEBUG: loading pickled environment... not yet created
+2017-06-24 13:35:58,765 INFO:dlrn-build:DEBUG: Using openstack theme from /usr/lib/python2.7/site-packages/oslosphinx/theme
+2017-06-24 13:35:58,765 INFO:dlrn-build:DEBUG: building [man]: all manpages
+2017-06-24 13:35:58,767 INFO:dlrn-build:DEBUG: updating environment: 113 added, 0 changed, 0 removed
+2017-06-24 13:35:58,767 INFO:dlrn-build:DEBUG: reading sources... [  0%] cli/authentication
+2017-06-24 13:35:58,812 INFO:dlrn-build:DEBUG: reading sources... [  1%] cli/backwards-incompatible
+2017-06-24 13:35:58,904 INFO:dlrn-build:DEBUG: reading sources... [  2%] cli/command-list
+2017-06-24 13:35:58,910 INFO:dlrn-build:DEBUG: reading sources... [  3%] cli/command-objects/access-token
+2017-06-24 13:35:58,923 INFO:dlrn-build:DEBUG: reading sources... [  4%] cli/command-objects/address-scope
+2017-06-24 13:35:58,957 INFO:dlrn-build:DEBUG: reading sources... [  5%] cli/command-objects/aggregate
+2017-06-24 13:35:58,990 INFO:dlrn-build:DEBUG: reading sources... [  6%] cli/command-objects/availability-zone
+2017-06-24 13:35:58,999 INFO:dlrn-build:DEBUG: reading sources... [  7%] cli/command-objects/backup
+2017-06-24 13:35:59,023 INFO:dlrn-build:DEBUG: reading sources... [  7%] cli/command-objects/catalog
+2017-06-24 13:35:59,029 INFO:dlrn-build:DEBUG: reading sources... [  8%] cli/command-objects/command
+2017-06-24 13:35:59,036 INFO:dlrn-build:DEBUG: reading sources... [  9%] cli/command-objects/complete
+2017-06-24 13:35:59,042 INFO:dlrn-build:DEBUG: reading sources... [ 10%] cli/command-objects/compute-agent
+2017-06-24 13:35:59,060 INFO:dlrn-build:DEBUG: reading sources... [ 11%] cli/command-objects/compute-service
+2017-06-24 13:35:59,078 INFO:dlrn-build:DEBUG: reading sources... [ 12%] cli/command-objects/configuration
+2017-06-24 13:35:59,086 INFO:dlrn-build:DEBUG: reading sources... [ 13%] cli/command-objects/consistency-group
+2017-06-24 13:35:59,116 INFO:dlrn-build:DEBUG: reading sources... [ 14%] cli/command-objects/consistency-group-snapshot
+2017-06-24 13:35:59,135 INFO:dlrn-build:DEBUG: reading sources... [ 15%] cli/command-objects/console-log
+2017-06-24 13:35:59,143 INFO:dlrn-build:DEBUG: reading sources... [ 15%] cli/command-objects/console-url
+2017-06-24 13:35:59,153 INFO:dlrn-build:DEBUG: reading sources... [ 16%] cli/command-objects/consumer
+2017-06-24 13:35:59,168 INFO:dlrn-build:DEBUG: reading sources... [ 17%] cli/command-objects/container
+2017-06-24 13:35:59,194 INFO:dlrn-build:DEBUG: reading sources... [ 18%] cli/command-objects/credential
+2017-06-24 13:35:59,216 INFO:dlrn-build:DEBUG: reading sources... [ 19%] cli/command-objects/domain
+2017-06-24 13:35:59,236 INFO:dlrn-build:DEBUG: reading sources... [ 20%] cli/command-objects/ec2-credentials
+2017-06-24 13:35:59,262 INFO:dlrn-build:DEBUG: reading sources... [ 21%] cli/command-objects/endpoint
+2017-06-24 13:35:59,295 INFO:dlrn-build:DEBUG: reading sources... [ 22%] cli/command-objects/extension
+2017-06-24 13:35:59,306 INFO:dlrn-build:DEBUG: reading sources... [ 23%] cli/command-objects/federation-protocol
+2017-06-24 13:35:59,327 INFO:dlrn-build:DEBUG: reading sources... [ 23%] cli/command-objects/flavor
+2017-06-24 13:35:59,366 INFO:dlrn-build:DEBUG: reading sources... [ 24%] cli/command-objects/floating-ip
+2017-06-24 13:35:59,401 INFO:dlrn-build:DEBUG: reading sources... [ 25%] cli/command-objects/floating-ip-pool
+2017-06-24 13:35:59,405 INFO:dlrn-build:DEBUG: reading sources... [ 26%] cli/command-objects/group
+2017-06-24 13:35:59,451 INFO:dlrn-build:DEBUG: reading sources... [ 27%] cli/command-objects/host
+2017-06-24 13:35:59,465 INFO:dlrn-build:DEBUG: reading sources... [ 28%] cli/command-objects/hypervisor
+2017-06-24 13:35:59,474 INFO:dlrn-build:DEBUG: reading sources... [ 29%] cli/command-objects/hypervisor-stats
+2017-06-24 13:35:59,478 INFO:dlrn-build:DEBUG: reading sources... [ 30%] cli/command-objects/identity-provider
+2017-06-24 13:35:59,501 INFO:dlrn-build:DEBUG: reading sources... [ 30%] cli/command-objects/image
+2017-06-24 13:35:59,628 INFO:dlrn-build:DEBUG: reading sources... [ 31%] cli/command-objects/ip-availability
+2017-06-24 13:35:59,638 INFO:dlrn-build:DEBUG: reading sources... [ 32%] cli/command-objects/ip-fixed
+2017-06-24 13:35:59,648 INFO:dlrn-build:DEBUG: reading sources... [ 33%] cli/command-objects/ip-floating
+2017-06-24 13:35:59,669 INFO:dlrn-build:DEBUG: reading sources... [ 34%] cli/command-objects/ip-floating-pool
+2017-06-24 13:35:59,674 INFO:dlrn-build:DEBUG: reading sources... [ 35%] cli/command-objects/keypair
+2017-06-24 13:35:59,689 INFO:dlrn-build:DEBUG: reading sources... [ 36%] cli/command-objects/limits
+2017-06-24 13:35:59,699 INFO:dlrn-build:DEBUG: reading sources... [ 37%] cli/command-objects/mapping
+2017-06-24 13:35:59,715 INFO:dlrn-build:DEBUG: reading sources... [ 38%] cli/command-objects/module
+2017-06-24 13:35:59,720 INFO:dlrn-build:DEBUG: reading sources... [ 38%] cli/command-objects/network
+2017-06-24 13:35:59,787 INFO:dlrn-build:DEBUG: reading sources... [ 39%] cli/command-objects/network-agent
+2017-06-24 13:35:59,812 INFO:dlrn-build:DEBUG: reading sources... [ 40%] cli/command-objects/network-auto-allocated-topology
+2017-06-24 13:35:59,826 INFO:dlrn-build:DEBUG: reading sources... [ 41%] cli/command-objects/network-flavor
+2017-06-24 13:35:59,856 INFO:dlrn-build:DEBUG: reading sources... [ 42%] cli/command-objects/network-flavor-profile
+2017-06-24 13:35:59,882 INFO:dlrn-build:DEBUG: reading sources... [ 43%] cli/command-objects/network-meter
+2017-06-24 13:35:59,898 INFO:dlrn-build:DEBUG: reading sources... [ 44%] cli/command-objects/network-meter-rule
+2017-06-24 13:35:59,916 INFO:dlrn-build:DEBUG: reading sources... [ 45%] cli/command-objects/network-qos-policy
+2017-06-24 13:35:59,943 INFO:dlrn-build:DEBUG: reading sources... [ 46%] cli/command-objects/network-qos-rule
+2017-06-24 13:35:59,970 INFO:dlrn-build:DEBUG: reading sources... [ 46%] cli/command-objects/network-qos-rule-type
+2017-06-24 13:35:59,975 INFO:dlrn-build:DEBUG: reading sources... [ 47%] cli/command-objects/network-rbac
+2017-06-24 13:36:00,001 INFO:dlrn-build:DEBUG: reading sources... [ 48%] cli/command-objects/network-segment
+2017-06-24 13:36:00,025 INFO:dlrn-build:DEBUG: reading sources... [ 49%] cli/command-objects/network-service-provider
+2017-06-24 13:36:00,031 INFO:dlrn-build:DEBUG: reading sources... [ 50%] cli/command-objects/object
+2017-06-24 13:36:00,065 INFO:dlrn-build:DEBUG: reading sources... [ 51%] cli/command-objects/object-store-account
+2017-06-24 13:36:00,075 INFO:dlrn-build:DEBUG: reading sources... [ 52%] cli/command-objects/policy
+2017-06-24 13:36:00,092 INFO:dlrn-build:DEBUG: reading sources... [ 53%] cli/command-objects/port
+2017-06-24 13:36:00,164 INFO:dlrn-build:DEBUG: reading sources... [ 53%] cli/command-objects/project
+2017-06-24 13:36:00,212 INFO:dlrn-build:DEBUG: reading sources... [ 54%] cli/command-objects/project-purge
+2017-06-24 13:36:00,221 INFO:dlrn-build:DEBUG: reading sources... [ 55%] cli/command-objects/quota
+2017-06-24 13:36:00,291 INFO:dlrn-build:DEBUG: reading sources... [ 56%] cli/command-objects/region
+2017-06-24 13:36:00,310 INFO:dlrn-build:DEBUG: reading sources... [ 57%] cli/command-objects/request-token
+2017-06-24 13:36:00,322 INFO:dlrn-build:DEBUG: reading sources... [ 58%] cli/command-objects/role
+2017-06-24 13:36:00,390 INFO:dlrn-build:DEBUG: reading sources... [ 59%] cli/command-objects/role-assignment
+2017-06-24 13:36:00,415 INFO:dlrn-build:DEBUG: reading sources... [ 60%] cli/command-objects/router
+2017-06-24 13:36:00,478 INFO:dlrn-build:DEBUG: reading sources... [ 61%] cli/command-objects/security-group
+2017-06-24 13:36:00,500 INFO:dlrn-build:DEBUG: reading sources... [ 61%] cli/command-objects/security-group-rule
+2017-06-24 13:36:00,530 INFO:dlrn-build:DEBUG: reading sources... [ 62%] cli/command-objects/server
+2017-06-24 13:36:00,685 INFO:dlrn-build:DEBUG: reading sources... [ 63%] cli/command-objects/server-backup
+2017-06-24 13:36:00,695 INFO:dlrn-build:DEBUG: reading sources... [ 64%] cli/command-objects/server-event
+2017-06-24 13:36:00,704 INFO:dlrn-build:DEBUG: reading sources... [ 65%] cli/command-objects/server-group
+2017-06-24 13:36:00,718 INFO:dlrn-build:DEBUG: reading sources... [ 66%] cli/command-objects/server-image
+2017-06-24 13:36:00,725 INFO:dlrn-build:DEBUG: reading sources... [ 67%] cli/command-objects/service
+2017-06-24 13:36:00,748 INFO:dlrn-build:DEBUG: reading sources... [ 68%] cli/command-objects/service-provider
+2017-06-24 13:36:00,771 INFO:dlrn-build:DEBUG: reading sources... [ 69%] cli/command-objects/snapshot
+2017-06-24 13:36:00,802 INFO:dlrn-build:DEBUG: reading sources... [ 69%] cli/command-objects/subnet
+2017-06-24 13:36:00,867 INFO:dlrn-build:DEBUG: reading sources... [ 70%] cli/command-objects/subnet-pool
+2017-06-24 13:36:00,940 INFO:dlrn-build:DEBUG: reading sources... [ 71%] cli/command-objects/token
+2017-06-24 13:36:00,947 INFO:dlrn-build:DEBUG: reading sources... [ 72%] cli/command-objects/trust
+2017-06-24 13:36:00,966 INFO:dlrn-build:DEBUG: reading sources... [ 73%] cli/command-objects/usage
+2017-06-24 13:36:00,977 INFO:dlrn-build:DEBUG: reading sources... [ 74%] cli/command-objects/user
+2017-06-24 13:36:01,020 INFO:dlrn-build:DEBUG: reading sources... [ 75%] cli/command-objects/user-role
+2017-06-24 13:36:01,028 INFO:dlrn-build:DEBUG: reading sources... [ 76%] cli/command-objects/volume
+2017-06-24 13:36:01,098 INFO:dlrn-build:DEBUG: reading sources... [ 76%] cli/command-objects/volume-backup
+2017-06-24 13:36:01,132 INFO:dlrn-build:DEBUG: reading sources... [ 77%] cli/command-objects/volume-host
+2017-06-24 13:36:01,144 INFO:dlrn-build:DEBUG: reading sources... [ 78%] cli/command-objects/volume-qos
+2017-06-24 13:36:01,174 INFO:dlrn-build:DEBUG: reading sources... [ 79%] cli/command-objects/volume-service
+2017-06-24 13:36:01,187 INFO:dlrn-build:DEBUG: reading sources... [ 80%] cli/command-objects/volume-snapshot
+2017-06-24 13:36:01,228 INFO:dlrn-build:DEBUG: reading sources... [ 81%] cli/command-objects/volume-transfer-request
+2017-06-24 13:36:01,246 INFO:dlrn-build:DEBUG: reading sources... [ 82%] cli/command-objects/volume-type
+2017-06-24 13:36:01,301 INFO:dlrn-build:DEBUG: reading sources... [ 83%] cli/commands
+2017-06-24 13:36:01,398 INFO:dlrn-build:DEBUG: reading sources... [ 84%] cli/decoder
+2017-06-24 13:36:01,774 INFO:dlrn-build:DEBUG: reading sources... [ 84%] cli/index
+2017-06-24 13:36:01,779 INFO:dlrn-build:DEBUG: reading sources... [ 85%] cli/interactive
+2017-06-24 13:36:01,789 INFO:dlrn-build:DEBUG: reading sources... [ 86%] cli/man/openstack
+2017-06-24 13:36:01,869 INFO:dlrn-build:DEBUG: reading sources... [ 87%] cli/plugin-commands
+2017-06-24 13:36:01,875 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.cli.extension'
+2017-06-24 13:36:02,165 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.alarming.v2'
+2017-06-24 13:36:02,167 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.key_manager.v1'
+2017-06-24 13:36:02,169 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.congressclient.v1'
+2017-06-24 13:36:02,171 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.dns.v1'
+2017-06-24 13:36:02,173 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.metric.v1'
+2017-06-24 13:36:02,174 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.orchestration.v1'
+2017-06-24 13:36:02,176 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal.v1'
+2017-06-24 13:36:02,178 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal_introspection.v1'
+2017-06-24 13:36:02,180 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_protection.v1'
+2017-06-24 13:36:02,182 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.workflow_engine.v2'
+2017-06-24 13:36:02,184 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.neutronclient.v2'
+2017-06-24 13:36:02,508 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_processing.v1'
+2017-06-24 13:36:02,509 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.search.v1'
+2017-06-24 13:36:02,511 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.clustering.v1'
+2017-06-24 13:36:02,513 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.database.v1'
+2017-06-24 13:36:02,516 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.messaging.v2'
+2017-06-24 13:36:02,531 INFO:dlrn-build:DEBUG: reading sources... [ 88%] configuration/index
+2017-06-24 13:36:02,570 INFO:dlrn-build:DEBUG: reading sources... [ 89%] contributor/command-beta
+2017-06-24 13:36:02,591 INFO:dlrn-build:DEBUG: reading sources... [ 90%] contributor/command-errors
+2017-06-24 13:36:02,611 INFO:dlrn-build:DEBUG: reading sources... [ 91%] contributor/command-logs
+2017-06-24 13:36:02,621 INFO:dlrn-build:DEBUG: reading sources... [ 92%] contributor/command-options
+2017-06-24 13:36:02,661 INFO:dlrn-build:DEBUG: reading sources... [ 92%] contributor/command-wrappers
+2017-06-24 13:36:02,670 INFO:dlrn-build:DEBUG: reading sources... [ 93%] contributor/developing
+2017-06-24 13:36:02,706 INFO:dlrn-build:DEBUG: reading sources... [ 94%] contributor/humaninterfaceguide
+2017-06-24 13:36:02,757 INFO:dlrn-build:DEBUG: reading sources... [ 95%] contributor/index
+2017-06-24 13:36:02,762 INFO:dlrn-build:DEBUG: reading sources... [ 96%] contributor/plugins
+2017-06-24 13:36:02,795 INFO:dlrn-build:DEBUG: reading sources... [ 97%] contributor/specs/command-objects/example
+2017-06-24 13:36:02,810 INFO:dlrn-build:DEBUG: reading sources... [ 98%] contributor/specs/commands
+2017-06-24 13:36:02,820 INFO:dlrn-build:DEBUG: reading sources... [ 99%] contributor/specs/network-topology
+2017-06-24 13:36:02,828 INFO:dlrn-build:DEBUG: reading sources... [100%] index
+2017-06-24 13:36:02,848 INFO:dlrn-build:DEBUG: /builddir/build/BUILD/python-openstackclient-3.11.1.dev52/doc/source/contributor/index.rst:5: WARNING: toctree contains reference to nonexisting document u'contributor/api/modules'
+2017-06-24 13:36:02,849 INFO:dlrn-build:DEBUG: looking for now-outdated files... none found
+2017-06-24 13:36:02,884 INFO:dlrn-build:DEBUG: pickling environment... done
+2017-06-24 13:36:02,884 INFO:dlrn-build:DEBUG: checking consistency... done
+2017-06-24 13:36:02,885 INFO:dlrn-build:DEBUG: writing... openstack.1 { 
+2017-06-24 13:36:02,885 INFO:dlrn-build:DEBUG: Exception occurred:
+2017-06-24 13:36:02,886 INFO:dlrn-build:DEBUG:   File "/usr/lib/python2.7/site-packages/sphinx/environment.py", line 1097, in get_doctree
+2017-06-24 13:36:02,886 INFO:dlrn-build:DEBUG:     f = open(doctree_filename, 'rb')
+2017-06-24 13:36:02,886 INFO:dlrn-build:DEBUG: IOError: [Errno 2] No such file or directory: u'/builddir/build/BUILD/python-openstackclient-3.11.1.dev52/man/.doctrees/man/openstack.doctree'
+2017-06-24 13:36:02,886 INFO:dlrn-build:DEBUG: The full traceback has been saved in /tmp/sphinx-err-9ZipNP.log, if you want to report the issue to the developers.
+2017-06-24 13:36:02,887 INFO:dlrn-build:DEBUG: Please also report this if it was a user error, so that a better error message can be provided next time.
+2017-06-24 13:36:02,887 INFO:dlrn-build:DEBUG: A bug report can be filed in the tracker at <https://bitbucket.org/birkenfeld/sphinx/issues/>. Thanks!
+2017-06-24 13:36:02,950 INFO:dlrn-build:DEBUG: RPM build errors:
+2017-06-24 13:36:02,950 INFO:dlrn-build:DEBUG: error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
+2017-06-24 13:36:02,950 INFO:dlrn-build:DEBUG:     Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
+2017-06-24 13:36:02,965 INFO:dlrn-build:DEBUG: Child return code was: 1
+2017-06-24 13:36:02,965 INFO:dlrn-build:INFO: EXCEPTION: [Error()]
+2017-06-24 13:36:02,965 INFO:dlrn-build:Traceback (most recent call last):
+2017-06-24 13:36:02,965 INFO:dlrn-build:  File "/usr/lib/python2.7/site-packages/mockbuild/trace_decorator.py", line 88, in trace
+2017-06-24 13:36:02,965 INFO:dlrn-build:    result = func(*args, **kw)
+2017-06-24 13:36:02,965 INFO:dlrn-build:  File "/usr/lib/python2.7/site-packages/mockbuild/util.py", line 547, in do
+2017-06-24 13:36:02,965 INFO:dlrn-build:    raise exception.Error("Command failed. See logs for output.\n # %s" % (command,), child.returncode)
+2017-06-24 13:36:02,965 INFO:dlrn-build:Error: Command failed. See logs for output.
+2017-06-24 13:36:02,965 INFO:dlrn-build: # bash --login -c /usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-openstackclient.spec
+2017-06-24 13:36:02,970 INFO:dlrn-build:ERROR: Exception(/tmp/tmp.IYy49grLPx/SRPMS/python-openstackclient-3.11.1-0.20170624133419.c0719c3.el7.centos.src.rpm) Config(dlrn-centos7-x86_64-1) 1 minutes 43 seconds
+2017-06-24 13:36:02,970 INFO:dlrn-build:INFO: Results and/or logs in: /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e
+2017-06-24 13:36:02,970 INFO:dlrn-build:INFO: Cleaning up build root ('cleanup_on_failure=True')
+2017-06-24 13:36:02,970 INFO:dlrn-build:Start: clean chroot
+2017-06-24 13:36:02,970 INFO:dlrn-build:DEBUG: kill orphans
+2017-06-24 13:36:02,975 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-24 13:36:02,975 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-24 13:36:02,981 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-24 13:36:02,984 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-24 13:36:02,984 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '/var/lib/mock/dlrn-centos7-x86_64-1/root/var/cache/yum/'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-24 13:36:02,989 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-24 13:36:02,992 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-24 13:36:02,992 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-24 13:36:02,994 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-24 13:36:02,999 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-24 13:36:02,999 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-24 13:36:03,002 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-24 13:36:03,006 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-24 13:36:03,006 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-24 13:36:03,011 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-24 13:36:03,011 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-24 13:36:03,011 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-24 13:36:03,014 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-24 13:36:03,019 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-24 13:36:03,019 INFO:dlrn-build:DEBUG: Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-24 13:36:03,022 INFO:dlrn-build:DEBUG: Child return code was: 1
+2017-06-24 13:36:03,022 INFO:dlrn-build:DEBUG: Please ignore the error above above about btrfs.
+2017-06-24 13:36:08,813 INFO:dlrn-build:Finish: clean chroot
+2017-06-24 13:36:08,813 INFO:dlrn-build:ERROR: Command failed. See logs for output.
+2017-06-24 13:36:08,813 INFO:dlrn-build: # bash --login -c /usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-openstackclient.spec
+2017-06-24 13:36:08,832 INFO:dlrn-build:+ finalize
+2017-06-24 13:36:08,832 INFO:dlrn-build:+ rm -rf /tmp/tmp.IYy49grLPx
+2017-06-24 13:36:08,900 ERROR:dlrn-build:cmd failed. See logs at: /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/
+2017-06-24 13:36:08,902 INFO:dlrn:Received exception Error in build_rpm_wrapper for python-openstackclient: 
+
+  RAN: /usr/bin/env /home/jenkins/workspace/DLRN-rpmbuild/DLRN/scripts/build_rpm.sh centos python-openstackclient /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data http://trunk.rdoproject.org/centos7/ /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/python-openstackclient_distro
+
+  STDOUT:
+
+
+  STDERR:
+
+2017-06-24 13:36:08,908 ERROR:dlrn:Received exception Error in build_rpm_wrapper for python-openstackclient: 
+
+  RAN: /usr/bin/env /home/jenkins/workspace/DLRN-rpmbuild/DLRN/scripts/build_rpm.sh centos python-openstackclient /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data http://trunk.rdoproject.org/centos7/ /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/python-openstackclient_distro
+
+  STDOUT:
+
+
+  STDERR:
+
+2017-06-24 13:36:08,919 INFO:dlrn-notifications:Skipping notify email to ['dougal@redhat.com']
+++ copy_logs
+++ mkdir -p logs
+++ rsync -avzr data/repos logs/centos
+sending incremental file list
+created directory logs/centos
+repos/
+repos/queue.html
+repos/report.html
+repos/status_report.html
+repos/styles.css
+repos/c0/
+repos/c0/71/
+repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/
+repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/build.log
+repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/commit.yaml
+repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/mock.log
+repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/root.log
+repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/rpmbuild.log
+repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/state.log

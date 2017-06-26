@@ -1,0 +1,25 @@
+01: Server created
+02: Bootloader initialized
+03: Kernel booted
+localhost kernel: Linux version 4.8.6-300.fc25.x86_64 (mockbuild@bkernel02.phx2.fedoraproject.org) (gcc version 6.2.1 20160916 (Red Hat 6.2.1-2) (GCC) ) #1 SMP Tue Nov 1 12:36:38 UTC 2016
+localhost kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-4.8.6-300.fc25.x86_64 root=UUID=9be70055-35f2-4a57-b120-5a003dfdb504 ro no_timer_check console=tty1 console=ttyS0,115200n8 rhgb quiet console=ttyS1 LANG=en_US.UTF-8 i
+localhost kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+localhost kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+localhost kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+localhost kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+localhost kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+localhost kernel: x86/fpu: Using 'eager' FPU context switches.
+localhost kernel: e820: BIOS-provided physical RAM map:
+localhost kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+localhost kernel: BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+localhost kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+localhost kernel: BIOS-e820: [mem 0x0000000000100000-0x00000000bffdbfff] usable
+localhost kernel: BIOS-e820: [mem 0x00000000bffdc000-0x00000000bfffffff] reserved
+localhost kernel: BIOS-e820: [mem 0x00000000feffc000-0x00000000feffffff] reserved
+localhost kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+localhost kernel: BIOS-e820: [mem 0x0000000100000000-0x000000023fffffff] usable
+localhost kernel: NX (Execute Disable) protection: active
+04: Init called
+05: Shell started
+06: Tests executed
+07: Tests SUCCESS

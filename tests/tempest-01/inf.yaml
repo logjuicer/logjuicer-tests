@@ -1,0 +1,3 @@
+anomalies:
+  - lines: |
+      TestSecurityGroupsBasicOps:test_cross_tenant_traffic

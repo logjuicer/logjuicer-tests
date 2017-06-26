@@ -1,0 +1,5 @@
+anomalies:
+  - lines: |
+      Activating swap
+  - lines: |
+      System clock wrong

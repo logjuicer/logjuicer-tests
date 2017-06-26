@@ -1,0 +1,1012 @@
+Started by user anonymous
+Building remotely on bare-centos-7-rdo-cloud-159660 (bare-centos-7) in workspace /home/jenkins/workspace/DLRN-rpmbuild
+[DLRN-rpmbuild] $ /bin/sh -xe /tmp/hudson6143012175509132533.sh
++ echo 'Use default for ZUUL_BRANCH and ZUUL_REF if needed'
+Use default for ZUUL_BRANCH and ZUUL_REF if needed
++ export ZUUL_BRANCH=master
++ ZUUL_BRANCH=master
++ export ZUUL_REF=refs/zuul/master/Z9249f6066a2041bbbeb838e2ca1cf2b4
++ ZUUL_REF=refs/zuul/master/Z9249f6066a2041bbbeb838e2ca1cf2b4
++ '[' refs/zuul/master/Z9249f6066a2041bbbeb838e2ca1cf2b4 = master ']'
++ echo 'Clean workspace'
+Clean workspace
++ rm -Rf './*'
++ echo 'Clone openstack/python-openstackclient'
+Clone openstack/python-openstackclient
++ [[ openstack-check-verified =~ openstack- ]]
++ zuul-cloner -v https://git.openstack.org openstack/python-openstackclient
+INFO:zuul.CloneMapper:Workspace path set to: /home/jenkins/workspace/DLRN-rpmbuild
+DEBUG:zuul.CloneMapper:Using openstack/python-openstackclient as destination (unmatched)
+INFO:zuul.CloneMapper:Mapping projects to workspace...
+INFO:zuul.CloneMapper:  openstack/python-openstackclient -> /home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient
+DEBUG:zuul.CloneMapper:Checking overlap in destination directories...
+INFO:zuul.CloneMapper:Expansion completed.
+INFO:zuul.Cloner:Preparing 1 repositories
+INFO:zuul.Cloner:Creating repo openstack/python-openstackclient from upstream https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient
+DEBUG:zuul.Repo:Cloning from https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient to /home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient
+DEBUG:git.cmd:Popen(['git', 'clone', '-v', 'https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient', '/home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient'], cwd=/home/jenkins/workspace/DLRN-rpmbuild, universal_newlines=False, shell=None)
+DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zuul/p/review.openstack.org/openstack/python-openstackclient', '/home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient'])'s unused stdout: Cloning into '/home/jenkins/workspace/DLRN-rpmbuild/openstack/python-openstackclient'...
+
+2017-06-23 20:10:03,805 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.alarming.v2'
+2017-06-23 20:10:03,813 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.key_manager.v1'
+2017-06-23 20:10:03,813 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.congressclient.v1'
+2017-06-23 20:10:03,813 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.dns.v1'
+2017-06-23 20:10:03,817 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.metric.v1'
+2017-06-23 20:10:03,817 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.orchestration.v1'
+2017-06-23 20:10:03,820 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal.v1'
+2017-06-23 20:10:03,820 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal_introspection.v1'
+2017-06-23 20:10:03,827 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_protection.v1'
+2017-06-23 20:10:03,827 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.workflow_engine.v2'
+2017-06-23 20:10:03,827 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.neutronclient.v2'
+2017-06-23 20:10:04,103 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_processing.v1'
+2017-06-23 20:10:04,106 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.search.v1'
+2017-06-23 20:10:04,109 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.clustering.v1'
+2017-06-23 20:10:04,109 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.database.v1'
+2017-06-23 20:10:04,112 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.messaging.v2'
+2017-06-23 20:10:04,127 INFO:dlrn-build:DEBUG: reading sources... [ 97%] plugins
+2017-06-23 20:10:04,160 INFO:dlrn-build:DEBUG: reading sources... [ 98%] specs/command-objects/example
+2017-06-23 20:10:04,175 INFO:dlrn-build:DEBUG: reading sources... [ 99%] specs/commands
+2017-06-23 20:10:04,187 INFO:dlrn-build:DEBUG: reading sources... [100%] specs/network-topology
+2017-06-23 20:10:04,196 INFO:dlrn-build:DEBUG: /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/doc/source/index.rst:50: WARNING: toctree contains reference to nonexisting document u'api/modules'
+2017-06-23 20:10:04,197 INFO:dlrn-build:DEBUG: looking for now-outdated files... none found
+2017-06-23 20:10:04,231 INFO:dlrn-build:DEBUG: pickling environment... done
+2017-06-23 20:10:04,231 INFO:dlrn-build:DEBUG: checking consistency... done
+2017-06-23 20:10:04,233 INFO:dlrn-build:DEBUG: preparing documents... done
+2017-06-23 20:10:04,233 INFO:dlrn-build:DEBUG: writing output... [  0%] authentication
+2017-06-23 20:10:04,358 INFO:dlrn-build:DEBUG: writing output... [  1%] backwards-incompatible
+2017-06-23 20:10:04,408 INFO:dlrn-build:DEBUG: writing output... [  2%] command-beta
+2017-06-23 20:10:04,427 INFO:dlrn-build:DEBUG: writing output... [  3%] command-errors
+2017-06-23 20:10:04,453 INFO:dlrn-build:DEBUG: writing output... [  4%] command-list
+2017-06-23 20:10:04,562 INFO:dlrn-build:DEBUG: writing output... [  5%] command-logs
+2017-06-23 20:10:04,577 INFO:dlrn-build:DEBUG: writing output... [  6%] command-objects/access-token
+2017-06-23 20:10:04,590 INFO:dlrn-build:DEBUG: writing output... [  7%] command-objects/address-scope
+2017-06-23 20:10:04,613 INFO:dlrn-build:DEBUG: writing output... [  8%] command-objects/aggregate
+2017-06-23 20:10:04,639 INFO:dlrn-build:DEBUG: writing output... [  9%] command-objects/availability-zone
+2017-06-23 20:10:04,652 INFO:dlrn-build:DEBUG: writing output... [  9%] command-objects/backup
+2017-06-23 20:10:04,673 INFO:dlrn-build:DEBUG: writing output... [ 10%] command-objects/catalog
+2017-06-23 20:10:04,685 INFO:dlrn-build:DEBUG: writing output... [ 11%] command-objects/command
+2017-06-23 20:10:04,698 INFO:dlrn-build:DEBUG: writing output... [ 12%] command-objects/complete
+2017-06-23 20:10:04,710 INFO:dlrn-build:DEBUG: writing output... [ 13%] command-objects/compute-agent
+2017-06-23 20:10:04,728 INFO:dlrn-build:DEBUG: writing output... [ 14%] command-objects/compute-service
+2017-06-23 20:10:04,745 INFO:dlrn-build:DEBUG: writing output... [ 15%] command-objects/configuration
+2017-06-23 20:10:04,758 INFO:dlrn-build:DEBUG: writing output... [ 16%] command-objects/consistency-group
+2017-06-23 20:10:04,782 INFO:dlrn-build:DEBUG: writing output... [ 17%] command-objects/consistency-group-snapshot
+2017-06-23 20:10:04,799 INFO:dlrn-build:DEBUG: writing output... [ 18%] command-objects/console-log
+2017-06-23 20:10:04,811 INFO:dlrn-build:DEBUG: writing output... [ 18%] command-objects/console-url
+2017-06-23 20:10:04,827 INFO:dlrn-build:DEBUG: writing output... [ 19%] command-objects/consumer
+2017-06-23 20:10:04,843 INFO:dlrn-build:DEBUG: writing output... [ 20%] command-objects/container
+2017-06-23 20:10:04,866 INFO:dlrn-build:DEBUG: writing output... [ 21%] command-objects/credential
+2017-06-23 20:10:04,887 INFO:dlrn-build:DEBUG: writing output... [ 22%] command-objects/domain
+2017-06-23 20:10:04,906 INFO:dlrn-build:DEBUG: writing output... [ 23%] command-objects/ec2-credentials
+2017-06-23 20:10:04,976 INFO:dlrn-build:DEBUG: writing output... [ 24%] command-objects/endpoint
+2017-06-23 20:10:05,001 INFO:dlrn-build:DEBUG: writing output... [ 25%] command-objects/extension
+2017-06-23 20:10:05,015 INFO:dlrn-build:DEBUG: writing output... [ 26%] command-objects/federation-protocol
+2017-06-23 20:10:05,035 INFO:dlrn-build:DEBUG: writing output... [ 27%] command-objects/flavor
+2017-06-23 20:10:05,063 INFO:dlrn-build:DEBUG: writing output... [ 27%] command-objects/floating-ip
+2017-06-23 20:10:05,090 INFO:dlrn-build:DEBUG: writing output... [ 28%] command-objects/floating-ip-pool
+2017-06-23 20:10:05,102 INFO:dlrn-build:DEBUG: writing output... [ 29%] command-objects/group
+2017-06-23 20:10:05,131 INFO:dlrn-build:DEBUG: writing output... [ 30%] command-objects/host
+2017-06-23 20:10:05,146 INFO:dlrn-build:DEBUG: writing output... [ 31%] command-objects/hypervisor
+2017-06-23 20:10:05,160 INFO:dlrn-build:DEBUG: writing output... [ 32%] command-objects/hypervisor-stats
+2017-06-23 20:10:05,172 INFO:dlrn-build:DEBUG: writing output... [ 33%] command-objects/identity-provider
+2017-06-23 20:10:05,192 INFO:dlrn-build:DEBUG: writing output... [ 34%] command-objects/image
+2017-06-23 20:10:05,251 INFO:dlrn-build:DEBUG: writing output... [ 35%] command-objects/ip-availability
+2017-06-23 20:10:05,266 INFO:dlrn-build:DEBUG: writing output... [ 36%] command-objects/ip-fixed
+2017-06-23 20:10:05,279 INFO:dlrn-build:DEBUG: writing output... [ 36%] command-objects/ip-floating
+2017-06-23 20:10:05,300 INFO:dlrn-build:DEBUG: writing output... [ 37%] command-objects/ip-floating-pool
+2017-06-23 20:10:05,312 INFO:dlrn-build:DEBUG: writing output... [ 38%] command-objects/keypair
+2017-06-23 20:10:05,328 INFO:dlrn-build:DEBUG: writing output... [ 39%] command-objects/limits
+2017-06-23 20:10:05,342 INFO:dlrn-build:DEBUG: writing output... [ 40%] command-objects/mapping
+2017-06-23 20:10:05,358 INFO:dlrn-build:DEBUG: writing output... [ 41%] command-objects/module
+2017-06-23 20:10:05,371 INFO:dlrn-build:DEBUG: writing output... [ 42%] command-objects/network
+2017-06-23 20:10:05,413 INFO:dlrn-build:DEBUG: writing output... [ 43%] command-objects/network-agent
+2017-06-23 20:10:05,435 INFO:dlrn-build:DEBUG: writing output... [ 44%] command-objects/network-auto-allocated-topology
+2017-06-23 20:10:05,451 INFO:dlrn-build:DEBUG: writing output... [ 45%] command-objects/network-flavor
+2017-06-23 20:10:05,475 INFO:dlrn-build:DEBUG: writing output... [ 45%] command-objects/network-flavor-profile
+2017-06-23 20:10:05,497 INFO:dlrn-build:DEBUG: writing output... [ 46%] command-objects/network-meter
+2017-06-23 20:10:05,561 INFO:dlrn-build:DEBUG: writing output... [ 47%] command-objects/network-meter-rule
+2017-06-23 20:10:05,578 INFO:dlrn-build:DEBUG: writing output... [ 48%] command-objects/network-qos-policy
+2017-06-23 20:10:05,600 INFO:dlrn-build:DEBUG: writing output... [ 49%] command-objects/network-qos-rule
+2017-06-23 20:10:05,623 INFO:dlrn-build:DEBUG: writing output... [ 50%] command-objects/network-qos-rule-type
+2017-06-23 20:10:05,634 INFO:dlrn-build:DEBUG: writing output... [ 51%] command-objects/network-rbac
+2017-06-23 20:10:05,655 INFO:dlrn-build:DEBUG: writing output... [ 52%] command-objects/network-segment
+2017-06-23 20:10:05,674 INFO:dlrn-build:DEBUG: writing output... [ 53%] command-objects/network-service-provider
+2017-06-23 20:10:05,685 INFO:dlrn-build:DEBUG: writing output... [ 54%] command-objects/object
+2017-06-23 20:10:05,709 INFO:dlrn-build:DEBUG: writing output... [ 54%] command-objects/object-store-account
+2017-06-23 20:10:05,722 INFO:dlrn-build:DEBUG: writing output... [ 55%] command-objects/policy
+2017-06-23 20:10:05,738 INFO:dlrn-build:DEBUG: writing output... [ 56%] command-objects/port
+2017-06-23 20:10:05,780 INFO:dlrn-build:DEBUG: writing output... [ 57%] command-objects/project
+2017-06-23 20:10:05,812 INFO:dlrn-build:DEBUG: writing output... [ 58%] command-objects/project-purge
+2017-06-23 20:10:05,825 INFO:dlrn-build:DEBUG: writing output... [ 59%] command-objects/quota
+2017-06-23 20:10:05,858 INFO:dlrn-build:DEBUG: writing output... [ 60%] command-objects/region
+2017-06-23 20:10:05,877 INFO:dlrn-build:DEBUG: writing output... [ 61%] command-objects/request-token
+2017-06-23 20:10:05,892 INFO:dlrn-build:DEBUG: writing output... [ 62%] command-objects/role
+2017-06-23 20:10:05,929 INFO:dlrn-build:DEBUG: writing output... [ 63%] command-objects/role-assignment
+2017-06-23 20:10:05,947 INFO:dlrn-build:DEBUG: writing output... [ 63%] command-objects/router
+2017-06-23 20:10:05,985 INFO:dlrn-build:DEBUG: writing output... [ 64%] command-objects/security-group
+2017-06-23 20:10:06,004 INFO:dlrn-build:DEBUG: writing output... [ 65%] command-objects/security-group-rule
+2017-06-23 20:10:06,029 INFO:dlrn-build:DEBUG: writing output... [ 66%] command-objects/server
+2017-06-23 20:10:06,170 INFO:dlrn-build:DEBUG: writing output... [ 67%] command-objects/server-backup
+2017-06-23 20:10:06,184 INFO:dlrn-build:DEBUG: writing output... [ 68%] command-objects/server-event
+2017-06-23 20:10:06,197 INFO:dlrn-build:DEBUG: writing output... [ 69%] command-objects/server-group
+2017-06-23 20:10:06,212 INFO:dlrn-build:DEBUG: writing output... [ 70%] command-objects/server-image
+2017-06-23 20:10:06,226 INFO:dlrn-build:DEBUG: writing output... [ 71%] command-objects/service
+2017-06-23 20:10:06,247 INFO:dlrn-build:DEBUG: writing output... [ 72%] command-objects/service-provider
+2017-06-23 20:10:06,267 INFO:dlrn-build:DEBUG: writing output... [ 72%] command-objects/snapshot
+2017-06-23 20:10:06,292 INFO:dlrn-build:DEBUG: writing output... [ 73%] command-objects/subnet
+2017-06-23 20:10:06,336 INFO:dlrn-build:DEBUG: writing output... [ 74%] command-objects/subnet-pool
+2017-06-23 20:10:06,370 INFO:dlrn-build:DEBUG: writing output... [ 75%] command-objects/token
+2017-06-23 20:10:06,382 INFO:dlrn-build:DEBUG: writing output... [ 76%] command-objects/trust
+2017-06-23 20:10:06,399 INFO:dlrn-build:DEBUG: writing output... [ 77%] command-objects/usage
+2017-06-23 20:10:06,414 INFO:dlrn-build:DEBUG: writing output... [ 78%] command-objects/user
+2017-06-23 20:10:06,441 INFO:dlrn-build:DEBUG: writing output... [ 79%] command-objects/user-role
+2017-06-23 20:10:06,453 INFO:dlrn-build:DEBUG: writing output... [ 80%] command-objects/volume
+2017-06-23 20:10:06,499 INFO:dlrn-build:DEBUG: writing output... [ 81%] command-objects/volume-backup
+2017-06-23 20:10:06,523 INFO:dlrn-build:DEBUG: writing output... [ 81%] command-objects/volume-host
+2017-06-23 20:10:06,537 INFO:dlrn-build:DEBUG: writing output... [ 82%] command-objects/volume-qos
+2017-06-23 20:10:06,562 INFO:dlrn-build:DEBUG: writing output... [ 83%] command-objects/volume-service
+2017-06-23 20:10:06,576 INFO:dlrn-build:DEBUG: writing output... [ 84%] command-objects/volume-snapshot
+2017-06-23 20:10:06,606 INFO:dlrn-build:DEBUG: writing output... [ 85%] command-objects/volume-transfer-request
+2017-06-23 20:10:06,622 INFO:dlrn-build:DEBUG: writing output... [ 86%] command-objects/volume-type
+2017-06-23 20:10:06,713 INFO:dlrn-build:DEBUG: writing output... [ 87%] command-options
+2017-06-23 20:10:06,751 INFO:dlrn-build:DEBUG: writing output... [ 88%] command-wrappers
+2017-06-23 20:10:06,765 INFO:dlrn-build:DEBUG: writing output... [ 89%] commands
+2017-06-23 20:10:06,848 INFO:dlrn-build:DEBUG: writing output... [ 90%] configuration
+2017-06-23 20:10:06,885 INFO:dlrn-build:DEBUG: writing output... [ 90%] decoder
+2017-06-23 20:10:07,118 INFO:dlrn-build:DEBUG: writing output... [ 91%] developing
+2017-06-23 20:10:07,148 INFO:dlrn-build:DEBUG: writing output... [ 92%] humaninterfaceguide
+2017-06-23 20:10:07,194 INFO:dlrn-build:DEBUG: writing output... [ 93%] index
+2017-06-23 20:10:07,310 INFO:dlrn-build:DEBUG: writing output... [ 94%] interactive
+2017-06-23 20:10:07,330 INFO:dlrn-build:DEBUG: writing output... [ 95%] man/openstack
+2017-06-23 20:10:07,390 INFO:dlrn-build:DEBUG: writing output... [ 96%] plugin-commands
+2017-06-23 20:10:07,429 INFO:dlrn-build:DEBUG: writing output... [ 97%] plugins
+2017-06-23 20:10:07,462 INFO:dlrn-build:DEBUG: writing output... [ 98%] specs/command-objects/example
+2017-06-23 20:10:07,477 INFO:dlrn-build:DEBUG: writing output... [ 99%] specs/commands
+2017-06-23 20:10:07,492 INFO:dlrn-build:DEBUG: writing output... [100%] specs/network-topology
+2017-06-23 20:10:07,599 INFO:dlrn-build:DEBUG: writing additional files... genindex search
+2017-06-23 20:10:07,611 INFO:dlrn-build:DEBUG: copying static files... done
+2017-06-23 20:10:07,611 INFO:dlrn-build:DEBUG: copying extra files... done
+2017-06-23 20:10:07,637 INFO:dlrn-build:DEBUG: dumping search index... done
+2017-06-23 20:10:07,647 INFO:dlrn-build:DEBUG: dumping object inventory... done
+2017-06-23 20:10:07,647 INFO:dlrn-build:DEBUG: build succeeded, 1 warning.
+2017-06-23 20:10:07,717 INFO:dlrn-build:DEBUG: + sphinx-build -b man doc/source man
+2017-06-23 20:10:07,925 INFO:dlrn-build:DEBUG: Making output directory...
+2017-06-23 20:10:07,925 INFO:dlrn-build:DEBUG: Running Sphinx v1.2.3
+2017-06-23 20:10:08,028 INFO:dlrn-build:DEBUG: loading stevedore.sphinxext
+2017-06-23 20:10:08,028 INFO:dlrn-build:DEBUG: loading pickled environment... not yet created
+2017-06-23 20:10:08,034 INFO:dlrn-build:DEBUG: Using openstack theme from /usr/lib/python2.7/site-packages/oslosphinx/theme
+2017-06-23 20:10:08,034 INFO:dlrn-build:DEBUG: building [man]: all manpages
+2017-06-23 20:10:08,034 INFO:dlrn-build:DEBUG: updating environment: 111 added, 0 changed, 0 removed
+2017-06-23 20:10:08,034 INFO:dlrn-build:DEBUG: reading sources... [  0%] authentication
+2017-06-23 20:10:08,078 INFO:dlrn-build:DEBUG: reading sources... [  1%] backwards-incompatible
+2017-06-23 20:10:08,170 INFO:dlrn-build:DEBUG: reading sources... [  2%] command-beta
+2017-06-23 20:10:08,199 INFO:dlrn-build:DEBUG: reading sources... [  3%] command-errors
+2017-06-23 20:10:08,215 INFO:dlrn-build:DEBUG: reading sources... [  4%] command-list
+2017-06-23 20:10:08,220 INFO:dlrn-build:DEBUG: reading sources... [  5%] command-logs
+2017-06-23 20:10:08,231 INFO:dlrn-build:DEBUG: reading sources... [  6%] command-objects/access-token
+2017-06-23 20:10:08,240 INFO:dlrn-build:DEBUG: reading sources... [  7%] command-objects/address-scope
+2017-06-23 20:10:08,267 INFO:dlrn-build:DEBUG: reading sources... [  8%] command-objects/aggregate
+2017-06-23 20:10:08,301 INFO:dlrn-build:DEBUG: reading sources... [  9%] command-objects/availability-zone
+2017-06-23 20:10:08,310 INFO:dlrn-build:DEBUG: reading sources... [  9%] command-objects/backup
+2017-06-23 20:10:08,333 INFO:dlrn-build:DEBUG: reading sources... [ 10%] command-objects/catalog
+2017-06-23 20:10:08,340 INFO:dlrn-build:DEBUG: reading sources... [ 11%] command-objects/command
+2017-06-23 20:10:08,348 INFO:dlrn-build:DEBUG: reading sources... [ 12%] command-objects/complete
+2017-06-23 20:10:08,354 INFO:dlrn-build:DEBUG: reading sources... [ 13%] command-objects/compute-agent
+2017-06-23 20:10:08,372 INFO:dlrn-build:DEBUG: reading sources... [ 14%] command-objects/compute-service
+2017-06-23 20:10:08,389 INFO:dlrn-build:DEBUG: reading sources... [ 15%] command-objects/configuration
+2017-06-23 20:10:08,396 INFO:dlrn-build:DEBUG: reading sources... [ 16%] command-objects/consistency-group
+2017-06-23 20:10:08,428 INFO:dlrn-build:DEBUG: reading sources... [ 17%] command-objects/consistency-group-snapshot
+2017-06-23 20:10:08,445 INFO:dlrn-build:DEBUG: reading sources... [ 18%] command-objects/console-log
+2017-06-23 20:10:08,452 INFO:dlrn-build:DEBUG: reading sources... [ 18%] command-objects/console-url
+2017-06-23 20:10:08,462 INFO:dlrn-build:DEBUG: reading sources... [ 19%] command-objects/consumer
+2017-06-23 20:10:08,478 INFO:dlrn-build:DEBUG: reading sources... [ 20%] command-objects/container
+2017-06-23 20:10:08,504 INFO:dlrn-build:DEBUG: reading sources... [ 21%] command-objects/credential
+2017-06-23 20:10:08,524 INFO:dlrn-build:DEBUG: reading sources... [ 22%] command-objects/domain
+2017-06-23 20:10:08,546 INFO:dlrn-build:DEBUG: reading sources... [ 23%] command-objects/ec2-credentials
+2017-06-23 20:10:08,570 INFO:dlrn-build:DEBUG: reading sources... [ 24%] command-objects/endpoint
+2017-06-23 20:10:08,604 INFO:dlrn-build:DEBUG: reading sources... [ 25%] command-objects/extension
+2017-06-23 20:10:08,615 INFO:dlrn-build:DEBUG: reading sources... [ 26%] command-objects/federation-protocol
+2017-06-23 20:10:08,634 INFO:dlrn-build:DEBUG: reading sources... [ 27%] command-objects/flavor
+2017-06-23 20:10:08,675 INFO:dlrn-build:DEBUG: reading sources... [ 27%] command-objects/floating-ip
+2017-06-23 20:10:08,709 INFO:dlrn-build:DEBUG: reading sources... [ 28%] command-objects/floating-ip-pool
+2017-06-23 20:10:08,715 INFO:dlrn-build:DEBUG: reading sources... [ 29%] command-objects/group
+2017-06-23 20:10:08,760 INFO:dlrn-build:DEBUG: reading sources... [ 30%] command-objects/host
+2017-06-23 20:10:08,775 INFO:dlrn-build:DEBUG: reading sources... [ 31%] command-objects/hypervisor
+2017-06-23 20:10:08,784 INFO:dlrn-build:DEBUG: reading sources... [ 32%] command-objects/hypervisor-stats
+2017-06-23 20:10:08,788 INFO:dlrn-build:DEBUG: reading sources... [ 33%] command-objects/identity-provider
+2017-06-23 20:10:08,811 INFO:dlrn-build:DEBUG: reading sources... [ 34%] command-objects/image
+2017-06-23 20:10:08,937 INFO:dlrn-build:DEBUG: reading sources... [ 35%] command-objects/ip-availability
+2017-06-23 20:10:08,948 INFO:dlrn-build:DEBUG: reading sources... [ 36%] command-objects/ip-fixed
+2017-06-23 20:10:08,957 INFO:dlrn-build:DEBUG: reading sources... [ 36%] command-objects/ip-floating
+2017-06-23 20:10:08,979 INFO:dlrn-build:DEBUG: reading sources... [ 37%] command-objects/ip-floating-pool
+2017-06-23 20:10:08,985 INFO:dlrn-build:DEBUG: reading sources... [ 38%] command-objects/keypair
+2017-06-23 20:10:08,998 INFO:dlrn-build:DEBUG: reading sources... [ 39%] command-objects/limits
+2017-06-23 20:10:09,009 INFO:dlrn-build:DEBUG: reading sources... [ 40%] command-objects/mapping
+2017-06-23 20:10:09,025 INFO:dlrn-build:DEBUG: reading sources... [ 41%] command-objects/module
+2017-06-23 20:10:09,031 INFO:dlrn-build:DEBUG: reading sources... [ 42%] command-objects/network
+2017-06-23 20:10:09,097 INFO:dlrn-build:DEBUG: reading sources... [ 43%] command-objects/network-agent
+2017-06-23 20:10:09,122 INFO:dlrn-build:DEBUG: reading sources... [ 44%] command-objects/network-auto-allocated-topology
+2017-06-23 20:10:09,137 INFO:dlrn-build:DEBUG: reading sources... [ 45%] command-objects/network-flavor
+2017-06-23 20:10:09,167 INFO:dlrn-build:DEBUG: reading sources... [ 45%] command-objects/network-flavor-profile
+2017-06-23 20:10:09,191 INFO:dlrn-build:DEBUG: reading sources... [ 46%] command-objects/network-meter
+2017-06-23 20:10:09,209 INFO:dlrn-build:DEBUG: reading sources... [ 47%] command-objects/network-meter-rule
+2017-06-23 20:10:09,227 INFO:dlrn-build:DEBUG: reading sources... [ 48%] command-objects/network-qos-policy
+2017-06-23 20:10:09,255 INFO:dlrn-build:DEBUG: reading sources... [ 49%] command-objects/network-qos-rule
+2017-06-23 20:10:09,282 INFO:dlrn-build:DEBUG: reading sources... [ 50%] command-objects/network-qos-rule-type
+2017-06-23 20:10:09,288 INFO:dlrn-build:DEBUG: reading sources... [ 51%] command-objects/network-rbac
+2017-06-23 20:10:09,313 INFO:dlrn-build:DEBUG: reading sources... [ 52%] command-objects/network-segment
+2017-06-23 20:10:09,336 INFO:dlrn-build:DEBUG: reading sources... [ 53%] command-objects/network-service-provider
+2017-06-23 20:10:09,342 INFO:dlrn-build:DEBUG: reading sources... [ 54%] command-objects/object
+2017-06-23 20:10:09,373 INFO:dlrn-build:DEBUG: reading sources... [ 54%] command-objects/object-store-account
+2017-06-23 20:10:09,385 INFO:dlrn-build:DEBUG: reading sources... [ 55%] command-objects/policy
+2017-06-23 20:10:09,402 INFO:dlrn-build:DEBUG: reading sources... [ 56%] command-objects/port
+2017-06-23 20:10:09,473 INFO:dlrn-build:DEBUG: reading sources... [ 57%] command-objects/project
+2017-06-23 20:10:09,539 INFO:dlrn-build:DEBUG: reading sources... [ 58%] command-objects/project-purge
+2017-06-23 20:10:09,548 INFO:dlrn-build:DEBUG: reading sources... [ 59%] command-objects/quota
+2017-06-23 20:10:09,595 INFO:dlrn-build:DEBUG: reading sources... [ 60%] command-objects/region
+2017-06-23 20:10:09,614 INFO:dlrn-build:DEBUG: reading sources... [ 61%] command-objects/request-token
+2017-06-23 20:10:09,625 INFO:dlrn-build:DEBUG: reading sources... [ 62%] command-objects/role
+2017-06-23 20:10:09,691 INFO:dlrn-build:DEBUG: reading sources... [ 63%] command-objects/role-assignment
+2017-06-23 20:10:09,716 INFO:dlrn-build:DEBUG: reading sources... [ 63%] command-objects/router
+2017-06-23 20:10:09,776 INFO:dlrn-build:DEBUG: reading sources... [ 64%] command-objects/security-group
+2017-06-23 20:10:09,797 INFO:dlrn-build:DEBUG: reading sources... [ 65%] command-objects/security-group-rule
+2017-06-23 20:10:09,827 INFO:dlrn-build:DEBUG: reading sources... [ 66%] command-objects/server
+2017-06-23 20:10:09,981 INFO:dlrn-build:DEBUG: reading sources... [ 67%] command-objects/server-backup
+2017-06-23 20:10:09,990 INFO:dlrn-build:DEBUG: reading sources... [ 68%] command-objects/server-event
+2017-06-23 20:10:09,999 INFO:dlrn-build:DEBUG: reading sources... [ 69%] command-objects/server-group
+2017-06-23 20:10:10,013 INFO:dlrn-build:DEBUG: reading sources... [ 70%] command-objects/server-image
+2017-06-23 20:10:10,021 INFO:dlrn-build:DEBUG: reading sources... [ 71%] command-objects/service
+2017-06-23 20:10:10,043 INFO:dlrn-build:DEBUG: reading sources... [ 72%] command-objects/service-provider
+2017-06-23 20:10:10,066 INFO:dlrn-build:DEBUG: reading sources... [ 72%] command-objects/snapshot
+2017-06-23 20:10:10,097 INFO:dlrn-build:DEBUG: reading sources... [ 73%] command-objects/subnet
+2017-06-23 20:10:10,185 INFO:dlrn-build:DEBUG: reading sources... [ 74%] command-objects/subnet-pool
+2017-06-23 20:10:10,232 INFO:dlrn-build:DEBUG: reading sources... [ 75%] command-objects/token
+2017-06-23 20:10:10,239 INFO:dlrn-build:DEBUG: reading sources... [ 76%] command-objects/trust
+2017-06-23 20:10:10,258 INFO:dlrn-build:DEBUG: reading sources... [ 77%] command-objects/usage
+2017-06-23 20:10:10,270 INFO:dlrn-build:DEBUG: reading sources... [ 78%] command-objects/user
+2017-06-23 20:10:10,313 INFO:dlrn-build:DEBUG: reading sources... [ 79%] command-objects/user-role
+2017-06-23 20:10:10,320 INFO:dlrn-build:DEBUG: reading sources... [ 80%] command-objects/volume
+2017-06-23 20:10:10,390 INFO:dlrn-build:DEBUG: reading sources... [ 81%] command-objects/volume-backup
+2017-06-23 20:10:10,423 INFO:dlrn-build:DEBUG: reading sources... [ 81%] command-objects/volume-host
+2017-06-23 20:10:10,435 INFO:dlrn-build:DEBUG: reading sources... [ 82%] command-objects/volume-qos
+2017-06-23 20:10:10,465 INFO:dlrn-build:DEBUG: reading sources... [ 83%] command-objects/volume-service
+2017-06-23 20:10:10,478 INFO:dlrn-build:DEBUG: reading sources... [ 84%] command-objects/volume-snapshot
+2017-06-23 20:10:10,518 INFO:dlrn-build:DEBUG: reading sources... [ 85%] command-objects/volume-transfer-request
+2017-06-23 20:10:10,535 INFO:dlrn-build:DEBUG: reading sources... [ 86%] command-objects/volume-type
+2017-06-23 20:10:10,590 INFO:dlrn-build:DEBUG: reading sources... [ 87%] command-options
+2017-06-23 20:10:10,631 INFO:dlrn-build:DEBUG: reading sources... [ 88%] command-wrappers
+2017-06-23 20:10:10,640 INFO:dlrn-build:DEBUG: reading sources... [ 89%] commands
+2017-06-23 20:10:10,735 INFO:dlrn-build:DEBUG: reading sources... [ 90%] configuration
+2017-06-23 20:10:10,773 INFO:dlrn-build:DEBUG: reading sources... [ 90%] decoder
+2017-06-23 20:10:11,145 INFO:dlrn-build:DEBUG: reading sources... [ 91%] developing
+2017-06-23 20:10:11,183 INFO:dlrn-build:DEBUG: reading sources... [ 92%] humaninterfaceguide
+2017-06-23 20:10:11,236 INFO:dlrn-build:DEBUG: reading sources... [ 93%] index
+2017-06-23 20:10:11,258 INFO:dlrn-build:DEBUG: reading sources... [ 94%] interactive
+2017-06-23 20:10:11,267 INFO:dlrn-build:DEBUG: reading sources... [ 95%] man/openstack
+2017-06-23 20:10:11,345 INFO:dlrn-build:DEBUG: reading sources... [ 96%] plugin-commands
+2017-06-23 20:10:11,348 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.cli.extension'
+2017-06-23 20:10:11,660 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.alarming.v2'
+2017-06-23 20:10:11,662 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.key_manager.v1'
+2017-06-23 20:10:11,664 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.congressclient.v1'
+2017-06-23 20:10:11,667 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.dns.v1'
+2017-06-23 20:10:11,669 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.metric.v1'
+2017-06-23 20:10:11,673 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.orchestration.v1'
+2017-06-23 20:10:11,673 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal.v1'
+2017-06-23 20:10:11,676 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.baremetal_introspection.v1'
+2017-06-23 20:10:11,681 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_protection.v1'
+2017-06-23 20:10:11,681 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.workflow_engine.v2'
+2017-06-23 20:10:11,681 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.neutronclient.v2'
+2017-06-23 20:10:11,936 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.data_processing.v1'
+2017-06-23 20:10:11,938 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.search.v1'
+2017-06-23 20:10:11,943 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.clustering.v1'
+2017-06-23 20:10:11,943 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.database.v1'
+2017-06-23 20:10:11,950 INFO:dlrn-build:DEBUG: documenting plugins from u'openstack.messaging.v2'
+2017-06-23 20:10:11,958 INFO:dlrn-build:DEBUG: reading sources... [ 97%] plugins
+2017-06-23 20:10:11,991 INFO:dlrn-build:DEBUG: reading sources... [ 98%] specs/command-objects/example
+2017-06-23 20:10:12,006 INFO:dlrn-build:DEBUG: reading sources... [ 99%] specs/commands
+2017-06-23 20:10:12,017 INFO:dlrn-build:DEBUG: reading sources... [100%] specs/network-topology
+2017-06-23 20:10:12,027 INFO:dlrn-build:DEBUG: looking for now-outdated files... none found
+2017-06-23 20:10:12,027 INFO:dlrn-build:DEBUG: pickling environment... /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/doc/source/index.rst:50: WARNING: toctree contains reference to nonexisting document u'api/modules'
+2017-06-23 20:10:12,100 INFO:dlrn-build:DEBUG: done
+2017-06-23 20:10:12,100 INFO:dlrn-build:DEBUG: checking consistency... done
+2017-06-23 20:10:12,128 INFO:dlrn-build:DEBUG: writing... openstack.1 { } 
+2017-06-23 20:10:12,128 INFO:dlrn-build:DEBUG: build succeeded, 1 warning.
+2017-06-23 20:10:12,174 INFO:dlrn-build:DEBUG: + install -p -D -m 644 man/openstack.1 /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/man/man1/openstack.1
+2017-06-23 20:10:12,174 INFO:dlrn-build:DEBUG: + rm -fr html/.doctrees html/.buildinfo
+2017-06-23 20:10:12,178 INFO:dlrn-build:DEBUG: + install -d -m 755 /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share
+2017-06-23 20:10:12,179 INFO:dlrn-build:DEBUG: + rm -f /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/lib/python2.7/site-packages/openstackclient/locale/de/LC_MESSAGES/openstackclient.po /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/lib/python2.7/site-packages/openstackclient/locale/zh_TW/LC_MESSAGES/openstackclient.po
+2017-06-23 20:10:12,180 INFO:dlrn-build:DEBUG: + rm -f '/builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/lib/python2.7/site-packages/openstackclient/locale/*pot'
+2017-06-23 20:10:12,181 INFO:dlrn-build:DEBUG: + mv /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/lib/python2.7/site-packages/openstackclient/locale /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/locale
+2017-06-23 20:10:12,182 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/find-lang.sh /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64 openstackclient --all-name
+2017-06-23 20:10:12,239 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/find-debuginfo.sh --strict-build-id -m --run-dwz --dwz-low-mem-die-limit 10000000 --dwz-max-die-limit 110000000 /builddir/build/BUILD/python-openstackclient-3.11.1.dev50
+2017-06-23 20:10:12,247 INFO:dlrn-build:DEBUG: /usr/lib/rpm/sepdebugcrcfix: Updated 0 CRC32s, 0 CRC32s did match.
+2017-06-23 20:10:12,251 INFO:dlrn-build:DEBUG: find: 'debug': No such file or directory
+2017-06-23 20:10:12,253 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/check-buildroot
+2017-06-23 20:10:12,263 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/redhat/brp-compress
+2017-06-23 20:10:12,268 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/redhat/brp-strip-static-archive /usr/bin/strip
+2017-06-23 20:10:12,271 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/brp-python-bytecompile /usr/bin/python 1
+2017-06-23 20:10:12,455 INFO:dlrn-build:DEBUG: Bytecompiling .py files below /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/lib/python2.7 using /usr/bin/python2.7
+2017-06-23 20:10:19,758 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/redhat/brp-python-hardlink
+2017-06-23 20:10:21,578 INFO:dlrn-build:DEBUG: + /usr/lib/rpm/redhat/brp-java-repack-jars
+2017-06-23 20:10:21,581 INFO:dlrn-build:DEBUG: Executing(%check): /bin/sh -e /var/tmp/rpm-tmp.3YCIXu
+2017-06-23 20:10:21,583 INFO:dlrn-build:DEBUG: + umask 022
+2017-06-23 20:10:21,583 INFO:dlrn-build:DEBUG: + cd /builddir/build/BUILD
+2017-06-23 20:10:21,583 INFO:dlrn-build:DEBUG: + cd python-openstackclient-3.11.1.dev50
+2017-06-23 20:10:21,583 INFO:dlrn-build:DEBUG: + /usr/bin/python2 setup.py test
+2017-06-23 20:10:22,125 INFO:dlrn-build:DEBUG: running test
+2017-06-23 20:10:22,918 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.command is deprecated and will be removed after Jun 2017. Please use osc_lib.command.command. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_command.py
+2017-06-23 20:10:22,930 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.logs is deprecated and will be removed after Jun 2017. Please use osc_lib.logs. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_logs.py
+2017-06-23 20:10:22,936 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.parseractions is deprecated and will be removed after Jun 2017. Please use osc_lib.cli.parseractions. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_parseractions.py
+2017-06-23 20:10:23,239 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.exceptions is deprecated and will be removed after Jun 2017. Please use osc_lib.exceptions. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/network/test_common.py
+2017-06-23 20:10:24,614 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.command is deprecated and will be removed after Jun 2017. Please use osc_lib.command.command. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_command.py
+2017-06-23 20:10:24,614 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.command is deprecated and will be removed after Jun 2017. Please use osc_lib.command.command. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_command.py
+2017-06-23 20:10:24,614 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.logs is deprecated and will be removed after Jun 2017. Please use osc_lib.logs. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_logs.py
+2017-06-23 20:10:24,614 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.logs is deprecated and will be removed after Jun 2017. Please use osc_lib.logs. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_logs.py
+2017-06-23 20:10:24,625 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.parseractions is deprecated and will be removed after Jun 2017. Please use osc_lib.cli.parseractions. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_parseractions.py
+2017-06-23 20:10:24,625 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.parseractions is deprecated and will be removed after Jun 2017. Please use osc_lib.cli.parseractions. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/common/test_parseractions.py
+2017-06-23 20:10:24,772 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.exceptions is deprecated and will be removed after Jun 2017. Please use osc_lib.exceptions. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/network/test_common.py
+2017-06-23 20:10:24,773 INFO:dlrn-build:DEBUG: WARNING: openstackclient.common.exceptions is deprecated and will be removed after Jun 2017. Please use osc_lib.exceptions. This warning is caused by an out-of-date import in /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/openstackclient/tests/unit/network/test_common.py
+2017-06-23 20:10:34,212 INFO:dlrn-build:DEBUG: running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+2017-06-23 20:10:34,212 INFO:dlrn-build:DEBUG: OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+2017-06-23 20:10:34,212 INFO:dlrn-build:DEBUG: OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: ${PYTHON:-python} -m subunit.run discover -t ./ ${OS_TEST_PATH:-./openstackclient/tests/unit} --list 
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: ${PYTHON:-python} -m subunit.run discover -t ./ ${OS_TEST_PATH:-./openstackclient/tests/unit}  --load-list /tmp/tmpD2gkHN
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: ${PYTHON:-python} -m subunit.run discover -t ./ ${OS_TEST_PATH:-./openstackclient/tests/unit}  --load-list /tmp/tmpTODCaQ
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: Ran 1701 tests in 3.842s
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: PASSED (id=0)
+2017-06-23 20:10:34,216 INFO:dlrn-build:DEBUG: + exit 0
+2017-06-23 20:10:34,216 INFO:dlrn-build:DEBUG: Processing files: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:10:34,220 INFO:dlrn-build:DEBUG: Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.2L5QeM
+2017-06-23 20:10:34,222 INFO:dlrn-build:DEBUG: + umask 022
+2017-06-23 20:10:34,222 INFO:dlrn-build:DEBUG: + cd /builddir/build/BUILD
+2017-06-23 20:10:34,222 INFO:dlrn-build:DEBUG: + cd python-openstackclient-3.11.1.dev50
+2017-06-23 20:10:34,222 INFO:dlrn-build:DEBUG: + DOCDIR=/builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/doc/python-openstackclient-3.11.1
+2017-06-23 20:10:34,222 INFO:dlrn-build:DEBUG: + export DOCDIR
+2017-06-23 20:10:34,222 INFO:dlrn-build:DEBUG: + /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/doc/python-openstackclient-3.11.1
+2017-06-23 20:10:34,223 INFO:dlrn-build:DEBUG: + cp -pr README.rst /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/doc/python-openstackclient-3.11.1
+2017-06-23 20:10:34,223 INFO:dlrn-build:DEBUG: + exit 0
+2017-06-23 20:10:34,223 INFO:dlrn-build:DEBUG: Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.5vLBw3
+2017-06-23 20:10:34,225 INFO:dlrn-build:DEBUG: + umask 022
+2017-06-23 20:10:34,225 INFO:dlrn-build:DEBUG: + cd /builddir/build/BUILD
+2017-06-23 20:10:34,225 INFO:dlrn-build:DEBUG: + cd python-openstackclient-3.11.1.dev50
+2017-06-23 20:10:34,225 INFO:dlrn-build:DEBUG: + LICENSEDIR=/builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/licenses/python-openstackclient-3.11.1
+2017-06-23 20:10:34,225 INFO:dlrn-build:DEBUG: + export LICENSEDIR
+2017-06-23 20:10:34,225 INFO:dlrn-build:DEBUG: + /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/licenses/python-openstackclient-3.11.1
+2017-06-23 20:10:34,225 INFO:dlrn-build:DEBUG: + cp -pr LICENSE /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/licenses/python-openstackclient-3.11.1
+2017-06-23 20:10:34,226 INFO:dlrn-build:DEBUG: + exit 0
+2017-06-23 20:10:40,876 INFO:dlrn-build:DEBUG: Provides: python-openstackclient = 3.11.1-0.20170623200805.5c40202.el7.centos
+2017-06-23 20:10:40,876 INFO:dlrn-build:DEBUG: Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PartialHardlinkSets) <= 4.0.4-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+2017-06-23 20:10:40,876 INFO:dlrn-build:DEBUG: Requires: /bin/bash /usr/bin/python2 python(abi) = 2.7
+2017-06-23 20:10:40,876 INFO:dlrn-build:DEBUG: Processing files: python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:10:40,876 INFO:dlrn-build:DEBUG: Executing(%doc): /bin/sh -e /var/tmp/rpm-tmp.ncSRGD
+2017-06-23 20:10:40,877 INFO:dlrn-build:DEBUG: + umask 022
+2017-06-23 20:10:40,877 INFO:dlrn-build:DEBUG: + cd /builddir/build/BUILD
+2017-06-23 20:10:40,877 INFO:dlrn-build:DEBUG: + cd python-openstackclient-3.11.1.dev50
+2017-06-23 20:10:40,877 INFO:dlrn-build:DEBUG: + DOCDIR=/builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/doc/python-openstackclient-doc-3.11.1
+2017-06-23 20:10:40,877 INFO:dlrn-build:DEBUG: + export DOCDIR
+2017-06-23 20:10:40,877 INFO:dlrn-build:DEBUG: + /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/doc/python-openstackclient-doc-3.11.1
+2017-06-23 20:10:40,878 INFO:dlrn-build:DEBUG: + cp -pr html /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/doc/python-openstackclient-doc-3.11.1
+2017-06-23 20:10:40,890 INFO:dlrn-build:DEBUG: + exit 0
+2017-06-23 20:10:40,891 INFO:dlrn-build:DEBUG: Executing(%license): /bin/sh -e /var/tmp/rpm-tmp.ZiHVTd
+2017-06-23 20:10:40,893 INFO:dlrn-build:DEBUG: + umask 022
+2017-06-23 20:10:40,893 INFO:dlrn-build:DEBUG: + cd /builddir/build/BUILD
+2017-06-23 20:10:40,893 INFO:dlrn-build:DEBUG: + cd python-openstackclient-3.11.1.dev50
+2017-06-23 20:10:40,893 INFO:dlrn-build:DEBUG: + LICENSEDIR=/builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/licenses/python-openstackclient-doc-3.11.1
+2017-06-23 20:10:40,893 INFO:dlrn-build:DEBUG: + export LICENSEDIR
+2017-06-23 20:10:40,893 INFO:dlrn-build:DEBUG: + /usr/bin/mkdir -p /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/licenses/python-openstackclient-doc-3.11.1
+2017-06-23 20:10:40,893 INFO:dlrn-build:DEBUG: + cp -pr LICENSE /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/licenses/python-openstackclient-doc-3.11.1
+2017-06-23 20:10:40,895 INFO:dlrn-build:DEBUG: + exit 0
+2017-06-23 20:10:42,295 INFO:dlrn-build:DEBUG: Provides: python-openstackclient-doc = 3.11.1-0.20170623200805.5c40202.el7.centos
+2017-06-23 20:10:42,295 INFO:dlrn-build:DEBUG: Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+2017-06-23 20:10:42,295 INFO:dlrn-build:DEBUG: Checking for unpackaged file(s): /usr/lib/rpm/check-files /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64
+2017-06-23 20:10:42,749 INFO:dlrn-build:DEBUG: Wrote: /builddir/build/RPMS/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm
+2017-06-23 20:10:42,881 INFO:dlrn-build:DEBUG: Wrote: /builddir/build/RPMS/python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm
+2017-06-23 20:10:42,881 INFO:dlrn-build:DEBUG: Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.Cg6Gzd
+2017-06-23 20:10:42,883 INFO:dlrn-build:DEBUG: + umask 022
+2017-06-23 20:10:42,883 INFO:dlrn-build:DEBUG: + cd /builddir/build/BUILD
+2017-06-23 20:10:42,883 INFO:dlrn-build:DEBUG: + cd python-openstackclient-3.11.1.dev50
+2017-06-23 20:10:42,883 INFO:dlrn-build:DEBUG: + /usr/bin/rm -rf /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64
+2017-06-23 20:10:42,901 INFO:dlrn-build:DEBUG: + exit 0
+2017-06-23 20:10:42,924 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:10:42,924 INFO:dlrn-build:DEBUG: Copying packages to result dir
+2017-06-23 20:10:43,030 INFO:dlrn-build:Finish: rpmbuild python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.src.rpm
+2017-06-23 20:10:43,032 INFO:dlrn-build:Finish: build phase for python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.src.rpm
+2017-06-23 20:10:43,032 INFO:dlrn-build:INFO: Done(/tmp/tmp.bkgxqyIglA/SRPMS/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.src.rpm) Config(dlrn-1) 2 minutes 37 seconds
+2017-06-23 20:10:43,032 INFO:dlrn-build:INFO: Results and/or logs in: /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e
+2017-06-23 20:10:43,032 INFO:dlrn-build:INFO: Cleaning up build root ('cleanup_on_success=True')
+2017-06-23 20:10:43,034 INFO:dlrn-build:Start: clean chroot
+2017-06-23 20:10:43,036 INFO:dlrn-build:DEBUG: kill orphans
+2017-06-23 20:10:43,041 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:43,041 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:10:43,044 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:10:43,047 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:43,047 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '/var/lib/mock/dlrn-centos7-x86_64-1/root/var/cache/yum/'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:10:43,050 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:10:43,053 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:43,053 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:10:43,055 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:10:43,059 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:43,059 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:10:43,061 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:10:43,064 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:43,065 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:10:43,068 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:10:43,070 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:43,070 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:10:43,072 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:10:43,076 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:43,076 INFO:dlrn-build:DEBUG: Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:10:43,080 INFO:dlrn-build:DEBUG: Child return code was: 1
+2017-06-23 20:10:43,080 INFO:dlrn-build:DEBUG: Please ignore the error above above about btrfs.
+2017-06-23 20:10:48,672 INFO:dlrn-build:Finish: clean chroot
+2017-06-23 20:10:48,675 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1
+2017-06-23 20:10:48,675 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1
+2017-06-23 20:10:48,676 INFO:dlrn-build:Start: chroot init
+2017-06-23 20:10:48,678 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1
+2017-06-23 20:10:48,680 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root
+2017-06-23 20:10:48,682 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root
+2017-06-23 20:10:48,687 INFO:dlrn-build:DEBUG: ensuring that dir exists: /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e
+2017-06-23 20:10:48,689 INFO:dlrn-build:INFO: calling preinit hooks
+2017-06-23 20:10:48,692 INFO:dlrn-build:INFO: enabled root cache
+2017-06-23 20:10:48,694 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/cache/mock/dlrn-centos7-x86_64-1/root_cache/
+2017-06-23 20:10:48,694 INFO:dlrn-build:Start: unpacking root cache
+2017-06-23 20:10:48,700 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root
+2017-06-23 20:10:48,703 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:10:48,703 INFO:dlrn-build:DEBUG: Executing command: ['tar', '--use-compress-program', 'pigz', '-xf', '/var/cache/mock/dlrn-centos7-x86_64-1/root_cache/cache.tar.gz', '-C', '/var/lib/mock/dlrn-centos7-x86_64-1/root'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:07,864 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:07,867 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/./proc
+2017-06-23 20:11:07,867 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/./proc
+2017-06-23 20:11:07,869 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/./sys
+2017-06-23 20:11:07,874 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/./sys
+2017-06-23 20:11:07,874 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/./dev
+2017-06-23 20:11:07,874 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/./dev
+2017-06-23 20:11:07,877 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/./tmp/ccache
+2017-06-23 20:11:07,877 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/./tmp/ccache
+2017-06-23 20:11:07,879 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/./var/cache/yum
+2017-06-23 20:11:07,884 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/./var/cache/yum
+2017-06-23 20:11:07,884 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/./var/cache/dnf
+2017-06-23 20:11:07,884 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/./var/cache/dnf
+2017-06-23 20:11:07,885 INFO:dlrn-build:Finish: unpacking root cache
+2017-06-23 20:11:07,888 INFO:dlrn-build:INFO: enabled yum cache
+2017-06-23 20:11:07,888 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/cache/yum/
+2017-06-23 20:11:07,891 INFO:dlrn-build:Start: cleaning yum metadata
+2017-06-23 20:11:07,894 INFO:dlrn-build:Finish: cleaning yum metadata
+2017-06-23 20:11:07,897 INFO:dlrn-build:DEBUG: create skeleton dirs
+2017-06-23 20:11:07,899 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/lib/rpm
+2017-06-23 20:11:07,901 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/lib/yum
+2017-06-23 20:11:07,906 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/lib/dbus
+2017-06-23 20:11:07,906 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/log
+2017-06-23 20:11:07,913 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/cache/yum
+2017-06-23 20:11:07,913 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/rpm
+2017-06-23 20:11:07,913 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/tmp
+2017-06-23 20:11:07,913 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/tmp/ccache
+2017-06-23 20:11:07,918 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/tmp
+2017-06-23 20:11:07,918 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/yum.repos.d
+2017-06-23 20:11:07,920 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/yum
+2017-06-23 20:11:07,926 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/proc
+2017-06-23 20:11:07,926 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/sys
+2017-06-23 20:11:07,927 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/dev/pts
+2017-06-23 20:11:07,929 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/dev/pts
+2017-06-23 20:11:07,932 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/dev/shm
+2017-06-23 20:11:07,932 INFO:dlrn-build:DEBUG: creating dir: /var/lib/mock/dlrn-centos7-x86_64-1/root/dev/shm
+2017-06-23 20:11:07,932 INFO:dlrn-build:DEBUG: kernel version == 3.10.0-514.21.2.el7.x86_64
+2017-06-23 20:11:07,953 INFO:dlrn-build:DEBUG: touching file: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/fstab
+2017-06-23 20:11:07,954 INFO:dlrn-build:DEBUG: touching file: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/yum.conf
+2017-06-23 20:11:07,958 INFO:dlrn-build:DEBUG: touching file: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/dnf.conf
+2017-06-23 20:11:07,958 INFO:dlrn-build:DEBUG: touching file: /var/lib/mock/dlrn-centos7-x86_64-1/root/var/log/yum.log
+2017-06-23 20:11:07,961 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:07,961 INFO:dlrn-build:DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'proc', 'proc', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:07,965 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:07,967 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:07,968 INFO:dlrn-build:DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'sysfs', 'sysfs', '/var/lib/mock/dlrn-centos7-x86_64-1/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:07,970 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:07,973 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:07,974 INFO:dlrn-build:DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'tmpfs', 'tmpfs', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:07,976 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:07,979 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:07,979 INFO:dlrn-build:DEBUG: Executing command: ['/bin/mount', '-n', '-t', 'devpts', '-o', 'gid=5,mode=0620,ptmxmode=0666,newinstance', 'devpts', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:07,982 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:07,985 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:07,985 INFO:dlrn-build:DEBUG: Executing command: ['/bin/mount', '-n', '--bind', '/var/cache/mock/dlrn-centos7-x86_64-1/yum_cache/', '/var/lib/mock/dlrn-centos7-x86_64-1/root/var/cache/yum/'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:07,987 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:07,991 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:07,991 INFO:dlrn-build:DEBUG: Executing command: ['/bin/mount', '-n', '--bind', '/tmp/mock-selinux-plugin.YUUOsG', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:07,993 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:07,994 INFO:dlrn-build:DEBUG: rootdir = /var/lib/mock/dlrn-centos7-x86_64-1/root
+2017-06-23 20:11:07,994 INFO:dlrn-build:DEBUG: resultdir = /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e
+2017-06-23 20:11:07,996 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/pki/mock
+2017-06-23 20:11:09,492 INFO:dlrn-build:DEBUG: ensuring that dir exists: /var/lib/mock/dlrn-centos7-x86_64-1/root/etc/yum/pluginconf.d
+2017-06-23 20:11:09,492 INFO:dlrn-build:DEBUG: configure yum
+2017-06-23 20:11:09,493 INFO:dlrn-build:DEBUG: configure yum priorities
+2017-06-23 20:11:09,495 INFO:dlrn-build:DEBUG: configure yum rhnplugin
+2017-06-23 20:11:09,497 INFO:dlrn-build:DEBUG: touching file: /var/lib/mock/dlrn-centos7-x86_64-1/root/.initialized
+2017-06-23 20:11:09,505 INFO:dlrn-build:Finish: chroot init
+2017-06-23 20:11:09,507 INFO:dlrn-build:INFO: Installing built packages
+2017-06-23 20:11:09,509 INFO:dlrn-build:INFO: installing package(s): /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm
+2017-06-23 20:11:09,516 INFO:dlrn-build:DEBUG: ['/usr/bin/yum', '--installroot', '/var/lib/mock/dlrn-centos7-x86_64-1/root/', '--releasever', '7', 'install', '/home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm', '/home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm']
+2017-06-23 20:11:09,520 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:09,520 INFO:dlrn-build:DEBUG: Executing command: ['/usr/bin/yum', '--installroot', '/var/lib/mock/dlrn-centos7-x86_64-1/root/', '--releasever', '7', 'install', '/home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm', '/home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm', '--setopt=tsflags=nocontexts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/bash', 'LC_MESSAGES': 'C', 'PROMPT_COMMAND': 'printf "\x1b]0;<mock-chroot>\x07<mock-chroot>"', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin', 'HOME': '/builddir', 'HOSTNAME': 'mock'} and shell False
+2017-06-23 20:11:09,617 INFO:dlrn-build:DEBUG: Loaded plugins: fastestmirror, priorities
+2017-06-23 20:11:09,625 INFO:dlrn-build:DEBUG: Examining /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:09,626 INFO:dlrn-build:DEBUG: Marking /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm to be installed
+2017-06-23 20:11:09,627 INFO:dlrn-build:DEBUG: Examining /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm: python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:09,627 INFO:dlrn-build:DEBUG: Marking /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm to be installed
+2017-06-23 20:11:09,627 INFO:dlrn-build:DEBUG: Resolving Dependencies
+2017-06-23 20:11:09,628 INFO:dlrn-build:DEBUG: --> Running transaction check
+2017-06-23 20:11:09,628 INFO:dlrn-build:DEBUG: ---> Package python-openstackclient.noarch 0:3.11.1-0.20170623200805.5c40202.el7.centos will be installed
+2017-06-23 20:11:09,635 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-cinderclient >= 1.6.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:12,782 INFO:dlrn-build:DEBUG: Loading mirror speeds from cached hostfile
+2017-06-23 20:11:12,782 INFO:dlrn-build:DEBUG:  * base: centos.sonn.com
+2017-06-23 20:11:12,782 INFO:dlrn-build:DEBUG:  * extras: mirror.scalabledns.com
+2017-06-23 20:11:12,782 INFO:dlrn-build:DEBUG:  * updates: repos.lax.quadranet.com
+2017-06-23 20:11:13,183 INFO:dlrn-build:DEBUG: 22 packages excluded due to repository priority protections
+2017-06-23 20:11:13,311 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-glanceclient >= 2.5.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,313 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-keystoneauth1 >= 2.18.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,313 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-keystoneclient >= 1:3.8.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,314 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-novaclient >= 1:6.0.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,314 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-openstacksdk >= 0.9.13 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,315 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-osc-lib >= 1.2.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,316 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-oslo-i18n >= 2.1.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,317 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-oslo-utils >= 3.18.0 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,318 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-requests >= 2.5.2 for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,321 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-cliff for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,321 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-neutronclient for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,322 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-os-client-config for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,323 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-oslo-config for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,324 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-oslo-serialization for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,324 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-stevedore for package: python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,326 INFO:dlrn-build:DEBUG: ---> Package python-openstackclient-doc.noarch 0:3.11.1-0.20170623200805.5c40202.el7.centos will be installed
+2017-06-23 20:11:13,327 INFO:dlrn-build:DEBUG: --> Running transaction check
+2017-06-23 20:11:13,327 INFO:dlrn-build:DEBUG: ---> Package python-cliff.noarch 0:2.7.0-0.20170511182646.c548b7b.el7.centos will be installed
+2017-06-23 20:11:13,331 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-cmd2 >= 0.6.7 for package: python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.noarch
+2017-06-23 20:11:13,331 INFO:dlrn-build:DEBUG: --> Processing Dependency: PyYAML for package: python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.noarch
+2017-06-23 20:11:13,332 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-prettytable for package: python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.noarch
+2017-06-23 20:11:13,334 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-unicodecsv for package: python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.noarch
+2017-06-23 20:11:13,334 INFO:dlrn-build:DEBUG: ---> Package python2-cinderclient.noarch 0:2.2.0-0.20170608235749.e374362.el7.centos will be installed
+2017-06-23 20:11:13,338 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-simplejson for package: python2-cinderclient-2.2.0-0.20170608235749.e374362.el7.centos.noarch
+2017-06-23 20:11:13,338 INFO:dlrn-build:DEBUG: ---> Package python2-glanceclient.noarch 1:2.7.0-0.20170622095732.d67b33b.el7.centos will be installed
+2017-06-23 20:11:13,341 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-warlock for package: 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el7.centos.noarch
+2017-06-23 20:11:13,342 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-wrapt for package: 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el7.centos.noarch
+2017-06-23 20:11:13,343 INFO:dlrn-build:DEBUG: ---> Package python2-keystoneauth1.noarch 0:2.21.0-0.20170613144756.0be1403.el7.centos will be installed
+2017-06-23 20:11:13,344 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-iso8601 >= 0.1.11 for package: python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el7.centos.noarch
+2017-06-23 20:11:13,345 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-positional >= 1.0.1 for package: python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el7.centos.noarch
+2017-06-23 20:11:13,347 INFO:dlrn-build:DEBUG: ---> Package python2-keystoneclient.noarch 1:3.11.0-0.20170613145143.daa99ed.el7.centos will be installed
+2017-06-23 20:11:13,351 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-debtcollector >= 1.2.0 for package: 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed.el7.centos.noarch
+2017-06-23 20:11:13,352 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-keyring >= 5.5.1 for package: 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed.el7.centos.noarch
+2017-06-23 20:11:13,353 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-netaddr for package: 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed.el7.centos.noarch
+2017-06-23 20:11:13,354 INFO:dlrn-build:DEBUG: ---> Package python2-neutronclient.noarch 0:6.3.0-0.20170601203754.ba535c6.el7.centos will be installed
+2017-06-23 20:11:13,357 INFO:dlrn-build:DEBUG: ---> Package python2-novaclient.noarch 1:9.0.1-0.20170621200422.ddb386b.el7.centos will be installed
+2017-06-23 20:11:13,359 INFO:dlrn-build:DEBUG: ---> Package python2-openstacksdk.noarch 0:0.9.17-0.20170621195806.7946243.el7.centos will be installed
+2017-06-23 20:11:13,361 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-jsonpatch >= 1.1 for package: python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7.centos.noarch
+2017-06-23 20:11:13,363 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-deprecation for package: python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7.centos.noarch
+2017-06-23 20:11:13,364 INFO:dlrn-build:DEBUG: ---> Package python2-os-client-config.noarch 0:1.27.0-0.20170428101737.f6804f6.el7.centos will be installed
+2017-06-23 20:11:13,365 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-appdirs >= 1.3.0 for package: python2-os-client-config-1.27.0-0.20170428101737.f6804f6.el7.centos.noarch
+2017-06-23 20:11:13,366 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-requestsexceptions >= 1.1.1 for package: python2-os-client-config-1.27.0-0.20170428101737.f6804f6.el7.centos.noarch
+2017-06-23 20:11:13,367 INFO:dlrn-build:DEBUG: ---> Package python2-osc-lib.noarch 0:1.6.0-0.20170505192114.361789f.el7.centos will be installed
+2017-06-23 20:11:13,369 INFO:dlrn-build:DEBUG: ---> Package python2-oslo-config.noarch 2:4.5.0-0.20170615200602.6e420e9.el7.centos will be installed
+2017-06-23 20:11:13,371 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-rfc3986 >= 0.2.2 for package: 2:python2-oslo-config-4.5.0-0.20170615200602.6e420e9.el7.centos.noarch
+2017-06-23 20:11:13,372 INFO:dlrn-build:DEBUG: ---> Package python2-oslo-i18n.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos will be installed
+2017-06-23 20:11:13,373 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-oslo-i18n-lang = 3.15.3-0.20170529140146.b9eed49.el7.centos for package: python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.centos.noarch
+2017-06-23 20:11:13,374 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-fixtures for package: python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.centos.noarch
+2017-06-23 20:11:13,375 INFO:dlrn-build:DEBUG: ---> Package python2-oslo-serialization.noarch 0:2.18.0-0.20170330071128.e6764d4.el7.centos will be installed
+2017-06-23 20:11:13,376 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-ipaddress for package: python2-oslo-serialization-2.18.0-0.20170330071128.e6764d4.el7.centos.noarch
+2017-06-23 20:11:13,377 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-msgpack for package: python2-oslo-serialization-2.18.0-0.20170330071128.e6764d4.el7.centos.noarch
+2017-06-23 20:11:13,378 INFO:dlrn-build:DEBUG: ---> Package python2-oslo-utils.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos will be installed
+2017-06-23 20:11:13,381 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-oslo-utils-lang = 3.26.0-0.20170609001847.15e0140.el7.centos for package: python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.centos.noarch
+2017-06-23 20:11:13,382 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-netifaces >= 0.10.4 for package: python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.centos.noarch
+2017-06-23 20:11:13,384 INFO:dlrn-build:DEBUG: --> Processing Dependency: pyparsing for package: python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.centos.noarch
+2017-06-23 20:11:13,385 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-funcsigs for package: python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.centos.noarch
+2017-06-23 20:11:13,387 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-monotonic for package: python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.centos.noarch
+2017-06-23 20:11:13,387 INFO:dlrn-build:DEBUG: ---> Package python2-requests.noarch 0:2.11.1-1.el7 will be installed
+2017-06-23 20:11:13,389 INFO:dlrn-build:DEBUG: --> Processing Dependency: python2-urllib3 = 1.16 for package: python2-requests-2.11.1-1.el7.noarch
+2017-06-23 20:11:13,390 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-chardet for package: python2-requests-2.11.1-1.el7.noarch
+2017-06-23 20:11:13,391 INFO:dlrn-build:DEBUG: ---> Package python2-stevedore.noarch 0:1.23.0-0.20170609002503.91c2e41.el7.centos will be installed
+2017-06-23 20:11:13,391 INFO:dlrn-build:DEBUG: --> Running transaction check
+2017-06-23 20:11:13,391 INFO:dlrn-build:DEBUG: ---> Package PyYAML.x86_64 0:3.10-11.el7 will be installed
+2017-06-23 20:11:13,397 INFO:dlrn-build:DEBUG: ---> Package pyparsing.noarch 0:2.0.7-1.el7 will be installed
+2017-06-23 20:11:13,397 INFO:dlrn-build:DEBUG: ---> Package python-chardet.noarch 0:2.2.1-1.el7_1 will be installed
+2017-06-23 20:11:13,399 INFO:dlrn-build:DEBUG: ---> Package python-cmd2.noarch 0:0.6.8-8.el7 will be installed
+2017-06-23 20:11:13,400 INFO:dlrn-build:DEBUG: --> Processing Dependency: /usr/bin/which for package: python-cmd2-0.6.8-8.el7.noarch
+2017-06-23 20:11:13,400 INFO:dlrn-build:DEBUG: ---> Package python-fixtures.noarch 0:3.0.0-2.el7 will be installed
+2017-06-23 20:11:13,401 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-testtools >= 0.9.22 for package: python-fixtures-3.0.0-2.el7.noarch
+2017-06-23 20:11:13,402 INFO:dlrn-build:DEBUG: ---> Package python-ipaddress.noarch 0:1.0.16-3.el7 will be installed
+2017-06-23 20:11:13,402 INFO:dlrn-build:DEBUG: ---> Package python-keyring.noarch 0:5.7.1-1.el7 will be installed
+2017-06-23 20:11:13,403 INFO:dlrn-build:DEBUG: ---> Package python-monotonic.noarch 0:0.6-1.el7 will be installed
+2017-06-23 20:11:13,403 INFO:dlrn-build:DEBUG: ---> Package python-msgpack.x86_64 0:0.4.6-3.el7 will be installed
+2017-06-23 20:11:13,406 INFO:dlrn-build:DEBUG: ---> Package python-netaddr.noarch 0:0.7.18-1.el7 will be installed
+2017-06-23 20:11:13,408 INFO:dlrn-build:DEBUG: ---> Package python-netifaces.x86_64 0:0.10.4-3.el7 will be installed
+2017-06-23 20:11:13,408 INFO:dlrn-build:DEBUG: ---> Package python-oslo-i18n-lang.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos will be installed
+2017-06-23 20:11:13,408 INFO:dlrn-build:DEBUG: ---> Package python-oslo-utils-lang.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos will be installed
+2017-06-23 20:11:13,409 INFO:dlrn-build:DEBUG: ---> Package python-prettytable.noarch 0:0.7.2-2.el7.centos will be installed
+2017-06-23 20:11:13,409 INFO:dlrn-build:DEBUG: ---> Package python-simplejson.x86_64 0:3.5.3-5.el7 will be installed
+2017-06-23 20:11:13,410 INFO:dlrn-build:DEBUG: ---> Package python-unicodecsv.noarch 0:0.14.1-1.el7 will be installed
+2017-06-23 20:11:13,410 INFO:dlrn-build:DEBUG: ---> Package python-warlock.noarch 0:1.0.1-1.el7 will be installed
+2017-06-23 20:11:13,411 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-jsonschema for package: python-warlock-1.0.1-1.el7.noarch
+2017-06-23 20:11:13,412 INFO:dlrn-build:DEBUG: ---> Package python-wrapt.x86_64 0:1.10.8-2.el7 will be installed
+2017-06-23 20:11:13,412 INFO:dlrn-build:DEBUG: ---> Package python2-appdirs.noarch 0:1.4.0-4.el7 will be installed
+2017-06-23 20:11:13,412 INFO:dlrn-build:DEBUG: ---> Package python2-debtcollector.noarch 0:1.15.0-0.20170615195554.d2f3f45.el7.centos will be installed
+2017-06-23 20:11:13,413 INFO:dlrn-build:DEBUG: ---> Package python2-deprecation.noarch 0:1.0-3.el7 will be installed
+2017-06-23 20:11:13,413 INFO:dlrn-build:DEBUG: ---> Package python2-funcsigs.noarch 0:1.0.2-1.el7 will be installed
+2017-06-23 20:11:13,414 INFO:dlrn-build:DEBUG: ---> Package python2-iso8601.noarch 0:0.1.11-1.el7 will be installed
+2017-06-23 20:11:13,414 INFO:dlrn-build:DEBUG: ---> Package python2-jsonpatch.noarch 0:1.14-1.el7 will be installed
+2017-06-23 20:11:13,415 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-jsonpointer for package: python2-jsonpatch-1.14-1.el7.noarch
+2017-06-23 20:11:13,417 INFO:dlrn-build:DEBUG: ---> Package python2-positional.noarch 0:1.1.1-2.el7 will be installed
+2017-06-23 20:11:13,417 INFO:dlrn-build:DEBUG: ---> Package python2-requestsexceptions.noarch 0:1.2.0-0.20170303113339.3eb026b.el7.centos will be installed
+2017-06-23 20:11:13,418 INFO:dlrn-build:DEBUG: ---> Package python2-rfc3986.noarch 0:0.3.1-1.el7 will be installed
+2017-06-23 20:11:13,418 INFO:dlrn-build:DEBUG: ---> Package python2-urllib3.noarch 0:1.16-1.el7 will be installed
+2017-06-23 20:11:13,419 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-pysocks for package: python2-urllib3-1.16-1.el7.noarch
+2017-06-23 20:11:13,420 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-backports-ssl_match_hostname for package: python2-urllib3-1.16-1.el7.noarch
+2017-06-23 20:11:13,421 INFO:dlrn-build:DEBUG: --> Running transaction check
+2017-06-23 20:11:13,421 INFO:dlrn-build:DEBUG: ---> Package python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7 will be installed
+2017-06-23 20:11:13,421 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-backports for package: python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch
+2017-06-23 20:11:13,422 INFO:dlrn-build:DEBUG: ---> Package python-jsonschema.noarch 0:2.3.0-1.el7 will be installed
+2017-06-23 20:11:13,422 INFO:dlrn-build:DEBUG: ---> Package python-testtools.noarch 0:1.8.0-2.el7 will be installed
+2017-06-23 20:11:13,423 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-unittest2 >= 0.8.0 for package: python-testtools-1.8.0-2.el7.noarch
+2017-06-23 20:11:13,424 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-mimeparse for package: python-testtools-1.8.0-2.el7.noarch
+2017-06-23 20:11:13,425 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-extras for package: python-testtools-1.8.0-2.el7.noarch
+2017-06-23 20:11:13,426 INFO:dlrn-build:DEBUG: ---> Package python2-jsonpointer.noarch 0:1.10-4.el7 will be installed
+2017-06-23 20:11:13,426 INFO:dlrn-build:DEBUG: ---> Package python2-pysocks.noarch 0:1.5.6-3.el7 will be installed
+2017-06-23 20:11:13,426 INFO:dlrn-build:DEBUG: ---> Package which.x86_64 0:2.20-7.el7 will be installed
+2017-06-23 20:11:13,429 INFO:dlrn-build:DEBUG: --> Running transaction check
+2017-06-23 20:11:13,429 INFO:dlrn-build:DEBUG: ---> Package python-backports.x86_64 0:1.0-8.el7 will be installed
+2017-06-23 20:11:13,429 INFO:dlrn-build:DEBUG: ---> Package python-extras.noarch 0:0.0.3-2.el7 will be installed
+2017-06-23 20:11:13,429 INFO:dlrn-build:DEBUG: ---> Package python-mimeparse.noarch 0:0.1.4-1.el7 will be installed
+2017-06-23 20:11:13,429 INFO:dlrn-build:DEBUG: ---> Package python-unittest2.noarch 0:1.0.1-1.el7 will be installed
+2017-06-23 20:11:13,431 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-traceback2 for package: python-unittest2-1.0.1-1.el7.noarch
+2017-06-23 20:11:13,431 INFO:dlrn-build:DEBUG: --> Running transaction check
+2017-06-23 20:11:13,431 INFO:dlrn-build:DEBUG: ---> Package python-traceback2.noarch 0:1.4.0-2.el7 will be installed
+2017-06-23 20:11:13,432 INFO:dlrn-build:DEBUG: --> Processing Dependency: python-linecache2 for package: python-traceback2-1.4.0-2.el7.noarch
+2017-06-23 20:11:13,432 INFO:dlrn-build:DEBUG: --> Running transaction check
+2017-06-23 20:11:13,432 INFO:dlrn-build:DEBUG: ---> Package python-linecache2.noarch 0:1.0.0-1.el7 will be installed
+2017-06-23 20:11:13,559 INFO:dlrn-build:DEBUG: --> Finished Dependency Resolution
+2017-06-23 20:11:13,617 INFO:dlrn-build:DEBUG: Dependencies Resolved
+2017-06-23 20:11:13,656 INFO:dlrn-build:DEBUG: ================================================================================
+2017-06-23 20:11:13,656 INFO:dlrn-build:DEBUG:  Package                     Arch   Version        Repository              Size
+2017-06-23 20:11:13,656 INFO:dlrn-build:DEBUG: ================================================================================
+2017-06-23 20:11:13,656 INFO:dlrn-build:DEBUG: Installing:
+2017-06-23 20:11:13,656 INFO:dlrn-build:DEBUG:  python-openstackclient      noarch 3.11.1-0.20170623200805.5c40202.el7.centos
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:                                                    /python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:                                                                           6.6 M
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-openstackclient-doc  noarch 3.11.1-0.20170623200805.5c40202.el7.centos
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:                                                    /python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:                                                                           2.6 M
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG: Installing for dependencies:
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  PyYAML                      x86_64 3.10-11.el7    base                   153 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  pyparsing                   noarch 2.0.7-1.el7    delorean-pike-testing  102 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-backports            x86_64 1.0-8.el7      base                   5.8 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-backports-ssl_match_hostname
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:                              noarch 3.4.0.2-4.el7  base                    12 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-chardet              noarch 2.2.1-1.el7_1  base                   227 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-cliff                noarch 2.7.0-0.20170511182646.c548b7b.el7.centos
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:                                                    delorean                76 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-cmd2                 noarch 0.6.8-8.el7    delorean-pike-testing   40 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-extras               noarch 0.0.3-2.el7    delorean-pike-testing   12 k
+2017-06-23 20:11:13,661 INFO:dlrn-build:DEBUG:  python-fixtures             noarch 3.0.0-2.el7    delorean-pike-testing   87 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-ipaddress            noarch 1.0.16-3.el7   delorean-pike-testing   33 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-jsonschema           noarch 2.3.0-1.el7    delorean-pike-testing   59 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-keyring              noarch 5.7.1-1.el7    delorean-pike-testing  116 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-linecache2           noarch 1.0.0-1.el7    delorean-pike-testing   11 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-mimeparse            noarch 0.1.4-1.el7    delorean-pike-testing  8.1 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-monotonic            noarch 0.6-1.el7      delorean-pike-testing  8.3 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-msgpack              x86_64 0.4.6-3.el7    delorean-pike-testing   72 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-netaddr              noarch 0.7.18-1.el7   delorean-pike-testing  1.3 M
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-netifaces            x86_64 0.10.4-3.el7   base                    17 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-oslo-i18n-lang       noarch 3.15.3-0.20170529140146.b9eed49.el7.centos
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:                                                    delorean               8.9 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-oslo-utils-lang      noarch 3.26.0-0.20170609001847.15e0140.el7.centos
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:                                                    delorean               7.8 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-prettytable          noarch 0.7.2-2.el7.centos
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:                                                    extras                  37 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-simplejson           x86_64 3.5.3-5.el7    delorean-pike-testing  185 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-testtools            noarch 1.8.0-2.el7    delorean-pike-testing  301 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-traceback2           noarch 1.4.0-2.el7    delorean-pike-testing   17 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-unicodecsv           noarch 0.14.1-1.el7   delorean-pike-testing   25 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-unittest2            noarch 1.0.1-1.el7    delorean-pike-testing  170 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-warlock              noarch 1.0.1-1.el7    delorean-pike-testing   13 k
+2017-06-23 20:11:13,662 INFO:dlrn-build:DEBUG:  python-wrapt                x86_64 1.10.8-2.el7   delorean-pike-testing   45 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-appdirs             noarch 1.4.0-4.el7    delorean-pike-testing   16 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-cinderclient        noarch 2.2.0-0.20170608235749.e374362.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean               231 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-debtcollector       noarch 1.15.0-0.20170615195554.d2f3f45.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean                27 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-deprecation         noarch 1.0-3.el7      delorean-pike-testing   14 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-funcsigs            noarch 1.0.2-1.el7    delorean-pike-testing   23 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-glanceclient        noarch 1:2.7.0-0.20170622095732.d67b33b.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean               134 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-iso8601             noarch 0.1.11-1.el7   delorean-pike-testing   18 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-jsonpatch           noarch 1.14-1.el7     delorean-pike-testing   21 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-jsonpointer         noarch 1.10-4.el7     delorean-pike-testing   13 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-keystoneauth1       noarch 2.21.0-0.20170613144756.0be1403.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean               331 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-keystoneclient      noarch 1:3.11.0-0.20170613145143.daa99ed.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean               232 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-neutronclient       noarch 6.3.0-0.20170601203754.ba535c6.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean               251 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-novaclient          noarch 1:9.0.1-0.20170621200422.ddb386b.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean               207 k
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:  python2-openstacksdk        noarch 0.9.17-0.20170621195806.7946243.el7.centos
+2017-06-23 20:11:13,663 INFO:dlrn-build:DEBUG:                                                    delorean               334 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-os-client-config    noarch 1.27.0-0.20170428101737.f6804f6.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean                83 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-osc-lib             noarch 1.6.0-0.20170505192114.361789f.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean                65 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-oslo-config         noarch 2:4.5.0-0.20170615200602.6e420e9.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean               192 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-oslo-i18n           noarch 3.15.3-0.20170529140146.b9eed49.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean                51 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-oslo-serialization  noarch 2.18.0-0.20170330071128.e6764d4.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean                27 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-oslo-utils          noarch 3.26.0-0.20170609001847.15e0140.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean                69 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-positional          noarch 1.1.1-2.el7    delorean-pike-testing   16 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-pysocks             noarch 1.5.6-3.el7    delorean-pike-testing   19 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-requests            noarch 2.11.1-1.el7   delorean-pike-testing  105 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-requestsexceptions  noarch 1.2.0-0.20170303113339.3eb026b.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean                10 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-rfc3986             noarch 0.3.1-1.el7    delorean-pike-testing   28 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-stevedore           noarch 1.23.0-0.20170609002503.91c2e41.el7.centos
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:                                                    delorean                55 k
+2017-06-23 20:11:13,664 INFO:dlrn-build:DEBUG:  python2-urllib3             noarch 1.16-1.el7     delorean-pike-testing  126 k
+2017-06-23 20:11:13,665 INFO:dlrn-build:DEBUG:  which                       x86_64 2.20-7.el7     base                    41 k
+2017-06-23 20:11:13,665 INFO:dlrn-build:DEBUG: Transaction Summary
+2017-06-23 20:11:13,665 INFO:dlrn-build:DEBUG: ================================================================================
+2017-06-23 20:11:13,665 INFO:dlrn-build:DEBUG: Install  2 Packages (+56 Dependent packages)
+2017-06-23 20:11:13,665 INFO:dlrn-build:DEBUG: Total size: 15 M
+2017-06-23 20:11:13,665 INFO:dlrn-build:DEBUG: Installed size: 35 M
+2017-06-23 20:11:13,665 INFO:dlrn-build:DEBUG: Downloading packages:
+2017-06-23 20:11:15,158 INFO:dlrn-build:DEBUG: Running transaction check
+2017-06-23 20:11:15,174 INFO:dlrn-build:DEBUG: Running transaction test
+2017-06-23 20:11:15,209 INFO:dlrn-build:DEBUG: Transaction test succeeded
+2017-06-23 20:11:15,209 INFO:dlrn-build:DEBUG: Running transaction
+2017-06-23 20:11:16,133 INFO:dlrn-build:DEBUG:   Installing : python2-stevedore-1.23.0-0.20170609002503.91c2e41.el7.ce    1/58 
+2017-06-23 20:11:16,341 INFO:dlrn-build:DEBUG:   Installing : python2-iso8601-0.1.11-1.el7.noarch                         2/58 
+2017-06-23 20:11:16,567 INFO:dlrn-build:DEBUG:   Installing : python-prettytable-0.7.2-2.el7.centos.noarch                3/58 
+2017-06-23 20:11:20,956 INFO:dlrn-build:DEBUG:   Installing : python-simplejson-3.5.3-5.el7.x86_64                        4/58 
+2017-06-23 20:11:29,537 INFO:dlrn-build:DEBUG:   Installing : python-netaddr-0.7.18-1.el7.noarch                          5/58 
+2017-06-23 20:11:29,897 INFO:dlrn-build:DEBUG:   Installing : PyYAML-3.10-11.el7.x86_64                                   6/58 
+2017-06-23 20:11:30,199 INFO:dlrn-build:DEBUG:   Installing : python-wrapt-1.10.8-2.el7.x86_64                            7/58 
+2017-06-23 20:11:30,500 INFO:dlrn-build:DEBUG:   Installing : python2-positional-1.1.1-2.el7.noarch                       8/58 
+2017-06-23 20:11:30,778 INFO:dlrn-build:DEBUG:   Installing : python2-funcsigs-1.0.2-1.el7.noarch                         9/58 
+2017-06-23 20:11:30,997 INFO:dlrn-build:DEBUG:   Installing : python2-debtcollector-1.15.0-0.20170615195554.d2f3f45.el   10/58 
+2017-06-23 20:11:31,136 INFO:dlrn-build:DEBUG:   Installing : pyparsing-2.0.7-1.el7.noarch                               11/58 
+2017-06-23 20:11:32,407 INFO:dlrn-build:DEBUG:   Installing : python2-requestsexceptions-1.2.0-0.20170303113339.3eb026   12/58 
+2017-06-23 20:11:32,565 INFO:dlrn-build:DEBUG:   Installing : python-chardet-2.2.1-1.el7_1.noarch                        13/58 
+2017-06-23 20:11:32,788 INFO:dlrn-build:DEBUG:   Installing : python-linecache2-1.0.0-1.el7.noarch                       14/58 
+2017-06-23 20:11:32,967 INFO:dlrn-build:DEBUG:   Installing : python-traceback2-1.4.0-2.el7.noarch                       15/58 
+2017-06-23 20:11:33,122 INFO:dlrn-build:DEBUG:   Installing : python-unittest2-1.0.1-1.el7.noarch                        16/58 
+2017-06-23 20:11:33,282 INFO:dlrn-build:DEBUG:   Installing : python-msgpack-0.4.6-3.el7.x86_64                          17/58 
+2017-06-23 20:11:33,424 INFO:dlrn-build:DEBUG:   Installing : which-2.20-7.el7.x86_64                                    18/58 
+2017-06-23 20:11:33,547 INFO:dlrn-build:DEBUG:   Installing : python-cmd2-0.6.8-8.el7.noarch                             19/58 
+2017-06-23 20:11:33,661 INFO:dlrn-build:DEBUG:   Installing : python-monotonic-0.6-1.el7.noarch                          20/58 
+2017-06-23 20:11:33,807 INFO:dlrn-build:DEBUG:   Installing : python-oslo-utils-lang-3.26.0-0.20170609001847.15e0140.e   21/58 
+2017-06-23 20:11:33,983 INFO:dlrn-build:DEBUG:   Installing : python-unicodecsv-0.14.1-1.el7.noarch                      22/58 
+2017-06-23 20:11:34,124 INFO:dlrn-build:DEBUG:   Installing : python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.n   23/58 
+2017-06-23 20:11:34,283 INFO:dlrn-build:DEBUG:   Installing : python-netifaces-0.10.4-3.el7.x86_64                       24/58 
+2017-06-23 20:11:34,410 INFO:dlrn-build:DEBUG:   Installing : python-backports-1.0-8.el7.x86_64                          25/58 
+2017-06-23 20:11:34,553 INFO:dlrn-build:DEBUG:   Installing : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   26/58 
+2017-06-23 20:11:34,690 INFO:dlrn-build:DEBUG:   Installing : python2-deprecation-1.0-3.el7.noarch                       27/58 
+2017-06-23 20:11:34,852 INFO:dlrn-build:DEBUG:   Installing : python2-jsonpointer-1.10-4.el7.noarch                      28/58 
+2017-06-23 20:11:35,001 INFO:dlrn-build:DEBUG:   Installing : python2-jsonpatch-1.14-1.el7.noarch                        29/58 
+2017-06-23 20:11:35,177 INFO:dlrn-build:DEBUG:   Installing : python2-appdirs-1.4.0-4.el7.noarch                         30/58 
+2017-06-23 20:11:35,340 INFO:dlrn-build:DEBUG:   Installing : python2-rfc3986-0.3.1-1.el7.noarch                         31/58 
+2017-06-23 20:11:35,479 INFO:dlrn-build:DEBUG:   Installing : python-ipaddress-1.0.16-3.el7.noarch                       32/58 
+2017-06-23 20:11:35,661 INFO:dlrn-build:DEBUG:   Installing : python-mimeparse-0.1.4-1.el7.noarch                        33/58 
+2017-06-23 20:11:35,823 INFO:dlrn-build:DEBUG:   Installing : python-keyring-5.7.1-1.el7.noarch                          34/58 
+2017-06-23 20:11:35,951 INFO:dlrn-build:DEBUG:   Installing : python-oslo-i18n-lang-3.15.3-0.20170529140146.b9eed49.el   35/58 
+2017-06-23 20:11:36,141 INFO:dlrn-build:DEBUG:   Installing : python2-pysocks-1.5.6-3.el7.noarch                         36/58 
+2017-06-23 20:11:36,314 INFO:dlrn-build:DEBUG:   Installing : python2-urllib3-1.16-1.el7.noarch                          37/58 
+2017-06-23 20:11:36,623 INFO:dlrn-build:DEBUG:   Installing : python2-requests-2.11.1-1.el7.noarch                       38/58 
+2017-06-23 20:11:36,840 INFO:dlrn-build:DEBUG:   Installing : python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el   39/58 
+2017-06-23 20:11:37,019 INFO:dlrn-build:DEBUG:   Installing : python2-os-client-config-1.27.0-0.20170428101737.f6804f6   40/58 
+2017-06-23 20:11:37,260 INFO:dlrn-build:DEBUG:   Installing : python-extras-0.0.3-2.el7.noarch                           41/58 
+2017-06-23 20:11:37,474 INFO:dlrn-build:DEBUG:   Installing : python-testtools-1.8.0-2.el7.noarch                        42/58 
+2017-06-23 20:11:37,640 INFO:dlrn-build:DEBUG:   Installing : python-fixtures-3.0.0-2.el7.noarch                         43/58 
+2017-06-23 20:11:43,826 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.ce   44/58 
+2017-06-23 20:11:44,023 INFO:dlrn-build:DEBUG:   Installing : 2:python2-oslo-config-4.5.0-0.20170615200602.6e420e9.el7   45/58 
+2017-06-23 20:11:44,218 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.c   46/58 
+2017-06-23 20:11:44,484 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-serialization-2.18.0-0.20170330071128.e6764   47/58 
+2017-06-23 20:11:44,705 INFO:dlrn-build:DEBUG:   Installing : 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed   48/58 
+2017-06-23 20:11:45,008 INFO:dlrn-build:DEBUG:   Installing : python2-osc-lib-1.6.0-0.20170505192114.361789f.el7.cento   49/58 
+2017-06-23 20:11:45,295 INFO:dlrn-build:DEBUG:   Installing : python2-neutronclient-6.3.0-0.20170601203754.ba535c6.el7   50/58 
+2017-06-23 20:11:45,540 INFO:dlrn-build:DEBUG:   Installing : python2-cinderclient-2.2.0-0.20170608235749.e374362.el7.   51/58 
+2017-06-23 20:11:45,939 INFO:dlrn-build:DEBUG:   Installing : 1:python2-novaclient-9.0.1-0.20170621200422.ddb386b.el7.   52/58 
+2017-06-23 20:11:46,147 INFO:dlrn-build:DEBUG:   Installing : python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7   53/58 
+2017-06-23 20:11:46,321 INFO:dlrn-build:DEBUG:   Installing : python-jsonschema-2.3.0-1.el7.noarch                       54/58 
+2017-06-23 20:11:46,519 INFO:dlrn-build:DEBUG:   Installing : python-warlock-1.0.1-1.el7.noarch                          55/58 
+2017-06-23 20:11:47,175 INFO:dlrn-build:DEBUG:   Installing : 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el   56/58 
+2017-06-23 20:11:47,484 INFO:dlrn-build:DEBUG:   Installing : python-openstackclient-3.11.1-0.20170623200805.5c40202.e   57/58 
+2017-06-23 20:11:47,716 INFO:dlrn-build:DEBUG:   Installing : python-openstackclient-doc-3.11.1-0.20170623200805.5c402   58/58 
+2017-06-23 20:11:47,774 INFO:dlrn-build:DEBUG:   Verifying  : python-fixtures-3.0.0-2.el7.noarch                          1/58 
+2017-06-23 20:11:47,831 INFO:dlrn-build:DEBUG:   Verifying  : python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7    2/58 
+2017-06-23 20:11:47,888 INFO:dlrn-build:DEBUG:   Verifying  : python-openstackclient-3.11.1-0.20170623200805.5c40202.e    3/58 
+2017-06-23 20:11:47,945 INFO:dlrn-build:DEBUG:   Verifying  : python-unittest2-1.0.1-1.el7.noarch                         4/58 
+2017-06-23 20:11:47,999 INFO:dlrn-build:DEBUG:   Verifying  : python2-positional-1.1.1-2.el7.noarch                       5/58 
+2017-06-23 20:11:48,056 INFO:dlrn-build:DEBUG:   Verifying  : python-jsonschema-2.3.0-1.el7.noarch                        6/58 
+2017-06-23 20:11:48,685 INFO:dlrn-build:DEBUG:   Verifying  : python2-jsonpatch-1.14-1.el7.noarch                         7/58 
+2017-06-23 20:11:48,779 INFO:dlrn-build:DEBUG:   Verifying  : python-prettytable-0.7.2-2.el7.centos.noarch                8/58 
+2017-06-23 20:11:48,839 INFO:dlrn-build:DEBUG:   Verifying  : python-extras-0.0.3-2.el7.noarch                            9/58 
+2017-06-23 20:11:48,894 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.ce   10/58 
+2017-06-23 20:11:48,946 INFO:dlrn-build:DEBUG:   Verifying  : python-testtools-1.8.0-2.el7.noarch                        11/58 
+2017-06-23 20:11:49,003 INFO:dlrn-build:DEBUG:   Verifying  : python2-pysocks-1.5.6-3.el7.noarch                         12/58 
+2017-06-23 20:11:49,071 INFO:dlrn-build:DEBUG:   Verifying  : python-cmd2-0.6.8-8.el7.noarch                             13/58 
+2017-06-23 20:11:49,141 INFO:dlrn-build:DEBUG:   Verifying  : python-oslo-i18n-lang-3.15.3-0.20170529140146.b9eed49.el   14/58 
+2017-06-23 20:11:49,193 INFO:dlrn-build:DEBUG:   Verifying  : python2-debtcollector-1.15.0-0.20170615195554.d2f3f45.el   15/58 
+2017-06-23 20:11:49,263 INFO:dlrn-build:DEBUG:   Verifying  : python2-cinderclient-2.2.0-0.20170608235749.e374362.el7.   16/58 
+2017-06-23 20:11:49,325 INFO:dlrn-build:DEBUG:   Verifying  : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   17/58 
+2017-06-23 20:11:49,404 INFO:dlrn-build:DEBUG:   Verifying  : python-openstackclient-doc-3.11.1-0.20170623200805.5c402   18/58 
+2017-06-23 20:11:49,491 INFO:dlrn-build:DEBUG:   Verifying  : python2-requests-2.11.1-1.el7.noarch                       19/58 
+2017-06-23 20:11:49,564 INFO:dlrn-build:DEBUG:   Verifying  : python-netaddr-0.7.18-1.el7.noarch                         20/58 
+2017-06-23 20:11:49,615 INFO:dlrn-build:DEBUG:   Verifying  : pyparsing-2.0.7-1.el7.noarch                               21/58 
+2017-06-23 20:11:49,672 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.c   22/58 
+2017-06-23 20:11:49,735 INFO:dlrn-build:DEBUG:   Verifying  : python-keyring-5.7.1-1.el7.noarch                          23/58 
+2017-06-23 20:11:49,798 INFO:dlrn-build:DEBUG:   Verifying  : python2-iso8601-0.1.11-1.el7.noarch                        24/58 
+2017-06-23 20:11:49,862 INFO:dlrn-build:DEBUG:   Verifying  : python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.n   25/58 
+2017-06-23 20:11:49,925 INFO:dlrn-build:DEBUG:   Verifying  : python-mimeparse-0.1.4-1.el7.noarch                        26/58 
+2017-06-23 20:11:49,976 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-novaclient-9.0.1-0.20170621200422.ddb386b.el7.   27/58 
+2017-06-23 20:11:50,028 INFO:dlrn-build:DEBUG:   Verifying  : python-ipaddress-1.0.16-3.el7.noarch                       28/58 
+2017-06-23 20:11:50,090 INFO:dlrn-build:DEBUG:   Verifying  : python2-rfc3986-0.3.1-1.el7.noarch                         29/58 
+2017-06-23 20:11:50,147 INFO:dlrn-build:DEBUG:   Verifying  : python2-appdirs-1.4.0-4.el7.noarch                         30/58 
+2017-06-23 20:11:50,204 INFO:dlrn-build:DEBUG:   Verifying  : python2-jsonpointer-1.10-4.el7.noarch                      31/58 
+2017-06-23 20:11:50,255 INFO:dlrn-build:DEBUG:   Verifying  : python-simplejson-3.5.3-5.el7.x86_64                       32/58 
+2017-06-23 20:11:50,313 INFO:dlrn-build:DEBUG:   Verifying  : python-wrapt-1.10.8-2.el7.x86_64                           33/58 
+2017-06-23 20:11:50,365 INFO:dlrn-build:DEBUG:   Verifying  : python2-deprecation-1.0-3.el7.noarch                       34/58 
+2017-06-23 20:11:50,416 INFO:dlrn-build:DEBUG:   Verifying  : python-traceback2-1.4.0-2.el7.noarch                       35/58 
+2017-06-23 20:11:50,469 INFO:dlrn-build:DEBUG:   Verifying  : python2-funcsigs-1.0.2-1.el7.noarch                        36/58 
+2017-06-23 20:11:50,521 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el   37/58 
+2017-06-23 20:11:50,581 INFO:dlrn-build:DEBUG:   Verifying  : python2-stevedore-1.23.0-0.20170609002503.91c2e41.el7.ce   38/58 
+2017-06-23 20:11:50,644 INFO:dlrn-build:DEBUG:   Verifying  : python-backports-1.0-8.el7.x86_64                          39/58 
+2017-06-23 20:11:50,703 INFO:dlrn-build:DEBUG:   Verifying  : python-netifaces-0.10.4-3.el7.x86_64                       40/58 
+2017-06-23 20:11:50,759 INFO:dlrn-build:DEBUG:   Verifying  : python-unicodecsv-0.14.1-1.el7.noarch                      41/58 
+2017-06-23 20:11:50,811 INFO:dlrn-build:DEBUG:   Verifying  : python2-urllib3-1.16-1.el7.noarch                          42/58 
+2017-06-23 20:11:50,858 INFO:dlrn-build:DEBUG:   Verifying  : python-oslo-utils-lang-3.26.0-0.20170609001847.15e0140.e   43/58 
+2017-06-23 20:11:50,909 INFO:dlrn-build:DEBUG:   Verifying  : python-warlock-1.0.1-1.el7.noarch                          44/58 
+2017-06-23 20:11:50,960 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-serialization-2.18.0-0.20170330071128.e6764   45/58 
+2017-06-23 20:11:51,008 INFO:dlrn-build:DEBUG:   Verifying  : python2-neutronclient-6.3.0-0.20170601203754.ba535c6.el7   46/58 
+2017-06-23 20:11:51,060 INFO:dlrn-build:DEBUG:   Verifying  : python-monotonic-0.6-1.el7.noarch                          47/58 
+2017-06-23 20:11:51,113 INFO:dlrn-build:DEBUG:   Verifying  : which-2.20-7.el7.x86_64                                    48/58 
+2017-06-23 20:11:51,158 INFO:dlrn-build:DEBUG:   Verifying  : python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el   49/58 
+2017-06-23 20:11:51,215 INFO:dlrn-build:DEBUG:   Verifying  : 2:python2-oslo-config-4.5.0-0.20170615200602.6e420e9.el7   50/58 
+2017-06-23 20:11:51,258 INFO:dlrn-build:DEBUG:   Verifying  : python2-os-client-config-1.27.0-0.20170428101737.f6804f6   51/58 
+2017-06-23 20:11:51,321 INFO:dlrn-build:DEBUG:   Verifying  : python-msgpack-0.4.6-3.el7.x86_64                          52/58 
+2017-06-23 20:11:51,372 INFO:dlrn-build:DEBUG:   Verifying  : python-linecache2-1.0.0-1.el7.noarch                       53/58 
+2017-06-23 20:11:51,418 INFO:dlrn-build:DEBUG:   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                        54/58 
+2017-06-23 20:11:51,470 INFO:dlrn-build:DEBUG:   Verifying  : python2-osc-lib-1.6.0-0.20170505192114.361789f.el7.cento   55/58 
+2017-06-23 20:11:51,527 INFO:dlrn-build:DEBUG:   Verifying  : PyYAML-3.10-11.el7.x86_64                                  56/58 
+2017-06-23 20:11:51,581 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed   57/58 
+2017-06-23 20:11:51,801 INFO:dlrn-build:DEBUG:   Verifying  : python2-requestsexceptions-1.2.0-0.20170303113339.3eb026   58/58 
+2017-06-23 20:11:51,801 INFO:dlrn-build:DEBUG: Installed:
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-openstackclient.noarch 0:3.11.1-0.20170623200805.5c40202.el7.centos    
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-openstackclient-doc.noarch 0:3.11.1-0.20170623200805.5c40202.el7.centos
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG: Dependency Installed:
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   PyYAML.x86_64 0:3.10-11.el7                                                   
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   pyparsing.noarch 0:2.0.7-1.el7                                                
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-backports.x86_64 0:1.0-8.el7                                           
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7                    
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-chardet.noarch 0:2.2.1-1.el7_1                                         
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-cliff.noarch 0:2.7.0-0.20170511182646.c548b7b.el7.centos               
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-cmd2.noarch 0:0.6.8-8.el7                                              
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-extras.noarch 0:0.0.3-2.el7                                            
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-fixtures.noarch 0:3.0.0-2.el7                                          
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-ipaddress.noarch 0:1.0.16-3.el7                                        
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-jsonschema.noarch 0:2.3.0-1.el7                                        
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-keyring.noarch 0:5.7.1-1.el7                                           
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-linecache2.noarch 0:1.0.0-1.el7                                        
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-mimeparse.noarch 0:0.1.4-1.el7                                         
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-monotonic.noarch 0:0.6-1.el7                                           
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-msgpack.x86_64 0:0.4.6-3.el7                                           
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-netaddr.noarch 0:0.7.18-1.el7                                          
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-netifaces.x86_64 0:0.10.4-3.el7                                        
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-oslo-i18n-lang.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos     
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-oslo-utils-lang.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos    
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-prettytable.noarch 0:0.7.2-2.el7.centos                                
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-simplejson.x86_64 0:3.5.3-5.el7                                        
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-testtools.noarch 0:1.8.0-2.el7                                         
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-traceback2.noarch 0:1.4.0-2.el7                                        
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-unicodecsv.noarch 0:0.14.1-1.el7                                       
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-unittest2.noarch 0:1.0.1-1.el7                                         
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-warlock.noarch 0:1.0.1-1.el7                                           
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-wrapt.x86_64 0:1.10.8-2.el7                                            
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-appdirs.noarch 0:1.4.0-4.el7                                          
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-cinderclient.noarch 0:2.2.0-0.20170608235749.e374362.el7.centos       
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-debtcollector.noarch 0:1.15.0-0.20170615195554.d2f3f45.el7.centos     
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-deprecation.noarch 0:1.0-3.el7                                        
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-funcsigs.noarch 0:1.0.2-1.el7                                         
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-glanceclient.noarch 1:2.7.0-0.20170622095732.d67b33b.el7.centos       
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-iso8601.noarch 0:0.1.11-1.el7                                         
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-jsonpatch.noarch 0:1.14-1.el7                                         
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-jsonpointer.noarch 0:1.10-4.el7                                       
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-keystoneauth1.noarch 0:2.21.0-0.20170613144756.0be1403.el7.centos     
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-keystoneclient.noarch 1:3.11.0-0.20170613145143.daa99ed.el7.centos    
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-neutronclient.noarch 0:6.3.0-0.20170601203754.ba535c6.el7.centos      
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-novaclient.noarch 1:9.0.1-0.20170621200422.ddb386b.el7.centos         
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-openstacksdk.noarch 0:0.9.17-0.20170621195806.7946243.el7.centos      
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-os-client-config.noarch 0:1.27.0-0.20170428101737.f6804f6.el7.centos  
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-osc-lib.noarch 0:1.6.0-0.20170505192114.361789f.el7.centos            
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-config.noarch 2:4.5.0-0.20170615200602.6e420e9.el7.centos        
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-i18n.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos         
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-serialization.noarch 0:2.18.0-0.20170330071128.e6764d4.el7.centos
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-utils.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos        
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-positional.noarch 0:1.1.1-2.el7                                       
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-pysocks.noarch 0:1.5.6-3.el7                                          
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-requests.noarch 0:2.11.1-1.el7                                        
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-requestsexceptions.noarch 0:1.2.0-0.20170303113339.3eb026b.el7.centos 
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-rfc3986.noarch 0:0.3.1-1.el7                                          
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-stevedore.noarch 0:1.23.0-0.20170609002503.91c2e41.el7.centos         
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-urllib3.noarch 0:1.16-1.el7                                           
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   which.x86_64 0:2.20-7.el7                                                     
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG: Complete!
+2017-06-23 20:11:51,838 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:51,838 INFO:dlrn-build:INFO: None
+2017-06-23 20:11:51,839 INFO:dlrn-build:Start: clean chroot
+2017-06-23 20:11:51,840 INFO:dlrn-build:DEBUG: kill orphans
+2017-06-23 20:11:51,848 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:51,848 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc/filesystems'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:51,855 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:51,855 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:51,855 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '/var/lib/mock/dlrn-centos7-x86_64-1/root/var/cache/yum/'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:51,861 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:51,861 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:51,861 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/pts'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:51,866 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:51,868 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:51,868 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/dev/shm'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:51,872 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:51,874 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:51,874 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/sys'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:51,878 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:51,882 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:51,882 INFO:dlrn-build:DEBUG: Executing command: ['/bin/umount', '-n', '-l', '/var/lib/mock/dlrn-centos7-x86_64-1/root/proc'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:51,884 INFO:dlrn-build:DEBUG: Child return code was: 0
+2017-06-23 20:11:51,889 INFO:dlrn-build:DEBUG: child environment: None
+2017-06-23 20:11:51,889 INFO:dlrn-build:DEBUG: Executing command: ['btrfs', 'subv', 'list', '/var/lib/mock'] with env {'LANG': 'en_US.UTF-8', 'TERM': 'vt100', 'SHELL': '/bin/sh', 'HOSTNAME': 'mock', 'HOME': '/builddir', 'PATH': '/usr/bin:/bin:/usr/sbin:/sbin'} and shell False
+2017-06-23 20:11:51,893 INFO:dlrn-build:DEBUG: Child return code was: 1
+2017-06-23 20:11:51,894 INFO:dlrn-build:DEBUG: Please ignore the error above above about btrfs.
+2017-06-23 20:11:56,903 INFO:dlrn-build:Finish: clean chroot
+2017-06-23 20:11:56,905 INFO:dlrn-build:Finish: run
+2017-06-23 20:11:56,919 INFO:dlrn-build:+ '[' 0 -eq 0 ']'
+2017-06-23 20:11:56,919 INFO:dlrn-build:+ grep -F 'WARNING: Failed install built packages' /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/mock.log
+2017-06-23 20:11:56,920 INFO:dlrn-build:+ touch /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/installed
+2017-06-23 20:11:56,921 INFO:dlrn-build:+ exit 0
+2017-06-23 20:11:56,921 INFO:dlrn-build:+ finalize
+2017-06-23 20:11:56,921 INFO:dlrn-build:+ rm -rf /tmp/tmp.bkgxqyIglA
+2017-06-23 20:11:58,685 INFO:dlrn:744 packages not built correctly: not updating the consistent symlink
++ copy_logs
++ mkdir -p logs
++ rsync -avzr data/repos logs/centos
+sending incremental file list
+created directory logs/centos
+repos/
+repos/current -> 5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e
+repos/queue.html
+repos/report.html
+repos/status_report.html
+repos/styles.css
+repos/5c/
+repos/5c/40/
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/build.log
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/commit.yaml
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/delorean.repo
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/installed
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/mock.log
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.src.rpm
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/python-openstackclient-doc-3.11.1-0.20170623200805.5c40202.el7.centos.noarch.rpm
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/root.log
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/rpmbuild.log
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/state.log
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/versions.csv
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/376dcee5d3e10c5744d19f74a9f4a2394a7080c70d9a9fdfea7e84abdd320793-other.sqlite.bz2
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/4486dcc100bfb942f4ba371db91bc065259d5189fd7c361f1d9746aa3f5992a1-primary.sqlite.bz2
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/47516efad9252a8c64a01f575c1cb7c97f3aa92db2a32a567c0c18e6cf54e9c8-primary.xml.gz
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/547e67745cd535b89bbdddd709c78a689337e098e5b4559047bec0d528e18dde-other.xml.gz
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/a42840cac7f3af82cf9c5cc6fa4d8859045456b3c478e4f120cc4860f21714a6-filelists.xml.gz
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/e43072447eea956b72d597d7aa93d82660c0a743a2718e8a65fecb019fff73a6-filelists.sqlite.bz2
+repos/5c/40/5c402026eb46d3321f643fb18a4e6d27c2507651_e330b73e/repodata/repomd.xml
