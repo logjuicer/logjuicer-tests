@@ -54,7 +54,7 @@ def run(case_path):
         if anomaly["lines"][-1] == "\n":
             anomaly["lines"] = anomaly["lines"][:-1]
         anomaly["found"] = False
-        for _, result in results.items():
+        for _, result in results['files'].items():
             if anomaly.get("filename"):
                 # TODO: check filename chunks
                 pass
@@ -77,7 +77,7 @@ def run(case_path):
 
     # Look for falsepositive
     false_positives = []
-    for _, result in results.items():
+    for _, result in results['files'].items():
         chunk_pos = 0
         for chunk in result["chunks"]:
             if chunk_pos in result["found"]:
