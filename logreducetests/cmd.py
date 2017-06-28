@@ -39,7 +39,8 @@ def run(case_path):
     fail_path = glob.glob(os.path.join(case_path, "*.fail"))[0]
 
     cmd = ["logreduce", "--baseline", good_path, fail_path,
-           "--output-format", "json", "--context-length", "0"]
+           "--output-format", "json", "--before-context", "0",
+           "--after-context", "0"]
     if info.get("max-distance"):
         cmd.extend(["--max-distance", str(info["max-distance"])])
     if DEBUG:

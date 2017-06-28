@@ -1,0 +1,6 @@
+max-distance: 0.6
+anomalies:
+    - lines: |
+        Copying hooks /home/centos/tests//test-element/install.d/80-test
+    - lines: |
+        cp /tmp/fail /tmp/sucess
