@@ -41,8 +41,8 @@ def run(case_path):
     cmd = ["logreduce", "--baseline", good_path, fail_path,
            "--output-format", "json", "--before-context", "0",
            "--after-context", "0"]
-    if info.get("max-distance"):
-        cmd.extend(["--max-distance", str(info["max-distance"])])
+    if info.get("threshold"):
+        cmd.extend(["--threshold", str(info["threshold"])])
     if DEBUG:
         print("Running [%s]" % " ".join(cmd))
         stderr = None

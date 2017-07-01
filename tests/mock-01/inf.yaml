@@ -1,6 +1,4 @@
-max-distance: 0.5
+threshold: 0.5
 anomalies:
   - lines: |
       error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
-  - lines: |
-      File "/usr/lib/python2.7/site-packages/mockbuild/util.py", line 547, in do
