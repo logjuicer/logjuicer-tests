@@ -26,6 +26,7 @@ DEBUG=False
 def usage():
     p = argparse.ArgumentParser()
     p.add_argument("--debug", action="store_true", help="Print debug")
+    p.add_argument("--model", default='lshf')
     p.add_argument("cases", default=['tests/*'], nargs='*')
     args = p.parse_args()
     if args.debug:
@@ -33,14 +34,14 @@ def usage():
         DEBUG=True
     return args
 
-def run(case_path):
+def run(case_path, model):
     info = yaml.safe_load(open(os.path.join(case_path, "inf.yaml")))
     good_path = glob.glob(os.path.join(case_path, "*.good"))[0]
     fail_path = glob.glob(os.path.join(case_path, "*.fail"))[0]
 
     cmd = ["logreduce", "--baseline", good_path, fail_path,
            "--output-format", "json", "--before-context", "0",
-           "--after-context", "0"]
+           "--after-context", "0", "--model", model]
     if info.get("threshold"):
         cmd.extend(["--threshold", str(info["threshold"])])
     if DEBUG:
@@ -99,7 +100,7 @@ def main():
         for case_path in glob.glob(case):
             if case_path[-1] == "/":
                 case_path = case_path[:-1]
-            accuracy, false_positives = run(case_path)
+            accuracy, false_positives = run(case_path, args.model)
             print("%20s: %03.2f%% accuracy, %03.2f%% false-positive" % (
                 os.path.basename(case_path), accuracy * 100,
                 false_positives * 100))
