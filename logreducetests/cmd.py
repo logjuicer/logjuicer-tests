@@ -40,7 +40,7 @@ def run(case_path, model):
     fail_path = glob.glob(os.path.join(case_path, "*.fail"))[0]
 
     cmd = ["logreduce", "--baseline", good_path, fail_path,
-           "--output-format", "json", "--before-context", "0",
+           "--json", "/dev/stdout", "--before-context", "0",
            "--after-context", "0", "--model", model]
     if info.get("threshold"):
         cmd.extend(["--threshold", str(info["threshold"])])
