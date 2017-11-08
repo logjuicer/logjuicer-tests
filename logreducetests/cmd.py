@@ -21,18 +21,26 @@ import yaml
 
 import numpy as np
 
-DEBUG=False
+DEBUG = False
+
 
 def usage():
     p = argparse.ArgumentParser()
     p.add_argument("--debug", action="store_true", help="Print debug")
-    p.add_argument("--model", default='lshf')
+    p.add_argument("--model", action="append")
     p.add_argument("cases", default=['tests/*'], nargs='*')
     args = p.parse_args()
+    for case in args.cases:
+        if not glob.glob(case):
+            print("%s: no file found" % case)
+            exit(1)
     if args.debug:
         global DEBUG
-        DEBUG=True
+        DEBUG = True
+    if not args.model:
+        args.model = ["default"]
     return args
+
 
 def run(case_path, model):
     info = yaml.safe_load(open(os.path.join(case_path, "inf.yaml")))
@@ -41,7 +49,9 @@ def run(case_path, model):
 
     cmd = ["logreduce", "--baseline", good_path, fail_path,
            "--json", "/dev/stdout", "--before-context", "0",
-           "--after-context", "0", "--model", model]
+           "--after-context", "0"]
+    if model != "default":
+        cmd.extend(["--model", model])
     if info.get("threshold"):
         cmd.extend(["--threshold", str(info["threshold"])])
     if DEBUG:
@@ -95,22 +105,28 @@ def run(case_path, model):
 
 def main():
     args = usage()
-    accuracies, fps = [], []
-    for case in args.cases:
-        for case_path in glob.glob(case):
-            if case_path[-1] == "/":
-                case_path = case_path[:-1]
-            accuracy, false_positives = run(case_path, args.model)
-            print("%20s: %03.2f%% accuracy, %03.2f%% false-positive" % (
-                os.path.basename(case_path), accuracy * 100,
-                false_positives * 100))
-            accuracies.append(accuracy)
-            fps.append(false_positives)
-    mean_accuracy = np.mean(accuracies)
-    mean_fp = np.mean(fps)
-    result = "SUCCESS" if mean_accuracy > 0.95 and mean_fp < 0.25 else "FAILED"
-    print("%s: %03.2f%% accuracy, %03.2f%% false-positive" % (
-        result, mean_accuracy * 100, mean_fp * 100))
+    result = "SUCCESS"
+    for model in args.model:
+        accuracies, fps = [], []
+        for case in args.cases:
+            for case_path in glob.glob(case):
+                if case_path[-1] == "/":
+                    case_path = case_path[:-1]
+                accuracy, false_positives = run(case_path, model)
+                model_name = "" if model == "default" else "%s: " % model
+                print("%s%20s: %03.2f%% accuracy, %03.2f%% false-positive" %
+                      (model_name,
+                       os.path.basename(case_path), accuracy * 100,
+                       false_positives * 100))
+                accuracies.append(accuracy)
+                fps.append(false_positives)
+        mean_accuracy = np.mean(accuracies)
+        mean_fp = np.mean(fps)
+        r = "SUCCESS" if mean_accuracy > 0.95 and mean_fp < 0.25 else "FAILED"
+        if r != "SUCCESS":
+            result = "FAILED"
+        print("%s: %s: %03.2f%% accuracy, %03.2f%% false-positive" % (
+            model, r, mean_accuracy * 100, mean_fp * 100))
     exit(result != "SUCCESS")
 
 
