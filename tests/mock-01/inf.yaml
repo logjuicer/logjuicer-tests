@@ -1,4 +1,6 @@
-threshold: 0.5
+threshold: 0.3
 anomalies:
   - lines: |
       error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
+  - lines: |
+      Skipping notify email to ['dougal@redhat.com']

@@ -1,6 +1,8 @@
-threshold: 0.6
+threshold: 0.5
 anomalies:
     - lines: |
         Copying hooks /home/centos/tests//test-element/install.d/80-test
     - lines: |
         cp /tmp/fail /tmp/sucess
+    - lines: |
+        Timeout on ftp://ftp.ussg.iu.edu

@@ -1,0 +1,408 @@
+2017-11-10 01:37:16.451558 | [Zuul] Launched by managesf.softwarefactory-project.io
+2017-11-10 01:37:16.451598 | [Zuul] Building remotely on dib-centos-7-rdo-cloud-359275 in workspace /var/lib/zuul/jobs/sf-ci-functional-allinone
+2017-11-10 01:37:17.780492 | + git clone https://softwarefactory-project.io/r/software-factory/sfinfo
+2017-11-10 01:37:17.860794 | Cloning into 'sfinfo'...
+2017-11-10 01:37:18.360753 | + cp -v sfinfo/sf-master.yaml distro.yaml
+2017-11-10 01:37:18.361697 | ‘sfinfo/sf-master.yaml’ -> ‘distro.yaml’
+2017-11-10 01:37:18.362213 | + cp -v sfinfo/wait_for_other_jobs.py sfinfo/zuul_discover_tag_branch.py sfinfo/zuul_koji_compare_tag.py sfinfo/zuul_koji_lib.py sfinfo/zuul_koji_mash.py sfinfo/zuul_koji_populate_target.py sfinfo/zuul_koji_set_target.py sfinfo/zuul_rpm_build.py sfinfo/zuul_rpm_publish.py sfinfo/zuul_rpm_setup.py sfinfo/zuul_set_distro_branch.py sfinfo/sf-2.4.yaml sfinfo/sf-2.5.yaml sfinfo/sf-2.6.yaml sfinfo/sf-2.7.yaml sfinfo/sf-master.yaml sfinfo/mock.cfg.j2 .
+2017-11-10 01:37:18.363563 | ‘sfinfo/wait_for_other_jobs.py’ -> ‘./wait_for_other_jobs.py’
+2017-11-10 01:37:18.363605 | ‘sfinfo/zuul_discover_tag_branch.py’ -> ‘./zuul_discover_tag_branch.py’
+2017-11-10 01:37:18.363635 | ‘sfinfo/zuul_koji_compare_tag.py’ -> ‘./zuul_koji_compare_tag.py’
+2017-11-10 01:37:18.363656 | ‘sfinfo/zuul_koji_lib.py’ -> ‘./zuul_koji_lib.py’
+2017-11-10 01:37:18.363680 | ‘sfinfo/zuul_koji_mash.py’ -> ‘./zuul_koji_mash.py’
+2017-11-10 01:37:18.363723 | ‘sfinfo/zuul_koji_populate_target.py’ -> ‘./zuul_koji_populate_target.py’
+2017-11-10 01:37:18.363747 | ‘sfinfo/zuul_koji_set_target.py’ -> ‘./zuul_koji_set_target.py’
+2017-11-10 01:37:18.363768 | ‘sfinfo/zuul_rpm_build.py’ -> ‘./zuul_rpm_build.py’
+2017-11-10 01:37:18.363804 | ‘sfinfo/zuul_rpm_publish.py’ -> ‘./zuul_rpm_publish.py’
+2017-11-10 01:37:18.363825 | ‘sfinfo/zuul_rpm_setup.py’ -> ‘./zuul_rpm_setup.py’
+2017-11-10 01:37:18.363850 | ‘sfinfo/zuul_set_distro_branch.py’ -> ‘./zuul_set_distro_branch.py’
+2017-11-10 01:37:18.363868 | ‘sfinfo/sf-2.4.yaml’ -> ‘./sf-2.4.yaml’
+2017-11-10 01:37:18.363886 | ‘sfinfo/sf-2.5.yaml’ -> ‘./sf-2.5.yaml’
+2017-11-10 01:37:18.363904 | ‘sfinfo/sf-2.6.yaml’ -> ‘./sf-2.6.yaml’
+2017-11-10 01:37:18.363922 | ‘sfinfo/sf-2.7.yaml’ -> ‘./sf-2.7.yaml’
+2017-11-10 01:37:18.363941 | ‘sfinfo/sf-master.yaml’ -> ‘./sf-master.yaml’
+2017-11-10 01:37:18.363969 | ‘sfinfo/mock.cfg.j2’ -> ‘./mock.cfg.j2’
+2017-11-10 01:37:18.364634 | + sudo cp -v sfinfo/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud sfinfo/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo sfinfo/rpm-gpg/RPM-GPG-KEY-EPEL-7 /etc/pki/rpm-gpg/
+2017-11-10 01:37:18.429324 | ‘sfinfo/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud’ -> ‘/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud’
+2017-11-10 01:37:18.429380 | ‘sfinfo/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo’ -> ‘/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo’
+2017-11-10 01:37:18.429411 | ‘sfinfo/rpm-gpg/RPM-GPG-KEY-EPEL-7’ -> ‘/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7’
+2017-11-10 01:37:18.430378 | + awk '/koji-target/ { print $2 }' distro.yaml
+2017-11-10 01:37:18.430415 | + sed 's#$#-build/latest/x86_64#'
+2017-11-10 01:37:18.432944 | [Zuul] Task exit code: 0
+2017-11-10 01:37:19.057489 | + echo 38.145.34.53 koji.softwarefactory-project.io
+2017-11-10 01:37:19.057540 | + sudo tee -a /etc/hosts
+2017-11-10 01:37:19.082931 | 38.145.34.53 koji.softwarefactory-project.io
+2017-11-10 01:37:19.084416 | ++ echo refs/zuul/master/Z60f0ad207fbb4c55a07d665ef44131a4
+2017-11-10 01:37:19.084457 | ++ cut -f4 -d /
+2017-11-10 01:37:19.085225 | + ZUUL_REF=Z60f0ad207fbb4c55a07d665ef44131a4
+2017-11-10 01:37:19.085253 | + jobs='sf-rpm-build fedora-rpm-build'
+2017-11-10 01:37:19.085284 | + for job in '$jobs'
+2017-11-10 01:37:19.085333 | + LOG_PATH=42/9542/5/gate/sf-rpm-build/Z60f0ad207fbb4c55a07d665ef44131a4
+2017-11-10 01:37:19.085408 | + logs=https://softwarefactory-project.io/logs/42/9542/5/gate/sf-rpm-build/Z60f0ad207fbb4c55a07d665ef44131a4/zuul-rpm-build/
+2017-11-10 01:37:19.085463 | + curl -o /dev/null -sIf https://softwarefactory-project.io/logs/42/9542/5/gate/sf-rpm-build/Z60f0ad207fbb4c55a07d665ef44131a4/zuul-rpm-build/
+2017-11-10 01:37:19.417878 | + break
+2017-11-10 01:37:19.418017 | + sudo ./zuul_rpm_setup.py --testing-repo https://softwarefactory-project.io/logs/42/9542/5/gate/sf-rpm-build/Z60f0ad207fbb4c55a07d665ef44131a4/zuul-rpm-build/
+2017-11-10 01:37:19.717381 | [1;33mINFO  [zuulkoji.ZuulRpmSetup] Writing repo to /etc/yum.repos.d/zuul-built.repo[1;0m
+2017-11-10 01:37:19.722672 | [1;33mINFO  [zuulkoji.ZuulRpmSetup] Adding repo sfmaster[1;0m
+2017-11-10 01:37:19.722804 | [1;33mINFO  [zuulkoji.ZuulRpmSetup] Adding repo openstack-pike[1;0m
+2017-11-10 01:37:19.722901 | [1;33mINFO  [zuulkoji.ZuulRpmSetup] Adding repo centos-opstools[1;0m
+2017-11-10 01:37:19.811785 | [1;33mINFO  [zuulkoji.ZuulRpmSetup] Adding repo sftesting[1;0m
+2017-11-10 01:37:19.817394 | {'name': 'sfmaster', 'gpgkey': '', 'baseurl': 'https://softwarefactory-project.io/kojifiles/repos/sf-master-el7-build/latest/x86_64/', 'repourl': 'baseurl=https://softwarefactory-project.io/kojifiles/repos/sf-master-el7-build/latest/x86_64/', 'gpgcheck': 0, 'kojipriority': 110}
+2017-11-10 01:37:19.817521 | {'name': 'openstack-pike', 'gpgkey': 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Cloud', 'baseurl': 'http://mirror.centos.org/centos/7/cloud/x86_64/openstack-pike/', 'repourl': 'baseurl=http://mirror.centos.org/centos/7/cloud/x86_64/openstack-pike/', 'gpgcheck': 1, 'kojipriority': 5}
+2017-11-10 01:37:19.817600 | {'name': 'centos-opstools', 'gpgkey': 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-OpsTools', 'baseurl': 'http://mirror.centos.org/centos/7/opstools/x86_64/', 'repourl': 'baseurl=http://mirror.centos.org/centos/7/opstools/x86_64/', 'gpgcheck': 1, 'kojipriority': 7}
+2017-11-10 01:37:19.817695 | {'name': 'sftesting', 'gpgkey': '', 'baseurl': 'https://softwarefactory-project.io/logs/42/9542/5/gate/sf-rpm-build/Z60f0ad207fbb4c55a07d665ef44131a4/zuul-rpm-build/', 'repourl': 'baseurl=https://softwarefactory-project.io/logs/42/9542/5/gate/sf-rpm-build/Z60f0ad207fbb4c55a07d665ef44131a4/zuul-rpm-build/', 'gpgcheck': 0, 'kojipriority': 2}
+2017-11-10 01:37:19.820612 | [Zuul] Task exit code: 0
+2017-11-10 01:37:20.368541 | + sudo yum install -y git
+2017-11-10 01:37:20.921606 | Loaded plugins: fastestmirror, priorities
+2017-11-10 01:37:24.170279 | Loading mirror speeds from cached hostfile
+2017-11-10 01:37:24.171075 |  * base: centos-distro.cavecreek.net
+2017-11-10 01:37:24.171323 |  * extras: centos.sonn.com
+2017-11-10 01:37:24.171660 |  * updates: linux.mirrors.es.net
+2017-11-10 01:37:27.320821 | 19096 packages excluded due to repository priority protections
+2017-11-10 01:37:27.787540 | Package git-1.8.3.1-12.el7_4.x86_64 already installed and latest version
+2017-11-10 01:37:27.787734 | Nothing to do
+2017-11-10 01:37:27.946829 | + zuul-cloner http://softwarefactory-project.io/r software-factory/sf-ci
+2017-11-10 01:37:29.991561 | INFO:zuul.CloneMapper:Workspace path set to: /var/lib/zuul/jobs/sf-ci-functional-allinone
+2017-11-10 01:37:29.991823 | INFO:zuul.CloneMapper:Mapping projects to workspace...
+2017-11-10 01:37:29.991947 | INFO:zuul.CloneMapper:  software-factory/sf-ci -> /var/lib/zuul/jobs/sf-ci-functional-allinone/software-factory/sf-ci
+2017-11-10 01:37:29.992067 | INFO:zuul.CloneMapper:Expansion completed.
+2017-11-10 01:37:29.992147 | INFO:zuul.Cloner:Preparing 1 repositories
+2017-11-10 01:37:29.992275 | INFO:zuul.Cloner:Creating repo software-factory/sf-ci from upstream http://softwarefactory-project.io/r/software-factory/sf-ci
+2017-11-10 01:37:30.994554 | INFO:zuul.Cloner:upstream repo has branch master
+2017-11-10 01:37:31.290108 | INFO:zuul.Cloner:Prepared software-factory/sf-ci repo with commit 0919559666ea8bec4214449dd1404a68ddd68d89
+2017-11-10 01:37:31.290177 | INFO:zuul.Cloner:Prepared all repositories
+2017-11-10 01:37:31.319528 | + export SF_VERSION=master
+2017-11-10 01:37:31.319591 | + SF_VERSION=master
+2017-11-10 01:37:31.319608 | + cd software-factory/sf-ci
+2017-11-10 01:37:31.319627 | + sudo -E ./run_tests.sh functional allinone
+2017-11-10 01:37:31.325446 | + sudo yum update -y ansible
+2017-11-10 01:37:31.429671 | Loaded plugins: fastestmirror, priorities
+2017-11-10 01:37:31.501748 | Loading mirror speeds from cached hostfile
+2017-11-10 01:37:31.502808 |  * base: centos-distro.cavecreek.net
+2017-11-10 01:37:31.503230 |  * extras: centos.sonn.com
+2017-11-10 01:37:31.503493 |  * updates: linux.mirrors.es.net
+2017-11-10 01:37:32.884646 | 19096 packages excluded due to repository priority protections
+2017-11-10 01:37:33.627270 | No packages marked for update
+2017-11-10 01:37:33.782135 | + sudo yum install -y https://softwarefactory-project.io/logs/97/9997/1/check/sf-rpm-build/Zc3a7e638f27642cd853e6c94ce133f41/zuul-rpm-build/ara-0.14.4-1.el7.noarch.rpm
+2017-11-10 01:37:33.883913 | Loaded plugins: fastestmirror, priorities
+2017-11-10 01:37:34.000432 | Examining /var/tmp/yum-root-a7uoEM/ara-0.14.4-1.el7.noarch.rpm: ara-0.14.4-1.el7.noarch
+2017-11-10 01:37:34.036051 | Marking /var/tmp/yum-root-a7uoEM/ara-0.14.4-1.el7.noarch.rpm as an update to ara-0.13.1-1.el7.noarch
+2017-11-10 01:37:34.073447 | Resolving Dependencies
+2017-11-10 01:37:34.074106 | --> Running transaction check
+2017-11-10 01:37:34.074261 | ---> Package ara.noarch 0:0.13.1-1.el7 will be updated
+2017-11-10 01:37:34.086163 | ---> Package ara.noarch 0:0.14.4-1.el7 will be an update
+2017-11-10 01:37:34.189131 | --> Processing Dependency: python-subunit for package: ara-0.14.4-1.el7.noarch
+2017-11-10 01:37:34.194054 | Loading mirror speeds from cached hostfile
+2017-11-10 01:37:34.195171 |  * base: centos-distro.cavecreek.net
+2017-11-10 01:37:34.195558 |  * extras: centos.sonn.com
+2017-11-10 01:37:34.195798 |  * updates: linux.mirrors.es.net
+2017-11-10 01:37:35.537656 | 19096 packages excluded due to repository priority protections
+2017-11-10 01:37:35.840455 | --> Running transaction check
+2017-11-10 01:37:35.840638 | ---> Package python2-subunit.noarch 0:1.2.0-14.el7 will be installed
+2017-11-10 01:37:36.547668 | --> Finished Dependency Resolution
+2017-11-10 01:37:36.832370 | 
+2017-11-10 01:37:36.832413 | Dependencies Resolved
+2017-11-10 01:37:36.833225 | 
+2017-11-10 01:37:36.833268 | ================================================================================
+2017-11-10 01:37:36.833314 |  Package            Arch      Version         Repository                   Size
+2017-11-10 01:37:36.833340 | ================================================================================
+2017-11-10 01:37:36.833349 | Updating:
+2017-11-10 01:37:36.833375 |  ara                noarch    0.14.4-1.el7    /ara-0.14.4-1.el7.noarch    422 k
+2017-11-10 01:37:36.833388 | Installing for dependencies:
+2017-11-10 01:37:36.833414 |  python2-subunit    noarch    1.2.0-14.el7    openstack-pike               86 k
+2017-11-10 01:37:36.833420 | 
+2017-11-10 01:37:36.833431 | Transaction Summary
+2017-11-10 01:37:36.833472 | ================================================================================
+2017-11-10 01:37:36.833488 | Install             ( 1 Dependent package)
+2017-11-10 01:37:36.833498 | Upgrade  1 Package
+2017-11-10 01:37:36.833504 | 
+2017-11-10 01:37:36.833661 | Total size: 508 k
+2017-11-10 01:37:36.833779 | Total download size: 86 k
+2017-11-10 01:37:36.833878 | Downloading packages:
+2017-11-10 01:37:37.213943 | Running transaction check
+2017-11-10 01:37:37.229297 | Running transaction test
+2017-11-10 01:37:38.027311 | Transaction test succeeded
+2017-11-10 01:37:38.027785 | Running transaction
+2017-11-10 01:37:38.916269 |   Installing : python2-subunit-1.2.0-14.el7.noarch                          1/3 
+2017-11-10 01:37:39.343731 |   Updating   : ara-0.14.4-1.el7.noarch                                      2/3 
+2017-11-10 01:37:39.505425 |   Cleanup    : ara-0.13.1-1.el7.noarch                                      3/3 
+2017-11-10 01:37:39.631921 |   Verifying  : ara-0.14.4-1.el7.noarch                                      1/3 
+2017-11-10 01:37:39.696235 |   Verifying  : python2-subunit-1.2.0-14.el7.noarch                          2/3 
+2017-11-10 01:37:39.852737 |   Verifying  : ara-0.13.1-1.el7.noarch                                      3/3 
+2017-11-10 01:37:39.852792 | 
+2017-11-10 01:37:39.852808 | Dependency Installed:
+2017-11-10 01:37:39.852836 |   python2-subunit.noarch 0:1.2.0-14.el7                                         
+2017-11-10 01:37:39.852842 | 
+2017-11-10 01:37:39.852850 | Updated:
+2017-11-10 01:37:39.852877 |   ara.noarch 0:0.14.4-1.el7                                                     
+2017-11-10 01:37:39.852884 | 
+2017-11-10 01:37:39.853108 | Complete!
+2017-11-10 01:37:39.890121 | + sudo yum update -y ara
+2017-11-10 01:37:39.996642 | Loaded plugins: fastestmirror, priorities
+2017-11-10 01:37:40.047932 | Loading mirror speeds from cached hostfile
+2017-11-10 01:37:40.049070 |  * base: centos-distro.cavecreek.net
+2017-11-10 01:37:40.049521 |  * extras: centos.sonn.com
+2017-11-10 01:37:40.049839 |  * updates: linux.mirrors.es.net
+2017-11-10 01:37:41.386205 | 19096 packages excluded due to repository priority protections
+2017-11-10 01:37:41.984787 | No packages marked for update
+2017-11-10 01:37:42.095739 | + read var
+2017-11-10 01:37:42.095794 | ++ env
+2017-11-10 01:37:42.095939 | ++ egrep '^ZUUL_.*'
+2017-11-10 01:37:42.095990 | ++ awk -F= '{ print $1}'
+2017-11-10 01:37:42.098288 | + unset ZUUL_PROJECT
+2017-11-10 01:37:42.098317 | + read var
+2017-11-10 01:37:42.098331 | + unset ZUUL_BRANCH
+2017-11-10 01:37:42.098341 | + read var
+2017-11-10 01:37:42.098352 | + unset ZUUL_VOTING
+2017-11-10 01:37:42.098361 | + read var
+2017-11-10 01:37:42.098372 | + unset ZUUL_URL
+2017-11-10 01:37:42.098381 | + read var
+2017-11-10 01:37:42.098392 | + unset ZUUL_CHANGE
+2017-11-10 01:37:42.098400 | + read var
+2017-11-10 01:37:42.098412 | + unset ZUUL_CHANGES
+2017-11-10 01:37:42.098421 | + read var
+2017-11-10 01:37:42.098431 | + unset ZUUL_REF
+2017-11-10 01:37:42.098440 | + read var
+2017-11-10 01:37:42.098452 | + unset ZUUL_CHANGE_IDS
+2017-11-10 01:37:42.098461 | + read var
+2017-11-10 01:37:42.098472 | + unset ZUUL_PIPELINE
+2017-11-10 01:37:42.098481 | + read var
+2017-11-10 01:37:42.098492 | + unset ZUUL_COMMIT
+2017-11-10 01:37:42.098500 | + read var
+2017-11-10 01:37:42.098512 | + unset ZUUL_PATCHSET
+2017-11-10 01:37:42.098521 | + read var
+2017-11-10 01:37:42.098531 | + unset ZUUL_UUID
+2017-11-10 01:37:42.098540 | + read var
+2017-11-10 01:37:42.098655 | + TEST_TYPE=functional
+2017-11-10 01:37:42.098671 | + ARCH=allinone
+2017-11-10 01:37:42.098687 | + FUNC_TEST_CASE=tests/functional
+2017-11-10 01:37:42.098711 | + WORKSPACE=/var/lib/zuul/jobs/sf-ci-functional-allinone
+2017-11-10 01:37:42.098735 | + ARTIFACTS=/var/lib/zuul/jobs/sf-ci-functional-allinone/artifacts
+2017-11-10 01:37:42.098745 | + VERSION=master
+2017-11-10 01:37:42.098756 | + USER=zuul
+2017-11-10 01:37:42.098766 | + LOCAL_REPO_PATH=
+2017-11-10 01:37:42.098793 | + rm -Rf /root/.ara/ /var/lib/zuul/jobs/sf-ci-functional-allinone/artifacts/
+2017-11-10 01:37:42.100040 | + sudo sed -i 's/^jinja2.*//' /usr/lib/python2.7/site-packages/ansible-2.4.0.0-py2.7.egg-info/requires.txt /usr/lib/python2.7/site-packages/ansible_lint-3.4.13-py2.7.egg-info/requires.txt
+2017-11-10 01:37:42.194220 | + sudo sed -i 's/^MarkupSafe.*//' /usr/lib/python2.7/site-packages/Jinja2-2.9.6-py2.7.egg-info/requires.txt
+2017-11-10 01:37:42.205069 | + export ARA_LOG_FILE=
+2017-11-10 01:37:42.205111 | + ARA_LOG_FILE=
+2017-11-10 01:37:42.205230 | ++ python -c 'import os,ara; print(os.path.dirname(ara.__file__))'
+2017-11-10 01:37:42.350924 | + export ara_location=/usr/lib/python2.7/site-packages/ara
+2017-11-10 01:37:42.350998 | + ara_location=/usr/lib/python2.7/site-packages/ara
+2017-11-10 01:37:42.351043 | + export ANSIBLE_CALLBACK_PLUGINS=/usr/lib/python2.7/site-packages/ara/plugins/callbacks
+2017-11-10 01:37:42.351075 | + ANSIBLE_CALLBACK_PLUGINS=/usr/lib/python2.7/site-packages/ara/plugins/callbacks
+2017-11-10 01:37:42.351105 | + export ANSIBLE_ACTION_PLUGINS=/usr/lib/python2.7/site-packages/ara/plugins/actions
+2017-11-10 01:37:42.351132 | + ANSIBLE_ACTION_PLUGINS=/usr/lib/python2.7/site-packages/ara/plugins/actions
+2017-11-10 01:37:42.351158 | + export ANSIBLE_LIBRARY=/usr/lib/python2.7/site-packages/ara/plugins/modules
+2017-11-10 01:37:42.351192 | + ANSIBLE_LIBRARY=/usr/lib/python2.7/site-packages/ara/plugins/modules
+2017-11-10 01:37:42.351204 | + trap terminate ERR
+2017-11-10 01:37:42.351212 | ++ pwd
+2017-11-10 01:37:42.351641 | + ansible-playbook -M modules/ -e @playbooks/group_vars/all.yaml -e sf_user=zuul -e workspace=/var/lib/zuul/jobs/sf-ci-functional-allinone -e local_repo_path= -e sf_ci=/var/lib/zuul/jobs/sf-ci-functional-allinone/software-factory/sf-ci -e sf_arch=allinone -e sf_version=master -e func_test_case=tests/functional playbooks/functional.yml
+2017-11-10 01:37:43.735694 |  [WARNING]: Could not match supplied host pattern, ignoring: all
+2017-11-10 01:37:43.735849 |  [WARNING]: provided hosts list is empty, only localhost is available
+2017-11-10 01:37:43.779203 | [DEPRECATION WARNING]: The use of 'include' for tasks has been deprecated. Use 
+2017-11-10 01:37:43.779260 | 'import_tasks' for static inclusions or 'include_tasks' for dynamic inclusions.
+2017-11-10 01:37:43.779290 |  This feature will be removed in a future release. Deprecation warnings can be 
+2017-11-10 01:37:43.779314 | disabled by setting deprecation_warnings=False in ansible.cfg.
+2017-11-10 01:37:43.872787 | [DEPRECATION WARNING]: include is kept for backwards compatibility but usage is
+2017-11-10 01:37:43.872868 |  discouraged. The module documentation details page may explain more about this
+2017-11-10 01:37:43.872900 |  rationale.. This feature will be removed in a future release. Deprecation 
+2017-11-10 01:37:43.872928 | warnings can be disabled by setting deprecation_warnings=False in ansible.cfg.
+2017-11-10 01:37:45.781111 | 
+2017-11-10 01:37:45.781177 | PLAY [localhost] ***************************************************************
+2017-11-10 01:37:45.959944 | 
+2017-11-10 01:37:45.960053 | TASK [Gathering Facts] *********************************************************
+2017-11-10 01:37:46.896489 | ok: [localhost]
+2017-11-10 01:37:47.319727 | 
+2017-11-10 01:37:47.319790 | TASK [Fix jenkins user shell] **************************************************
+2017-11-10 01:37:47.690131 |  [WARNING]: Consider using template or lineinfile module rather than running
+2017-11-10 01:37:47.690168 | sed
+2017-11-10 01:37:47.690182 | changed: [localhost]
+2017-11-10 01:37:47.736671 | 
+2017-11-10 01:37:47.736736 | TASK [Create artifact directory] ***********************************************
+2017-11-10 01:37:48.043803 | changed: [localhost]
+2017-11-10 01:37:48.161542 | 
+2017-11-10 01:37:48.161599 | TASK [Setup /etc/sf-release file] **********************************************
+2017-11-10 01:37:48.753094 | changed: [localhost]
+2017-11-10 01:37:48.803622 | 
+2017-11-10 01:37:48.803677 | TASK [Check for zuul-built.repo] ***********************************************
+2017-11-10 01:37:49.034105 | ok: [localhost]
+2017-11-10 01:37:49.084739 | 
+2017-11-10 01:37:49.084844 | TASK [Check for sf-release.repo] ***********************************************
+2017-11-10 01:37:49.303423 | ok: [localhost]
+2017-11-10 01:37:49.353564 | 
+2017-11-10 01:37:49.353632 | TASK [Check for local-build.repo] **********************************************
+2017-11-10 01:37:49.589815 | ok: [localhost]
+2017-11-10 01:37:49.690820 | 
+2017-11-10 01:37:49.690878 | TASK [Install sf-release master when no zuul-built] ****************************
+2017-11-10 01:37:49.815036 | skipping: [localhost]
+2017-11-10 01:37:49.870996 | 
+2017-11-10 01:37:49.871074 | TASK [Install zuul-built.repo in place of sf-release] **************************
+2017-11-10 01:37:50.173931 | changed: [localhost]
+2017-11-10 01:37:50.249645 | 
+2017-11-10 01:37:50.249727 | TASK [Exclude sf-release package from zuul-built repo] *************************
+2017-11-10 01:37:50.625074 | changed: [localhost] => (item=sfmaster)
+2017-11-10 01:37:50.699879 | 
+2017-11-10 01:37:50.699944 | TASK [Replace koji hostname by its IP] *****************************************
+2017-11-10 01:37:51.069339 | ok: [localhost]
+2017-11-10 01:37:51.144945 | 
+2017-11-10 01:37:51.145032 | TASK [Check for locally built packages] ****************************************
+2017-11-10 01:37:51.389103 | ok: [localhost]
+2017-11-10 01:37:51.423764 | 
+2017-11-10 01:37:51.423828 | TASK [Remove local_built repo] *************************************************
+2017-11-10 01:37:51.644175 | ok: [localhost]
+2017-11-10 01:37:51.695810 | 
+2017-11-10 01:37:51.695867 | TASK [Add local_built repo] ****************************************************
+2017-11-10 01:37:51.818943 | skipping: [localhost]
+2017-11-10 01:37:51.865003 | 
+2017-11-10 01:37:51.865082 | TASK [Exclude older package from scl] ******************************************
+2017-11-10 01:37:52.092099 | changed: [localhost]
+2017-11-10 01:37:52.119221 | 
+2017-11-10 01:37:52.119276 | TASK [Update all installed packages] *******************************************
+2017-11-10 01:38:36.813833 | changed: [localhost]
+2017-11-10 01:38:36.869111 | 
+2017-11-10 01:38:36.869171 | TASK [Install sf-config package] ***********************************************
+2017-11-10 01:38:48.999079 | changed: [localhost]
+2017-11-10 01:38:49.052888 | 
+2017-11-10 01:38:49.052953 | TASK [Install SF architecture file allinone.yaml] ******************************
+2017-11-10 01:38:49.388763 | changed: [localhost]
+2017-11-10 01:38:49.434269 | 
+2017-11-10 01:38:49.434327 | TASK [Install extra custom-vars for mirrors] ***********************************
+2017-11-10 01:38:49.804112 | changed: [localhost]
+2017-11-10 01:38:49.857889 | 
+2017-11-10 01:38:49.857950 | TASK [Activate hypervisor-oci role in the arch.yaml file] **********************
+2017-11-10 01:38:50.284094 | ok: [localhost]
+2017-11-10 01:38:50.350930 | 
+2017-11-10 01:38:50.350998 | TASK [file] ********************************************************************
+2017-11-10 01:38:50.437497 | skipping: [localhost] => (item=/root/.ssh) 
+2017-11-10 01:38:50.441180 | skipping: [localhost] => (item=/etc/serverspec) 
+2017-11-10 01:38:50.479162 | 
+2017-11-10 01:38:50.479217 | TASK [Fix arch] ****************************************************************
+2017-11-10 01:38:50.582729 | skipping: [localhost]
+2017-11-10 01:38:50.614996 | 
+2017-11-10 01:38:50.615070 | TASK [Fix gitweb install] ******************************************************
+2017-11-10 01:38:50.697313 | skipping: [localhost]
+2017-11-10 01:38:50.764302 | 
+2017-11-10 01:38:50.764404 | TASK [Fix gitweb default] ******************************************************
+2017-11-10 01:38:50.851105 | skipping: [localhost]
+2017-11-10 01:38:50.889714 | 
+2017-11-10 01:38:50.889781 | TASK [Patch zuul2 ansiblelauncher for ansible 2.4] *****************************
+2017-11-10 01:38:51.163514 | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "patch /usr/lib/python2.7/site-packages/zuul/launcher/ansiblelaunchserver.py < /var/lib/zuul/jobs/sf-ci-functional-allinone/software-factory/sf-ci/patches/ansiblelauncher-ansible-2.4.patch", "delta": "0:00:00.055214", "end": "2017-11-10 01:38:51.146964", "failed": true, "msg": "non-zero return code", "rc": 1, "start": "2017-11-10 01:38:51.091750", "stderr": "", "stderr_lines": [], "stdout": "patching file /usr/lib/python2.7/site-packages/zuul/launcher/ansiblelaunchserver.py\nReversed (or previously applied) patch detected!  Assume -R? [n] \nApply anyway? [n] \nSkipping patch.\n1 out of 1 hunk ignored -- saving rejects to file /usr/lib/python2.7/site-packages/zuul/launcher/ansiblelaunchserver.py.rej", "stdout_lines": ["patching file /usr/lib/python2.7/site-packages/zuul/launcher/ansiblelaunchserver.py", "Reversed (or previously applied) patch detected!  Assume -R? [n] ", "Apply anyway? [n] ", "Skipping patch.", "1 out of 1 hunk ignored -- saving rejects to file /usr/lib/python2.7/site-packages/zuul/launcher/ansiblelaunchserver.py.rej"]}
+2017-11-10 01:38:51.163601 | ...ignoring
+2017-11-10 01:38:51.200865 | 
+2017-11-10 01:38:51.200923 | TASK [Patch sfconfig jenkins install.yaml for ansible 2.4] *********************
+2017-11-10 01:38:51.393909 | fatal: [localhost]: FAILED! => {"changed": true, "cmd": "patch /usr/share/sf-config/ansible/roles/sf-jenkins/tasks/install.yml < /var/lib/zuul/jobs/sf-ci-functional-allinone/software-factory/sf-ci/patches/jenkins-install-yaml-cert-issue-ansible-2.4.patch", "delta": "0:00:00.004031", "end": "2017-11-10 01:38:51.376690", "failed": true, "msg": "non-zero return code", "rc": 1, "start": "2017-11-10 01:38:51.372659", "stderr": "", "stderr_lines": [], "stdout": "patching file /usr/share/sf-config/ansible/roles/sf-jenkins/tasks/install.yml\nReversed (or previously applied) patch detected!  Assume -R? [n] \nApply anyway? [n] \nSkipping patch.\n2 out of 2 hunks ignored -- saving rejects to file /usr/share/sf-config/ansible/roles/sf-jenkins/tasks/install.yml.rej", "stdout_lines": ["patching file /usr/share/sf-config/ansible/roles/sf-jenkins/tasks/install.yml", "Reversed (or previously applied) patch detected!  Assume -R? [n] ", "Apply anyway? [n] ", "Skipping patch.", "2 out of 2 hunks ignored -- saving rejects to file /usr/share/sf-config/ansible/roles/sf-jenkins/tasks/install.yml.rej"]}
+2017-11-10 01:38:51.393971 | ...ignoring
+2017-11-10 01:38:51.436384 | 
+2017-11-10 01:38:51.436450 | TASK [Run sfconfig] ************************************************************
+2017-11-10 01:56:57.719370 | changed: [localhost]
+2017-11-10 01:56:57.762882 | 
+2017-11-10 01:56:57.762939 | TASK [Change perm for state data] **********************************************
+2017-11-10 01:56:58.093872 | changed: [localhost] => (item=/var/lib/software-factory/)
+2017-11-10 01:56:58.258394 | changed: [localhost] => (item=/etc/software-factory/)
+2017-11-10 01:56:58.296568 | 
+2017-11-10 01:56:58.296631 | TASK [Ensure test tools are installed] *****************************************
+2017-11-10 01:56:58.979584 | ok: [localhost] => (item=[u'python-nose', u'python-nose-timer', u'python-nose-htmloutput'])
+2017-11-10 01:56:59.072019 | 
+2017-11-10 01:56:59.072078 | TASK [Remove previous sfmanager.log] *******************************************
+2017-11-10 01:56:59.270387 | ok: [localhost]
+2017-11-10 01:56:59.306668 | 
+2017-11-10 01:56:59.306735 | TASK [Check for zuulv3 config update] ******************************************
+2017-11-10 01:56:59.533350 | changed: [localhost]
+2017-11-10 01:56:59.574768 | 
+2017-11-10 01:56:59.574822 | TASK [Set SF_ZUUL_EXECUTOR=0] **************************************************
+2017-11-10 01:56:59.660702 | ok: [localhost]
+2017-11-10 01:56:59.694587 | 
+2017-11-10 01:56:59.694641 | TASK [Set SF_ZUUL_EXECUTOR=1] **************************************************
+2017-11-10 01:56:59.736961 | skipping: [localhost]
+2017-11-10 01:56:59.758536 | 
+2017-11-10 01:56:59.758583 | TASK [Run data provisionner] ***************************************************
+2017-11-10 01:59:03.747214 | changed: [localhost]
+2017-11-10 01:59:03.774603 | 
+2017-11-10 01:59:03.774657 | TASK [Change perm for state data] **********************************************
+2017-11-10 01:59:04.032961 | ok: [localhost] => (item=/var/lib/software-factory/)
+2017-11-10 01:59:04.183391 | ok: [localhost] => (item=/etc/software-factory/)
+2017-11-10 01:59:04.205210 | 
+2017-11-10 01:59:04.205262 | TASK [Create backup] ***********************************************************
+2017-11-10 01:59:25.639387 | changed: [localhost]
+2017-11-10 01:59:25.657706 | 
+2017-11-10 01:59:25.657757 | TASK [Execute health-check] ****************************************************
+2017-11-10 02:11:08.563363 | changed: [localhost]
+2017-11-10 02:11:08.598138 | 
+2017-11-10 02:11:08.598195 | TASK [Include arch file vars] **************************************************
+2017-11-10 02:11:08.682272 | ok: [localhost]
+2017-11-10 02:11:08.724920 | 
+2017-11-10 02:11:08.724973 | TASK [Install mosquitto_sub service] *******************************************
+2017-11-10 02:11:09.095018 | changed: [localhost]
+2017-11-10 02:11:09.131175 | 
+2017-11-10 02:11:09.131228 | TASK [Start mosquitto_sub service] *********************************************
+2017-11-10 02:11:09.686398 | changed: [localhost]
+2017-11-10 02:11:09.722242 | 
+2017-11-10 02:11:09.722323 | TASK [Change perm for state data] **********************************************
+2017-11-10 02:11:10.417888 | changed: [localhost] => (item=/var/lib/software-factory/)
+2017-11-10 02:11:10.579721 | ok: [localhost] => (item=/etc/software-factory/)
+2017-11-10 02:11:10.611450 | 
+2017-11-10 02:11:10.611509 | TASK [Remove any sfmanager.log] ************************************************
+2017-11-10 02:11:10.851391 | ok: [localhost]
+2017-11-10 02:11:10.896486 | 
+2017-11-10 02:11:10.896542 | TASK [Start functional tests] **************************************************
+2017-11-10 02:42:30.968255 | changed: [localhost]
+2017-11-10 02:42:31.036178 | 
+2017-11-10 02:42:31.036241 | TASK [Include arch file vars] **************************************************
+2017-11-10 02:42:31.092730 | ok: [localhost]
+2017-11-10 02:42:31.129768 | 
+2017-11-10 02:42:31.129825 | TASK [Check whether /var/lib/software-factory/mosquitto_sub.log contains "review"] ***
+2017-11-10 02:42:31.317343 | changed: [localhost]
+2017-11-10 02:42:31.341799 | 
+2017-11-10 02:42:31.341855 | TASK [Check whether /var/lib/software-factory/mosquitto_sub.log contains "config-update"] ***
+2017-11-10 02:42:31.522353 | changed: [localhost]
+2017-11-10 02:42:31.563695 | 
+2017-11-10 02:42:31.563754 | TASK [Check whether /var/lib/software-factory/mosquitto_sub.log contains "PIPELINE"] ***
+2017-11-10 02:42:31.750393 | changed: [localhost]
+2017-11-10 02:42:31.791487 | 
+2017-11-10 02:42:31.791544 | TASK [Run sf_erase playbook] ***************************************************
+2017-11-10 02:43:05.887718 | fatal: [localhost]: FAILED! => {"changed": true, "cmd": ["ansible-playbook", "/var/lib/software-factory/ansible/sf_erase.yml", "-e", "sfconfig_batch=true"], "delta": "0:00:33.843579", "end": "2017-11-10 02:43:05.865153", "failed": true, "msg": "non-zero return code", "rc": 2, "start": "2017-11-10 02:42:32.021574", "stderr": "", "stderr_lines": [], "stdout": "\nPLAY [install-server] **********************************************************\n\nTASK [pause] *******************************************************************\nskipping: [managesf.sftests.com]\n\nPLAY [managesf.sftests.com] ****************************************************\n\nTASK [sf-zookeeper : include_tasks] ********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-zookeeper/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-zookeeper : Disable services] *****************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-zookeeper : Remove stat data] *****************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-zookeeper : Ensure /var/lib/zookeeper exists though] ******************\nchanged: [managesf.sftests.com]\n\nTASK [sf-rabbitmq : include_tasks] *********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-rabbitmq/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-rabbitmq : Disable services] ******************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-rabbitmq : Remove files] **********************************************\nchanged: [managesf.sftests.com] => (item=/var/lib/rabbitmq/mnesia)\n\nTASK [sf-rabbitmq : Remove packages] *******************************************\nchanged: [managesf.sftests.com] => (item=[u'rabbitmq-server'])\n\nTASK [sf-gateway : include_tasks] **********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-gateway/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-gateway : Disable httpd service] **************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-gateway : Remove files] ***********************************************\nchanged: [managesf.sftests.com] => (item=/var/www/sf)\nchanged: [managesf.sftests.com] => (item=/var/www/dashboard)\nchanged: [managesf.sftests.com] => (item=/var/www/dashboards_data)\nchanged: [managesf.sftests.com] => (item=/var/www/localCA.pem)\nchanged: [managesf.sftests.com] => (item=/etc/pki/tls/certs/sftests.com.crt)\nchanged: [managesf.sftests.com] => (item=/etc/pki/tls/certs/sftests.com-chain.crt)\nchanged: [managesf.sftests.com] => (item=/etc/pki/tls/private/sftests.com.key)\nchanged: [managesf.sftests.com] => (item=/etc/httpd/conf.d/ssl.conf)\nchanged: [managesf.sftests.com] => (item=/etc/httpd/conf.d/gateway.conf)\nchanged: [managesf.sftests.com] => (item=/etc/httpd/conf.d/gateway.common)\nchanged: [managesf.sftests.com] => (item=/etc/httpd/managesf_htpasswd)\n\nTASK [sf-cauth : include_tasks] ************************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-cauth/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-cauth : Remove files] *************************************************\nchanged: [managesf.sftests.com] => (item=/etc/cauth)\nok: [managesf.sftests.com] => (item=/etc/httpd/conf.d/cauth.site)\nchanged: [managesf.sftests.com] => (item=/var/lib/cauth/keys/privkey.pem)\n\nTASK [sf-cauth : Remove packages] **********************************************\nchanged: [managesf.sftests.com] => (item=[u'python2-cauth'])\n\nTASK [sf-managesf : include_tasks] *********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-managesf/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-managesf : Disable services] ******************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-managesf : Remove files] **********************************************\nchanged: [managesf.sftests.com] => (item=/var/lib/managesf)\nchanged: [managesf.sftests.com] => (item=/etc/managesf)\nok: [managesf.sftests.com] => (item=/etc/httpd/managesf_htpasswd)\n\nTASK [sf-managesf : Remove packages] *******************************************\nchanged: [managesf.sftests.com] => (item=[u'managesf'])\n\nTASK [sf-etherpad : include_tasks] *********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-etherpad/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-etherpad : Disable service] *******************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-etherpad : Remove files] **********************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-etherpad : Remove packages] *******************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-lodgeit : include_tasks] **********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-lodgeit/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-lodgeit : Disable services] *******************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-lodgeit : Remove files] ***********************************************\n\nTASK [sf-lodgeit : Remove packages] ********************************************\nchanged: [managesf.sftests.com] => (item=[u'lodgeit'])\n\nTASK [sf-gitweb : include_tasks] ***********************************************\nskipping: [managesf.sftests.com]\n\nTASK [sf-monit : include_tasks] ************************************************\nskipping: [managesf.sftests.com]\n\nTASK [sf-gerrit : include_tasks] ***********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-gerrit/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-gerrit : Disable services] ********************************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-gerrit : Remove files] ************************************************\nchanged: [managesf.sftests.com] => (item=/etc/gerrit)\nchanged: [managesf.sftests.com] => (item=/root/.ssh/gerrit_admin)\nchanged: [managesf.sftests.com] => (item=/root/.ssh/gerrit_admin.pub)\nchanged: [managesf.sftests.com] => (item=/var/lib/gerrit)\n\nTASK [sf-gerrit : Remove packages] *********************************************\nchanged: [managesf.sftests.com] => (item=[u'gerrit'])\n\nTASK [sf-gerritbot : include_tasks] ********************************************\nskipping: [managesf.sftests.com]\n\nTASK [sf-logserver : include_tasks] ********************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-logserver/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-logserver : Disable services] *****************************************\nchanged: [managesf.sftests.com] => (item=log-gearman-client)\nchanged: [managesf.sftests.com] => (item=log-gearman-worker)\n\nTASK [sf-logserver : Remove files] *********************************************\n\nTASK [sf-logserver : Remove packages] ******************************************\nok: [managesf.sftests.com] => (item=[u'log-gearman-client', u'log-gearman-worker'])\n\nTASK [sf-hypervisor-oci : include_tasks] ***************************************\nincluded: /usr/share/sf-config/ansible/roles/sf-hypervisor-oci/tasks/disable.yml for managesf.sftests.com\n\nTASK [sf-hypervisor-oci : Check for runc] **************************************\nok: [managesf.sftests.com]\n\nTASK [sf-hypervisor-oci : Unmount rootfs bind mount] ***************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-hypervisor-oci : List running containers] *****************************\nchanged: [managesf.sftests.com]\n\nTASK [sf-hypervisor-oci : Delete runC containers] ******************************\nchanged: [managesf.sftests.com] => (item=23088-centos-oci-100-0000000001)\nchanged: [managesf.sftests.com] => (item=25688-centos-oci-100-0000000003)\nchanged: [managesf.sftests.com] => (item=42829-centos-oci-100-0000000008)\n\nTASK [sf-hypervisor-oci : Remove files] ****************************************\nok: [managesf.sftests.com] => (item=/var/lib/zuul/src)\nfailed: [managesf.sftests.com] (item=/var/lib/nodepool/oci) => {\"changed\": false, \"failed\": true, \"item\": \"/var/lib/nodepool/oci\", \"msg\": \"rmtree failed: [Errno 30] Read-only file system: '/var/lib/nodepool/oci/host-rootfs/root/mysqldump.sql.gz'\"}\n\tto retry, use: --limit @/var/lib/software-factory/ansible/sf_erase.retry\n\nPLAY RECAP *********************************************************************\nmanagesf.sftests.com       : ok=37   changed=25   unreachable=0    failed=1   ", "stdout_lines": ["", "PLAY [install-server] **********************************************************", "", "TASK [pause] *******************************************************************", "skipping: [managesf.sftests.com]", "", "PLAY [managesf.sftests.com] ****************************************************", "", "TASK [sf-zookeeper : include_tasks] ********************************************", "included: /usr/share/sf-config/ansible/roles/sf-zookeeper/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-zookeeper : Disable services] *****************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-zookeeper : Remove stat data] *****************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-zookeeper : Ensure /var/lib/zookeeper exists though] ******************", "changed: [managesf.sftests.com]", "", "TASK [sf-rabbitmq : include_tasks] *********************************************", "included: /usr/share/sf-config/ansible/roles/sf-rabbitmq/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-rabbitmq : Disable services] ******************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-rabbitmq : Remove files] **********************************************", "changed: [managesf.sftests.com] => (item=/var/lib/rabbitmq/mnesia)", "", "TASK [sf-rabbitmq : Remove packages] *******************************************", "changed: [managesf.sftests.com] => (item=[u'rabbitmq-server'])", "", "TASK [sf-gateway : include_tasks] **********************************************", "included: /usr/share/sf-config/ansible/roles/sf-gateway/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-gateway : Disable httpd service] **************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-gateway : Remove files] ***********************************************", "changed: [managesf.sftests.com] => (item=/var/www/sf)", "changed: [managesf.sftests.com] => (item=/var/www/dashboard)", "changed: [managesf.sftests.com] => (item=/var/www/dashboards_data)", "changed: [managesf.sftests.com] => (item=/var/www/localCA.pem)", "changed: [managesf.sftests.com] => (item=/etc/pki/tls/certs/sftests.com.crt)", "changed: [managesf.sftests.com] => (item=/etc/pki/tls/certs/sftests.com-chain.crt)", "changed: [managesf.sftests.com] => (item=/etc/pki/tls/private/sftests.com.key)", "changed: [managesf.sftests.com] => (item=/etc/httpd/conf.d/ssl.conf)", "changed: [managesf.sftests.com] => (item=/etc/httpd/conf.d/gateway.conf)", "changed: [managesf.sftests.com] => (item=/etc/httpd/conf.d/gateway.common)", "changed: [managesf.sftests.com] => (item=/etc/httpd/managesf_htpasswd)", "", "TASK [sf-cauth : include_tasks] ************************************************", "included: /usr/share/sf-config/ansible/roles/sf-cauth/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-cauth : Remove files] *************************************************", "changed: [managesf.sftests.com] => (item=/etc/cauth)", "ok: [managesf.sftests.com] => (item=/etc/httpd/conf.d/cauth.site)", "changed: [managesf.sftests.com] => (item=/var/lib/cauth/keys/privkey.pem)", "", "TASK [sf-cauth : Remove packages] **********************************************", "changed: [managesf.sftests.com] => (item=[u'python2-cauth'])", "", "TASK [sf-managesf : include_tasks] *********************************************", "included: /usr/share/sf-config/ansible/roles/sf-managesf/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-managesf : Disable services] ******************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-managesf : Remove files] **********************************************", "changed: [managesf.sftests.com] => (item=/var/lib/managesf)", "changed: [managesf.sftests.com] => (item=/etc/managesf)", "ok: [managesf.sftests.com] => (item=/etc/httpd/managesf_htpasswd)", "", "TASK [sf-managesf : Remove packages] *******************************************", "changed: [managesf.sftests.com] => (item=[u'managesf'])", "", "TASK [sf-etherpad : include_tasks] *********************************************", "included: /usr/share/sf-config/ansible/roles/sf-etherpad/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-etherpad : Disable service] *******************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-etherpad : Remove files] **********************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-etherpad : Remove packages] *******************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-lodgeit : include_tasks] **********************************************", "included: /usr/share/sf-config/ansible/roles/sf-lodgeit/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-lodgeit : Disable services] *******************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-lodgeit : Remove files] ***********************************************", "", "TASK [sf-lodgeit : Remove packages] ********************************************", "changed: [managesf.sftests.com] => (item=[u'lodgeit'])", "", "TASK [sf-gitweb : include_tasks] ***********************************************", "skipping: [managesf.sftests.com]", "", "TASK [sf-monit : include_tasks] ************************************************", "skipping: [managesf.sftests.com]", "", "TASK [sf-gerrit : include_tasks] ***********************************************", "included: /usr/share/sf-config/ansible/roles/sf-gerrit/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-gerrit : Disable services] ********************************************", "changed: [managesf.sftests.com]", "", "TASK [sf-gerrit : Remove files] ************************************************", "changed: [managesf.sftests.com] => (item=/etc/gerrit)", "changed: [managesf.sftests.com] => (item=/root/.ssh/gerrit_admin)", "changed: [managesf.sftests.com] => (item=/root/.ssh/gerrit_admin.pub)", "changed: [managesf.sftests.com] => (item=/var/lib/gerrit)", "", "TASK [sf-gerrit : Remove packages] *********************************************", "changed: [managesf.sftests.com] => (item=[u'gerrit'])", "", "TASK [sf-gerritbot : include_tasks] ********************************************", "skipping: [managesf.sftests.com]", "", "TASK [sf-logserver : include_tasks] ********************************************", "included: /usr/share/sf-config/ansible/roles/sf-logserver/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-logserver : Disable services] *****************************************", "changed: [managesf.sftests.com] => (item=log-gearman-client)", "changed: [managesf.sftests.com] => (item=log-gearman-worker)", "", "TASK [sf-logserver : Remove files] *********************************************", "", "TASK [sf-logserver : Remove packages] ******************************************", "ok: [managesf.sftests.com] => (item=[u'log-gearman-client', u'log-gearman-worker'])", "", "TASK [sf-hypervisor-oci : include_tasks] ***************************************", "included: /usr/share/sf-config/ansible/roles/sf-hypervisor-oci/tasks/disable.yml for managesf.sftests.com", "", "TASK [sf-hypervisor-oci : Check for runc] **************************************", "ok: [managesf.sftests.com]", "", "TASK [sf-hypervisor-oci : Unmount rootfs bind mount] ***************************", "changed: [managesf.sftests.com]", "", "TASK [sf-hypervisor-oci : List running containers] *****************************", "changed: [managesf.sftests.com]", "", "TASK [sf-hypervisor-oci : Delete runC containers] ******************************", "changed: [managesf.sftests.com] => (item=23088-centos-oci-100-0000000001)", "changed: [managesf.sftests.com] => (item=25688-centos-oci-100-0000000003)", "changed: [managesf.sftests.com] => (item=42829-centos-oci-100-0000000008)", "", "TASK [sf-hypervisor-oci : Remove files] ****************************************", "ok: [managesf.sftests.com] => (item=/var/lib/zuul/src)", "failed: [managesf.sftests.com] (item=/var/lib/nodepool/oci) => {\"changed\": false, \"failed\": true, \"item\": \"/var/lib/nodepool/oci\", \"msg\": \"rmtree failed: [Errno 30] Read-only file system: '/var/lib/nodepool/oci/host-rootfs/root/mysqldump.sql.gz'\"}", "\tto retry, use: --limit @/var/lib/software-factory/ansible/sf_erase.retry", "", "PLAY RECAP *********************************************************************", "managesf.sftests.com       : ok=37   changed=25   unreachable=0    failed=1   "]}
+2017-11-10 02:43:05.932391 | 
+2017-11-10 02:43:05.932442 | TASK [Restore jenkins shell] ***************************************************
+2017-11-10 02:43:06.173387 | changed: [localhost]
+2017-11-10 02:43:06.217232 | 
+2017-11-10 02:43:06.217287 | TASK [Check for get_logs playbook] *********************************************
+2017-11-10 02:43:06.499563 | ok: [localhost]
+2017-11-10 02:43:06.537810 | 
+2017-11-10 02:43:06.537863 | TASK [Run get-logs playbook] ***************************************************
+2017-11-10 02:43:41.917308 | changed: [localhost]
+2017-11-10 02:43:41.943246 | 
+2017-11-10 02:43:41.943351 | TASK [Copy sf-logs] ************************************************************
+2017-11-10 02:43:42.811382 | changed: [localhost]
+2017-11-10 02:43:42.997905 | 
+2017-11-10 02:43:42.997977 | TASK [Ensure artifacts are owned by user] **************************************
+2017-11-10 02:43:45.004593 | changed: [localhost]
+2017-11-10 02:43:45.043126 | 
+2017-11-10 02:43:45.043182 | TASK [Check nose_results.html] *************************************************
+2017-11-10 02:43:45.266633 | ok: [localhost]
+2017-11-10 02:43:45.299873 | 
+2017-11-10 02:43:45.299937 | TASK [Move nose_results.html in artifacts directory] ***************************
+2017-11-10 02:43:45.512411 | changed: [localhost]
+2017-11-10 02:43:45.537031 | 	to retry, use: --limit @/var/lib/zuul/jobs/sf-ci-functional-allinone/software-factory/sf-ci/playbooks/functional.retry
+2017-11-10 02:43:45.537110 | 
+2017-11-10 02:43:45.537147 | PLAY RECAP *********************************************************************
+2017-11-10 02:43:45.537231 | localhost                  : ok=47   changed=30   unreachable=0    failed=1   
+2017-11-10 02:43:45.537283 | 
+2017-11-10 02:43:45.678397 | ++ terminate
+2017-11-10 02:43:45.678453 | ++ which ara
+2017-11-10 02:43:45.679277 | ++ mkdir -p /var/lib/zuul/jobs/sf-ci-functional-allinone/artifacts
+2017-11-10 02:43:45.680120 | ++ pushd /var/lib/zuul/jobs/sf-ci-functional-allinone/artifacts
+2017-11-10 02:43:45.688882 | /var/lib/zuul/jobs/sf-ci-functional-allinone/artifacts /var/lib/zuul/jobs/sf-ci-functional-allinone/software-factory/sf-ci
+2017-11-10 02:43:45.688915 | ++ rm -Rf ara-report
+2017-11-10 02:43:45.689504 | ++ ara generate html ara-report
+2017-11-10 02:43:47.305141 | Context impl SQLiteImpl.
+2017-11-10 02:43:47.305269 | Will assume non-transactional DDL.
+2017-11-10 02:43:47.306757 | Generating static files at ara-report...
+2017-11-10 02:44:08.026545 | Done.
+2017-11-10 02:44:08.070354 | ++ popd
+2017-11-10 02:44:08.070427 | /var/lib/zuul/jobs/sf-ci-functional-allinone/software-factory/sf-ci
+2017-11-10 02:44:08.070457 | ++ sudo chown -R zuul:zuul /var/lib/zuul/jobs/sf-ci-functional-allinone/artifacts
+2017-11-10 02:44:08.141874 | ++ '[' '' == END ']'
+2017-11-10 02:44:08.141913 | ++ exit 1
+2017-11-10 02:44:08.144341 | [Zuul] Task exit code: 1
+2017-11-10 02:44:09.124582 | [Zuul] Job complete, result: FAILURE
