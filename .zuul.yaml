@@ -1,0 +1,9 @@
+---
+- project:
+    name: logreduce-tests
+    check:
+      jobs:
+        - logreduce-tests
+    gate:
+      jobs:
+        - noop
