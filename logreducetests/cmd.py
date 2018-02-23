@@ -27,7 +27,7 @@ DEBUG = False
 def usage():
     p = argparse.ArgumentParser()
     p.add_argument("--debug", action="store_true", help="Print debug")
-    p.add_argument("--model", action="append")
+    p.add_argument("--model-type", action="append")
     p.add_argument("cases", default=['tests/*'], nargs='*')
     args = p.parse_args()
     for case in args.cases:
@@ -37,8 +37,8 @@ def usage():
     if args.debug:
         global DEBUG
         DEBUG = True
-    if not args.model:
-        args.model = ["default"]
+    if not args.model_type:
+        args.model_type = ["default"]
     return args
 
 
@@ -47,11 +47,11 @@ def run(case_path, model):
     good_path = glob.glob(os.path.join(case_path, "*.good"))[0]
     fail_path = glob.glob(os.path.join(case_path, "*.fail"))[0]
 
-    cmd = ["logreduce", "--baseline", good_path, fail_path,
+    cmd = ["logreduce", "run", good_path, fail_path,
            "--json", "/dev/stdout", "--before-context", "0",
            "--after-context", "0"]
     if model != "default":
-        cmd.extend(["--model", model])
+        cmd.extend(["--model-type", model])
     if info.get("threshold"):
         cmd.extend(["--threshold", str(info["threshold"])])
     if DEBUG:
@@ -106,7 +106,7 @@ def run(case_path, model):
 def main():
     args = usage()
     result = "SUCCESS"
-    for model in args.model:
+    for model in args.model_type:
         accuracies, fps = [], []
         for case in args.cases:
             for case_path in glob.glob(case):
