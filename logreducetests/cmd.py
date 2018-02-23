@@ -47,7 +47,7 @@ def run(case_path, model):
     good_path = glob.glob(os.path.join(case_path, "*.good"))[0]
     fail_path = glob.glob(os.path.join(case_path, "*.fail"))[0]
 
-    cmd = ["logreduce", "run", good_path, fail_path,
+    cmd = ["logreduce", "diff", good_path, fail_path,
            "--json", "/dev/stdout", "--before-context", "0",
            "--after-context", "0"]
     if model != "default":

@@ -4,3 +4,9 @@ anomalies:
       error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
   - lines: |
       Skipping notify email to ['dougal@redhat.com']
+  - optional: True
+    lines: |
+      INFO:dlrn-build:ERROR: Command failed
+  - optional: True
+    lines: |
+      INFO:dlrn:Received exception Error in build_rpm_wrapper

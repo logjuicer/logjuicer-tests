@@ -1,5 +1,5 @@
 anomalies:
   - lines: |
-      Activating swap
-  - lines: |
       System clock wrong
+  - lines: |
+      Started Remount Root and Kernel File Systems
