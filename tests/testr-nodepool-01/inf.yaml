@@ -3,6 +3,10 @@ anomalies:
     lines: |
       File "nodepool/tests/test_config_validator.py", line 33, in test_good_config
 
+  - optional: True
+    lines: |
+      failure: nodepool.tests.test_config_validator.TestConfigValidation.test_good_config
+
   - lines: |
       File "nodepool/tests/test_commands.py", line 133, in test_config_validate
 
