@@ -1,16 +1,76 @@
 anomalies:
   - optional: True
-    lines: |
+    line: |
       File "nodepool/tests/test_config_validator.py", line 33, in test_good_config
 
   - optional: True
-    lines: |
+    line: |
       failure: nodepool.tests.test_config_validator.TestConfigValidation.test_good_config
 
-  - lines: |
+  - line: |
       File "nodepool/tests/test_commands.py", line 133, in test_config_validate
 
   # not useful output
   - optional: True
-    lines: |
-      File "nodepool/build1314
+    line: |
+      nodepool/build1314
+
+  - line: |
+      Content-Type: text/x-traceback;charset=utf8,language=python
+
+  - line: |
+      traceback
+  - line: |
+      nodepoolcmd.main()
+  - line: |
+      File "nodepool/cmd/nodepoolcmd.py", line 353, in main
+  - line: |
+      return NodePoolCmd.main()
+  - line: |
+      File "nodepool/cmd/__init__.py", line 136, in main
+  - line: |
+      return cls()._main(argv=argv)
+  - line: |
+      File "nodepool/cmd/__init__.py", line 126, in _main
+  - line: |
+      return self._do_run()
+  - line: |
+      File "nodepool/cmd/__init__.py", line 132, in _do_run
+  - line: |
+      return self.run()
+  - line: |
+      File "nodepool/cmd/nodepoolcmd.py", line 331, in run
+  - line: |
+      return self.args.func()
+  - line: |
+      File "nodepool/cmd/nodepoolcmd.py", line 314, in config_validate
+  - line: |
+      validator.validate()
+  - line: |
+      File "nodepool/cmd/config_validator.py", line 144, in validate
+  - line: |
+      schema(config)
+  - line: |
+      return self._compiled([], data)
+  - line: |
+      return base_validate(path, iteritems(data), out)
+  - line: |
+      raise er.MultipleInvalid(errors)
+  - line: |
+      voluptuous.error.MultipleInvalid: required key not provided @ data['providers'][2]['cloud']
+  - line: |
+      validator.validate()
+  - line: |
+      File "nodepool/cmd/config_validator.py", line 144, in validate
+  - line: |
+      schema(config)
+  - line: |
+      return self._compiled([], data)
+  - line: |
+      return base_validate(path, iteritems(data), out)
+  - line: |
+      raise er.MultipleInvalid(errors)
+  - line: |
+      voluptuous.error.MultipleInvalid: required key not provided @ data['providers'][2]['cloud']
+  - line: |
+      er.py", line 855, in _uploadImage

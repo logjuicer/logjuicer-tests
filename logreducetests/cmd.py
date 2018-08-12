@@ -49,7 +49,7 @@ def run(case_path, model):
 
     cmd = ["logreduce", "diff", good_path, fail_path,
            "--json", "/dev/stdout", "--before-context", "0",
-           "--after-context", "0"]
+           "--after-context", "0", "--merge-distance", "0"]
     if model != "default":
         cmd.extend(["--model-type", model])
     if info.get("threshold"):
@@ -63,21 +63,20 @@ def run(case_path, model):
     results = json.loads(p.communicate()[0].decode('utf-8'))
     accuracy = []
     for anomaly in info["anomalies"]:
-        if anomaly["lines"][-1] == "\n":
-            anomaly["lines"] = anomaly["lines"][:-1]
+        if anomaly["line"][-1] == "\n":
+            anomaly["line"] = anomaly["line"][:-1]
         anomaly["found"] = False
         for _, result in results['files'].items():
             if anomaly.get("filename"):
                 # TODO: check filename chunks
                 pass
             result.setdefault("found", [])
-            chunk_pos = 0
-            for chunk in result["chunks"]:
-                if anomaly["lines"] in chunk:
+            idx = 0
+            for line in result["lines"]:
+                if anomaly["line"] in line:
                     anomaly["found"] = True
-                    result["found"].append(chunk_pos)
-                    break
-                chunk_pos += 1
+                    result["found"].append(result["scores"][idx][0])
+                idx += 1
             if anomaly["found"]:
                 break
         if anomaly["found"]:
@@ -85,20 +84,21 @@ def run(case_path, model):
         elif not anomaly.get("optional"):
             accuracy.append(0.)
             if DEBUG:
-                print("Didn't catch anomaly: [%s]" % anomaly["lines"])
+                print("Didn't catch anomaly: [%s]" % anomaly["line"])
 
     # Look for falsepositive
     false_positives = []
     for _, result in results['files'].items():
-        chunk_pos = 0
-        for chunk in result["chunks"]:
-            if chunk_pos in result["found"]:
+        idx = 0
+        for line in result["lines"]:
+            pos = result["scores"][idx][0]
+            if pos in result["found"]:
                 false_positives.append(0.)
             else:
                 if DEBUG:
-                    print("False positive found: [%s]" % chunk)
+                    print("False positive found: [%s]" % line)
                 false_positives.append(1.)
-            chunk_pos += 1
+            idx += 1
 
     return np.mean(accuracy), np.mean(false_positives)
 

@@ -1,3 +1,5 @@
 anomalies:
-    - lines: |
+    - line: |
         fatal: [localhost]: FAILED!
+    - line: |
+        to retry, use: --limit @/home/fedora/deploy.retry

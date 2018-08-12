@@ -1,12 +1,50 @@
 threshold: 0.3
 anomalies:
-  - lines: |
+  - line: |
       error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
-  - lines: |
+  - line: |
       Skipping notify email to ['dougal@redhat.com']
   - optional: True
-    lines: |
+    line: |
       INFO:dlrn-build:ERROR: Command failed
   - optional: True
-    lines: |
-      INFO:dlrn:Received exception Error in build_rpm_wrapper
+    line: |
+      Received exception Error in build_rpm_wrapper
+  - line: |
+      DEBUG:   File "/usr/lib/python2.7/site-packages/sphinx/environment.py", line 1097, in get_doctree
+  - line: |
+      DEBUG: IOError: [Errno 2] No such file or directory:
+  - line: |
+      DEBUG: The full traceback has been saved in /tmp/sphinx-err-9ZipNP.log
+  - line: |
+      DEBUG: Please also report this if it was a user error, so that a better error message can be provided next time.
+  - line: |
+      DEBUG: A bug report can be filed
+  - line: |
+      DEBUG:     Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
+  - line: |
+      INFO: EXCEPTION: [Error()]
+  - line: |
+      Traceback (most recent call last):
+  - line: |
+      File "/usr/lib/python2.7/site-packages/mockbuild/trace_decorator.py", line 88, in trace
+  - line: |
+      File "/usr/lib/python2.7/site-packages/mockbuild/util.py", line 547, in do
+  - line: |
+      raise exception.Error("Command failed. See logs for output.
+  - line: |
+      (command,), child.returncode)
+  - line: |
+      Error: Command failed. See logs for output.
+  - line: |
+      bash --login -c /usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-openstackclient.spec
+  - line: |
+      INFO: Cleaning up build root ('cleanup_on_failure=True')
+  - line: |
+      cmd failed
+  - line: |
+      RAN: /usr/bin/env /home/jenkins/workspace/DLRN-rpmbuild/DLRN/scripts/build_rpm.sh centos python-openstackclient
+  - line: |
+      STDOUT:
+  - line: |
+      STDERR:

@@ -1,6 +1,6 @@
 threshold: 0.5
 anomalies:
-    - lines: |
+    - line: |
         rmtree failed: [Errno 30] Read-only file system
     - optional: True
-      lines: + break
+      line: + break
