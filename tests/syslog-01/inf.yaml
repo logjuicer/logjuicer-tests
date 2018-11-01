@@ -5,5 +5,3 @@ anomalies:
       Started Remount Root and Kernel File Systems
   - line: |
       chronyd[637]: Selected source
-  - line: |
-      Started Apply Kernel Variables

@@ -39,8 +39,6 @@ anomalies:
   - line: |
       bash --login -c /usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-openstackclient.spec
   - line: |
-      INFO: Cleaning up build root ('cleanup_on_failure=True')
-  - line: |
       cmd failed
   - line: |
       RAN: /usr/bin/env /home/jenkins/workspace/DLRN-rpmbuild/DLRN/scripts/build_rpm.sh centos python-openstackclient
