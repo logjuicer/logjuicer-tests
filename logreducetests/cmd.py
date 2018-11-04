@@ -51,7 +51,7 @@ def run(case_path, model):
            "--json", "/dev/stdout", "--before-context", "0",
            "--after-context", "0", "--merge-distance", "0"]
     if model != "default":
-        cmd.extend(["--model-type", model])
+        cmd = ["logreduce", "--model-type", model] + cmd[1:]
     if info.get("threshold"):
         cmd.extend(["--threshold", str(info["threshold"])])
     if DEBUG:
