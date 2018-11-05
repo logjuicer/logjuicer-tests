@@ -4,9 +4,9 @@
 2017-11-12 14:26:51.417543 | Use default for ZUUL_BRANCH and ZUUL_REF if needed
 2017-11-12 14:26:51.417563 | + export ZUUL_BRANCH=master
 2017-11-12 14:26:51.417576 | + ZUUL_BRANCH=master
-2017-11-12 14:26:51.417602 | + export ZUUL_REF=refs/zuul/master/Z77ee533dd71e4b888ba76daf08036b45
-2017-11-12 14:26:51.417625 | + ZUUL_REF=refs/zuul/master/Z77ee533dd71e4b888ba76daf08036b45
-2017-11-12 14:26:51.417656 | + '[' refs/zuul/master/Z77ee533dd71e4b888ba76daf08036b45 = master ']'
+2017-11-12 14:26:51.417602 | + export ZUUL_REF=refs/zuul/master/77ee533dd71e4b888ba76daf08036b45
+2017-11-12 14:26:51.417625 | + ZUUL_REF=refs/zuul/master/77ee533dd71e4b888ba76daf08036b45
+2017-11-12 14:26:51.417656 | + '[' refs/zuul/master/77ee533dd71e4b888ba76daf08036b45 = master ']'
 2017-11-12 14:26:51.417672 | + echo 'Clean workspace'
 2017-11-12 14:26:51.417683 | Clean workspace
 2017-11-12 14:26:51.417693 | + rm -Rf './*'

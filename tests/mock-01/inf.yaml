@@ -1,4 +1,3 @@
-threshold: 0.3
 anomalies:
   - line: |
       error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
@@ -46,3 +45,9 @@ anomalies:
       STDOUT:
   - line: |
       STDERR:
+  - line: |
+      INFO:dlrn-build:INFO: Cleaning up build root ('cleanup_on_failure=True')
+  - line: |
+      INFO:dlrn-build:ERROR: Exception
+  - line: |
+      INFO:dlrn-build:    result = func(*args, **kw)

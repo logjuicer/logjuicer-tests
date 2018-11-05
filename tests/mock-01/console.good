@@ -5,9 +5,9 @@ Building remotely on bare-centos-7-rdo-cloud-159660 (bare-centos-7) in workspace
 Use default for ZUUL_BRANCH and ZUUL_REF if needed
 + export ZUUL_BRANCH=master
 + ZUUL_BRANCH=master
-+ export ZUUL_REF=refs/zuul/master/Z9249f6066a2041bbbeb838e2ca1cf2b4
-+ ZUUL_REF=refs/zuul/master/Z9249f6066a2041bbbeb838e2ca1cf2b4
-+ '[' refs/zuul/master/Z9249f6066a2041bbbeb838e2ca1cf2b4 = master ']'
++ export ZUUL_REF=refs/zuul/master/9249f6066a2041bbbeb838e2ca1cf2b4
++ ZUUL_REF=refs/zuul/master/9249f6066a2041bbbeb838e2ca1cf2b4
++ '[' refs/zuul/master/9249f6066a2041bbbeb838e2ca1cf2b4 = master ']'
 + echo 'Clean workspace'
 Clean workspace
 + rm -Rf './*'
@@ -309,7 +309,7 @@ DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zu
 2017-06-23 20:10:12,027 INFO:dlrn-build:DEBUG: pickling environment... /builddir/build/BUILD/python-openstackclient-3.11.1.dev50/doc/source/index.rst:50: WARNING: toctree contains reference to nonexisting document u'api/modules'
 2017-06-23 20:10:12,100 INFO:dlrn-build:DEBUG: done
 2017-06-23 20:10:12,100 INFO:dlrn-build:DEBUG: checking consistency... done
-2017-06-23 20:10:12,128 INFO:dlrn-build:DEBUG: writing... openstack.1 { } 
+2017-06-23 20:10:12,128 INFO:dlrn-build:DEBUG: writing... openstack.1 { }
 2017-06-23 20:10:12,128 INFO:dlrn-build:DEBUG: build succeeded, 1 warning.
 2017-06-23 20:10:12,174 INFO:dlrn-build:DEBUG: + install -p -D -m 644 man/openstack.1 /builddir/build/BUILDROOT/python-openstackclient-3.11.1-0.20170623200805.5c40202.el7.centos.x86_64/usr/share/man/man1/openstack.1
 2017-06-23 20:10:12,174 INFO:dlrn-build:DEBUG: + rm -fr html/.doctrees html/.buildinfo
@@ -349,7 +349,7 @@ DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zu
 2017-06-23 20:10:34,212 INFO:dlrn-build:DEBUG: running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
 2017-06-23 20:10:34,212 INFO:dlrn-build:DEBUG: OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
 2017-06-23 20:10:34,212 INFO:dlrn-build:DEBUG: OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
-2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: ${PYTHON:-python} -m subunit.run discover -t ./ ${OS_TEST_PATH:-./openstackclient/tests/unit} --list 
+2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: ${PYTHON:-python} -m subunit.run discover -t ./ ${OS_TEST_PATH:-./openstackclient/tests/unit} --list
 2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: running=OS_STDOUT_CAPTURE=${OS_STDOUT_CAPTURE:-1} \
 2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: OS_STDERR_CAPTURE=${OS_STDERR_CAPTURE:-1} \
 2017-06-23 20:10:34,213 INFO:dlrn-build:DEBUG: OS_TEST_TIMEOUT=${OS_TEST_TIMEOUT:-60} \
@@ -764,182 +764,182 @@ DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zu
 2017-06-23 20:11:15,174 INFO:dlrn-build:DEBUG: Running transaction test
 2017-06-23 20:11:15,209 INFO:dlrn-build:DEBUG: Transaction test succeeded
 2017-06-23 20:11:15,209 INFO:dlrn-build:DEBUG: Running transaction
-2017-06-23 20:11:16,133 INFO:dlrn-build:DEBUG:   Installing : python2-stevedore-1.23.0-0.20170609002503.91c2e41.el7.ce    1/58 
-2017-06-23 20:11:16,341 INFO:dlrn-build:DEBUG:   Installing : python2-iso8601-0.1.11-1.el7.noarch                         2/58 
-2017-06-23 20:11:16,567 INFO:dlrn-build:DEBUG:   Installing : python-prettytable-0.7.2-2.el7.centos.noarch                3/58 
-2017-06-23 20:11:20,956 INFO:dlrn-build:DEBUG:   Installing : python-simplejson-3.5.3-5.el7.x86_64                        4/58 
-2017-06-23 20:11:29,537 INFO:dlrn-build:DEBUG:   Installing : python-netaddr-0.7.18-1.el7.noarch                          5/58 
-2017-06-23 20:11:29,897 INFO:dlrn-build:DEBUG:   Installing : PyYAML-3.10-11.el7.x86_64                                   6/58 
-2017-06-23 20:11:30,199 INFO:dlrn-build:DEBUG:   Installing : python-wrapt-1.10.8-2.el7.x86_64                            7/58 
-2017-06-23 20:11:30,500 INFO:dlrn-build:DEBUG:   Installing : python2-positional-1.1.1-2.el7.noarch                       8/58 
-2017-06-23 20:11:30,778 INFO:dlrn-build:DEBUG:   Installing : python2-funcsigs-1.0.2-1.el7.noarch                         9/58 
-2017-06-23 20:11:30,997 INFO:dlrn-build:DEBUG:   Installing : python2-debtcollector-1.15.0-0.20170615195554.d2f3f45.el   10/58 
-2017-06-23 20:11:31,136 INFO:dlrn-build:DEBUG:   Installing : pyparsing-2.0.7-1.el7.noarch                               11/58 
-2017-06-23 20:11:32,407 INFO:dlrn-build:DEBUG:   Installing : python2-requestsexceptions-1.2.0-0.20170303113339.3eb026   12/58 
-2017-06-23 20:11:32,565 INFO:dlrn-build:DEBUG:   Installing : python-chardet-2.2.1-1.el7_1.noarch                        13/58 
-2017-06-23 20:11:32,788 INFO:dlrn-build:DEBUG:   Installing : python-linecache2-1.0.0-1.el7.noarch                       14/58 
-2017-06-23 20:11:32,967 INFO:dlrn-build:DEBUG:   Installing : python-traceback2-1.4.0-2.el7.noarch                       15/58 
-2017-06-23 20:11:33,122 INFO:dlrn-build:DEBUG:   Installing : python-unittest2-1.0.1-1.el7.noarch                        16/58 
-2017-06-23 20:11:33,282 INFO:dlrn-build:DEBUG:   Installing : python-msgpack-0.4.6-3.el7.x86_64                          17/58 
-2017-06-23 20:11:33,424 INFO:dlrn-build:DEBUG:   Installing : which-2.20-7.el7.x86_64                                    18/58 
-2017-06-23 20:11:33,547 INFO:dlrn-build:DEBUG:   Installing : python-cmd2-0.6.8-8.el7.noarch                             19/58 
-2017-06-23 20:11:33,661 INFO:dlrn-build:DEBUG:   Installing : python-monotonic-0.6-1.el7.noarch                          20/58 
-2017-06-23 20:11:33,807 INFO:dlrn-build:DEBUG:   Installing : python-oslo-utils-lang-3.26.0-0.20170609001847.15e0140.e   21/58 
-2017-06-23 20:11:33,983 INFO:dlrn-build:DEBUG:   Installing : python-unicodecsv-0.14.1-1.el7.noarch                      22/58 
-2017-06-23 20:11:34,124 INFO:dlrn-build:DEBUG:   Installing : python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.n   23/58 
-2017-06-23 20:11:34,283 INFO:dlrn-build:DEBUG:   Installing : python-netifaces-0.10.4-3.el7.x86_64                       24/58 
-2017-06-23 20:11:34,410 INFO:dlrn-build:DEBUG:   Installing : python-backports-1.0-8.el7.x86_64                          25/58 
-2017-06-23 20:11:34,553 INFO:dlrn-build:DEBUG:   Installing : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   26/58 
-2017-06-23 20:11:34,690 INFO:dlrn-build:DEBUG:   Installing : python2-deprecation-1.0-3.el7.noarch                       27/58 
-2017-06-23 20:11:34,852 INFO:dlrn-build:DEBUG:   Installing : python2-jsonpointer-1.10-4.el7.noarch                      28/58 
-2017-06-23 20:11:35,001 INFO:dlrn-build:DEBUG:   Installing : python2-jsonpatch-1.14-1.el7.noarch                        29/58 
-2017-06-23 20:11:35,177 INFO:dlrn-build:DEBUG:   Installing : python2-appdirs-1.4.0-4.el7.noarch                         30/58 
-2017-06-23 20:11:35,340 INFO:dlrn-build:DEBUG:   Installing : python2-rfc3986-0.3.1-1.el7.noarch                         31/58 
-2017-06-23 20:11:35,479 INFO:dlrn-build:DEBUG:   Installing : python-ipaddress-1.0.16-3.el7.noarch                       32/58 
-2017-06-23 20:11:35,661 INFO:dlrn-build:DEBUG:   Installing : python-mimeparse-0.1.4-1.el7.noarch                        33/58 
-2017-06-23 20:11:35,823 INFO:dlrn-build:DEBUG:   Installing : python-keyring-5.7.1-1.el7.noarch                          34/58 
-2017-06-23 20:11:35,951 INFO:dlrn-build:DEBUG:   Installing : python-oslo-i18n-lang-3.15.3-0.20170529140146.b9eed49.el   35/58 
-2017-06-23 20:11:36,141 INFO:dlrn-build:DEBUG:   Installing : python2-pysocks-1.5.6-3.el7.noarch                         36/58 
-2017-06-23 20:11:36,314 INFO:dlrn-build:DEBUG:   Installing : python2-urllib3-1.16-1.el7.noarch                          37/58 
-2017-06-23 20:11:36,623 INFO:dlrn-build:DEBUG:   Installing : python2-requests-2.11.1-1.el7.noarch                       38/58 
-2017-06-23 20:11:36,840 INFO:dlrn-build:DEBUG:   Installing : python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el   39/58 
-2017-06-23 20:11:37,019 INFO:dlrn-build:DEBUG:   Installing : python2-os-client-config-1.27.0-0.20170428101737.f6804f6   40/58 
-2017-06-23 20:11:37,260 INFO:dlrn-build:DEBUG:   Installing : python-extras-0.0.3-2.el7.noarch                           41/58 
-2017-06-23 20:11:37,474 INFO:dlrn-build:DEBUG:   Installing : python-testtools-1.8.0-2.el7.noarch                        42/58 
-2017-06-23 20:11:37,640 INFO:dlrn-build:DEBUG:   Installing : python-fixtures-3.0.0-2.el7.noarch                         43/58 
-2017-06-23 20:11:43,826 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.ce   44/58 
-2017-06-23 20:11:44,023 INFO:dlrn-build:DEBUG:   Installing : 2:python2-oslo-config-4.5.0-0.20170615200602.6e420e9.el7   45/58 
-2017-06-23 20:11:44,218 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.c   46/58 
-2017-06-23 20:11:44,484 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-serialization-2.18.0-0.20170330071128.e6764   47/58 
-2017-06-23 20:11:44,705 INFO:dlrn-build:DEBUG:   Installing : 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed   48/58 
-2017-06-23 20:11:45,008 INFO:dlrn-build:DEBUG:   Installing : python2-osc-lib-1.6.0-0.20170505192114.361789f.el7.cento   49/58 
-2017-06-23 20:11:45,295 INFO:dlrn-build:DEBUG:   Installing : python2-neutronclient-6.3.0-0.20170601203754.ba535c6.el7   50/58 
-2017-06-23 20:11:45,540 INFO:dlrn-build:DEBUG:   Installing : python2-cinderclient-2.2.0-0.20170608235749.e374362.el7.   51/58 
-2017-06-23 20:11:45,939 INFO:dlrn-build:DEBUG:   Installing : 1:python2-novaclient-9.0.1-0.20170621200422.ddb386b.el7.   52/58 
-2017-06-23 20:11:46,147 INFO:dlrn-build:DEBUG:   Installing : python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7   53/58 
-2017-06-23 20:11:46,321 INFO:dlrn-build:DEBUG:   Installing : python-jsonschema-2.3.0-1.el7.noarch                       54/58 
-2017-06-23 20:11:46,519 INFO:dlrn-build:DEBUG:   Installing : python-warlock-1.0.1-1.el7.noarch                          55/58 
-2017-06-23 20:11:47,175 INFO:dlrn-build:DEBUG:   Installing : 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el   56/58 
-2017-06-23 20:11:47,484 INFO:dlrn-build:DEBUG:   Installing : python-openstackclient-3.11.1-0.20170623200805.5c40202.e   57/58 
-2017-06-23 20:11:47,716 INFO:dlrn-build:DEBUG:   Installing : python-openstackclient-doc-3.11.1-0.20170623200805.5c402   58/58 
-2017-06-23 20:11:47,774 INFO:dlrn-build:DEBUG:   Verifying  : python-fixtures-3.0.0-2.el7.noarch                          1/58 
-2017-06-23 20:11:47,831 INFO:dlrn-build:DEBUG:   Verifying  : python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7    2/58 
-2017-06-23 20:11:47,888 INFO:dlrn-build:DEBUG:   Verifying  : python-openstackclient-3.11.1-0.20170623200805.5c40202.e    3/58 
-2017-06-23 20:11:47,945 INFO:dlrn-build:DEBUG:   Verifying  : python-unittest2-1.0.1-1.el7.noarch                         4/58 
-2017-06-23 20:11:47,999 INFO:dlrn-build:DEBUG:   Verifying  : python2-positional-1.1.1-2.el7.noarch                       5/58 
-2017-06-23 20:11:48,056 INFO:dlrn-build:DEBUG:   Verifying  : python-jsonschema-2.3.0-1.el7.noarch                        6/58 
-2017-06-23 20:11:48,685 INFO:dlrn-build:DEBUG:   Verifying  : python2-jsonpatch-1.14-1.el7.noarch                         7/58 
-2017-06-23 20:11:48,779 INFO:dlrn-build:DEBUG:   Verifying  : python-prettytable-0.7.2-2.el7.centos.noarch                8/58 
-2017-06-23 20:11:48,839 INFO:dlrn-build:DEBUG:   Verifying  : python-extras-0.0.3-2.el7.noarch                            9/58 
-2017-06-23 20:11:48,894 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.ce   10/58 
-2017-06-23 20:11:48,946 INFO:dlrn-build:DEBUG:   Verifying  : python-testtools-1.8.0-2.el7.noarch                        11/58 
-2017-06-23 20:11:49,003 INFO:dlrn-build:DEBUG:   Verifying  : python2-pysocks-1.5.6-3.el7.noarch                         12/58 
-2017-06-23 20:11:49,071 INFO:dlrn-build:DEBUG:   Verifying  : python-cmd2-0.6.8-8.el7.noarch                             13/58 
-2017-06-23 20:11:49,141 INFO:dlrn-build:DEBUG:   Verifying  : python-oslo-i18n-lang-3.15.3-0.20170529140146.b9eed49.el   14/58 
-2017-06-23 20:11:49,193 INFO:dlrn-build:DEBUG:   Verifying  : python2-debtcollector-1.15.0-0.20170615195554.d2f3f45.el   15/58 
-2017-06-23 20:11:49,263 INFO:dlrn-build:DEBUG:   Verifying  : python2-cinderclient-2.2.0-0.20170608235749.e374362.el7.   16/58 
-2017-06-23 20:11:49,325 INFO:dlrn-build:DEBUG:   Verifying  : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   17/58 
-2017-06-23 20:11:49,404 INFO:dlrn-build:DEBUG:   Verifying  : python-openstackclient-doc-3.11.1-0.20170623200805.5c402   18/58 
-2017-06-23 20:11:49,491 INFO:dlrn-build:DEBUG:   Verifying  : python2-requests-2.11.1-1.el7.noarch                       19/58 
-2017-06-23 20:11:49,564 INFO:dlrn-build:DEBUG:   Verifying  : python-netaddr-0.7.18-1.el7.noarch                         20/58 
-2017-06-23 20:11:49,615 INFO:dlrn-build:DEBUG:   Verifying  : pyparsing-2.0.7-1.el7.noarch                               21/58 
-2017-06-23 20:11:49,672 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.c   22/58 
-2017-06-23 20:11:49,735 INFO:dlrn-build:DEBUG:   Verifying  : python-keyring-5.7.1-1.el7.noarch                          23/58 
-2017-06-23 20:11:49,798 INFO:dlrn-build:DEBUG:   Verifying  : python2-iso8601-0.1.11-1.el7.noarch                        24/58 
-2017-06-23 20:11:49,862 INFO:dlrn-build:DEBUG:   Verifying  : python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.n   25/58 
-2017-06-23 20:11:49,925 INFO:dlrn-build:DEBUG:   Verifying  : python-mimeparse-0.1.4-1.el7.noarch                        26/58 
-2017-06-23 20:11:49,976 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-novaclient-9.0.1-0.20170621200422.ddb386b.el7.   27/58 
-2017-06-23 20:11:50,028 INFO:dlrn-build:DEBUG:   Verifying  : python-ipaddress-1.0.16-3.el7.noarch                       28/58 
-2017-06-23 20:11:50,090 INFO:dlrn-build:DEBUG:   Verifying  : python2-rfc3986-0.3.1-1.el7.noarch                         29/58 
-2017-06-23 20:11:50,147 INFO:dlrn-build:DEBUG:   Verifying  : python2-appdirs-1.4.0-4.el7.noarch                         30/58 
-2017-06-23 20:11:50,204 INFO:dlrn-build:DEBUG:   Verifying  : python2-jsonpointer-1.10-4.el7.noarch                      31/58 
-2017-06-23 20:11:50,255 INFO:dlrn-build:DEBUG:   Verifying  : python-simplejson-3.5.3-5.el7.x86_64                       32/58 
-2017-06-23 20:11:50,313 INFO:dlrn-build:DEBUG:   Verifying  : python-wrapt-1.10.8-2.el7.x86_64                           33/58 
-2017-06-23 20:11:50,365 INFO:dlrn-build:DEBUG:   Verifying  : python2-deprecation-1.0-3.el7.noarch                       34/58 
-2017-06-23 20:11:50,416 INFO:dlrn-build:DEBUG:   Verifying  : python-traceback2-1.4.0-2.el7.noarch                       35/58 
-2017-06-23 20:11:50,469 INFO:dlrn-build:DEBUG:   Verifying  : python2-funcsigs-1.0.2-1.el7.noarch                        36/58 
-2017-06-23 20:11:50,521 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el   37/58 
-2017-06-23 20:11:50,581 INFO:dlrn-build:DEBUG:   Verifying  : python2-stevedore-1.23.0-0.20170609002503.91c2e41.el7.ce   38/58 
-2017-06-23 20:11:50,644 INFO:dlrn-build:DEBUG:   Verifying  : python-backports-1.0-8.el7.x86_64                          39/58 
-2017-06-23 20:11:50,703 INFO:dlrn-build:DEBUG:   Verifying  : python-netifaces-0.10.4-3.el7.x86_64                       40/58 
-2017-06-23 20:11:50,759 INFO:dlrn-build:DEBUG:   Verifying  : python-unicodecsv-0.14.1-1.el7.noarch                      41/58 
-2017-06-23 20:11:50,811 INFO:dlrn-build:DEBUG:   Verifying  : python2-urllib3-1.16-1.el7.noarch                          42/58 
-2017-06-23 20:11:50,858 INFO:dlrn-build:DEBUG:   Verifying  : python-oslo-utils-lang-3.26.0-0.20170609001847.15e0140.e   43/58 
-2017-06-23 20:11:50,909 INFO:dlrn-build:DEBUG:   Verifying  : python-warlock-1.0.1-1.el7.noarch                          44/58 
-2017-06-23 20:11:50,960 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-serialization-2.18.0-0.20170330071128.e6764   45/58 
-2017-06-23 20:11:51,008 INFO:dlrn-build:DEBUG:   Verifying  : python2-neutronclient-6.3.0-0.20170601203754.ba535c6.el7   46/58 
-2017-06-23 20:11:51,060 INFO:dlrn-build:DEBUG:   Verifying  : python-monotonic-0.6-1.el7.noarch                          47/58 
-2017-06-23 20:11:51,113 INFO:dlrn-build:DEBUG:   Verifying  : which-2.20-7.el7.x86_64                                    48/58 
-2017-06-23 20:11:51,158 INFO:dlrn-build:DEBUG:   Verifying  : python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el   49/58 
-2017-06-23 20:11:51,215 INFO:dlrn-build:DEBUG:   Verifying  : 2:python2-oslo-config-4.5.0-0.20170615200602.6e420e9.el7   50/58 
-2017-06-23 20:11:51,258 INFO:dlrn-build:DEBUG:   Verifying  : python2-os-client-config-1.27.0-0.20170428101737.f6804f6   51/58 
-2017-06-23 20:11:51,321 INFO:dlrn-build:DEBUG:   Verifying  : python-msgpack-0.4.6-3.el7.x86_64                          52/58 
-2017-06-23 20:11:51,372 INFO:dlrn-build:DEBUG:   Verifying  : python-linecache2-1.0.0-1.el7.noarch                       53/58 
-2017-06-23 20:11:51,418 INFO:dlrn-build:DEBUG:   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                        54/58 
-2017-06-23 20:11:51,470 INFO:dlrn-build:DEBUG:   Verifying  : python2-osc-lib-1.6.0-0.20170505192114.361789f.el7.cento   55/58 
-2017-06-23 20:11:51,527 INFO:dlrn-build:DEBUG:   Verifying  : PyYAML-3.10-11.el7.x86_64                                  56/58 
-2017-06-23 20:11:51,581 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed   57/58 
-2017-06-23 20:11:51,801 INFO:dlrn-build:DEBUG:   Verifying  : python2-requestsexceptions-1.2.0-0.20170303113339.3eb026   58/58 
+2017-06-23 20:11:16,133 INFO:dlrn-build:DEBUG:   Installing : python2-stevedore-1.23.0-0.20170609002503.91c2e41.el7.ce    1/58
+2017-06-23 20:11:16,341 INFO:dlrn-build:DEBUG:   Installing : python2-iso8601-0.1.11-1.el7.noarch                         2/58
+2017-06-23 20:11:16,567 INFO:dlrn-build:DEBUG:   Installing : python-prettytable-0.7.2-2.el7.centos.noarch                3/58
+2017-06-23 20:11:20,956 INFO:dlrn-build:DEBUG:   Installing : python-simplejson-3.5.3-5.el7.x86_64                        4/58
+2017-06-23 20:11:29,537 INFO:dlrn-build:DEBUG:   Installing : python-netaddr-0.7.18-1.el7.noarch                          5/58
+2017-06-23 20:11:29,897 INFO:dlrn-build:DEBUG:   Installing : PyYAML-3.10-11.el7.x86_64                                   6/58
+2017-06-23 20:11:30,199 INFO:dlrn-build:DEBUG:   Installing : python-wrapt-1.10.8-2.el7.x86_64                            7/58
+2017-06-23 20:11:30,500 INFO:dlrn-build:DEBUG:   Installing : python2-positional-1.1.1-2.el7.noarch                       8/58
+2017-06-23 20:11:30,778 INFO:dlrn-build:DEBUG:   Installing : python2-funcsigs-1.0.2-1.el7.noarch                         9/58
+2017-06-23 20:11:30,997 INFO:dlrn-build:DEBUG:   Installing : python2-debtcollector-1.15.0-0.20170615195554.d2f3f45.el   10/58
+2017-06-23 20:11:31,136 INFO:dlrn-build:DEBUG:   Installing : pyparsing-2.0.7-1.el7.noarch                               11/58
+2017-06-23 20:11:32,407 INFO:dlrn-build:DEBUG:   Installing : python2-requestsexceptions-1.2.0-0.20170303113339.3eb026   12/58
+2017-06-23 20:11:32,565 INFO:dlrn-build:DEBUG:   Installing : python-chardet-2.2.1-1.el7_1.noarch                        13/58
+2017-06-23 20:11:32,788 INFO:dlrn-build:DEBUG:   Installing : python-linecache2-1.0.0-1.el7.noarch                       14/58
+2017-06-23 20:11:32,967 INFO:dlrn-build:DEBUG:   Installing : python-traceback2-1.4.0-2.el7.noarch                       15/58
+2017-06-23 20:11:33,122 INFO:dlrn-build:DEBUG:   Installing : python-unittest2-1.0.1-1.el7.noarch                        16/58
+2017-06-23 20:11:33,282 INFO:dlrn-build:DEBUG:   Installing : python-msgpack-0.4.6-3.el7.x86_64                          17/58
+2017-06-23 20:11:33,424 INFO:dlrn-build:DEBUG:   Installing : which-2.20-7.el7.x86_64                                    18/58
+2017-06-23 20:11:33,547 INFO:dlrn-build:DEBUG:   Installing : python-cmd2-0.6.8-8.el7.noarch                             19/58
+2017-06-23 20:11:33,661 INFO:dlrn-build:DEBUG:   Installing : python-monotonic-0.6-1.el7.noarch                          20/58
+2017-06-23 20:11:33,807 INFO:dlrn-build:DEBUG:   Installing : python-oslo-utils-lang-3.26.0-0.20170609001847.15e0140.e   21/58
+2017-06-23 20:11:33,983 INFO:dlrn-build:DEBUG:   Installing : python-unicodecsv-0.14.1-1.el7.noarch                      22/58
+2017-06-23 20:11:34,124 INFO:dlrn-build:DEBUG:   Installing : python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.n   23/58
+2017-06-23 20:11:34,283 INFO:dlrn-build:DEBUG:   Installing : python-netifaces-0.10.4-3.el7.x86_64                       24/58
+2017-06-23 20:11:34,410 INFO:dlrn-build:DEBUG:   Installing : python-backports-1.0-8.el7.x86_64                          25/58
+2017-06-23 20:11:34,553 INFO:dlrn-build:DEBUG:   Installing : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   26/58
+2017-06-23 20:11:34,690 INFO:dlrn-build:DEBUG:   Installing : python2-deprecation-1.0-3.el7.noarch                       27/58
+2017-06-23 20:11:34,852 INFO:dlrn-build:DEBUG:   Installing : python2-jsonpointer-1.10-4.el7.noarch                      28/58
+2017-06-23 20:11:35,001 INFO:dlrn-build:DEBUG:   Installing : python2-jsonpatch-1.14-1.el7.noarch                        29/58
+2017-06-23 20:11:35,177 INFO:dlrn-build:DEBUG:   Installing : python2-appdirs-1.4.0-4.el7.noarch                         30/58
+2017-06-23 20:11:35,340 INFO:dlrn-build:DEBUG:   Installing : python2-rfc3986-0.3.1-1.el7.noarch                         31/58
+2017-06-23 20:11:35,479 INFO:dlrn-build:DEBUG:   Installing : python-ipaddress-1.0.16-3.el7.noarch                       32/58
+2017-06-23 20:11:35,661 INFO:dlrn-build:DEBUG:   Installing : python-mimeparse-0.1.4-1.el7.noarch                        33/58
+2017-06-23 20:11:35,823 INFO:dlrn-build:DEBUG:   Installing : python-keyring-5.7.1-1.el7.noarch                          34/58
+2017-06-23 20:11:35,951 INFO:dlrn-build:DEBUG:   Installing : python-oslo-i18n-lang-3.15.3-0.20170529140146.b9eed49.el   35/58
+2017-06-23 20:11:36,141 INFO:dlrn-build:DEBUG:   Installing : python2-pysocks-1.5.6-3.el7.noarch                         36/58
+2017-06-23 20:11:36,314 INFO:dlrn-build:DEBUG:   Installing : python2-urllib3-1.16-1.el7.noarch                          37/58
+2017-06-23 20:11:36,623 INFO:dlrn-build:DEBUG:   Installing : python2-requests-2.11.1-1.el7.noarch                       38/58
+2017-06-23 20:11:36,840 INFO:dlrn-build:DEBUG:   Installing : python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el   39/58
+2017-06-23 20:11:37,019 INFO:dlrn-build:DEBUG:   Installing : python2-os-client-config-1.27.0-0.20170428101737.f6804f6   40/58
+2017-06-23 20:11:37,260 INFO:dlrn-build:DEBUG:   Installing : python-extras-0.0.3-2.el7.noarch                           41/58
+2017-06-23 20:11:37,474 INFO:dlrn-build:DEBUG:   Installing : python-testtools-1.8.0-2.el7.noarch                        42/58
+2017-06-23 20:11:37,640 INFO:dlrn-build:DEBUG:   Installing : python-fixtures-3.0.0-2.el7.noarch                         43/58
+2017-06-23 20:11:43,826 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.ce   44/58
+2017-06-23 20:11:44,023 INFO:dlrn-build:DEBUG:   Installing : 2:python2-oslo-config-4.5.0-0.20170615200602.6e420e9.el7   45/58
+2017-06-23 20:11:44,218 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.c   46/58
+2017-06-23 20:11:44,484 INFO:dlrn-build:DEBUG:   Installing : python2-oslo-serialization-2.18.0-0.20170330071128.e6764   47/58
+2017-06-23 20:11:44,705 INFO:dlrn-build:DEBUG:   Installing : 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed   48/58
+2017-06-23 20:11:45,008 INFO:dlrn-build:DEBUG:   Installing : python2-osc-lib-1.6.0-0.20170505192114.361789f.el7.cento   49/58
+2017-06-23 20:11:45,295 INFO:dlrn-build:DEBUG:   Installing : python2-neutronclient-6.3.0-0.20170601203754.ba535c6.el7   50/58
+2017-06-23 20:11:45,540 INFO:dlrn-build:DEBUG:   Installing : python2-cinderclient-2.2.0-0.20170608235749.e374362.el7.   51/58
+2017-06-23 20:11:45,939 INFO:dlrn-build:DEBUG:   Installing : 1:python2-novaclient-9.0.1-0.20170621200422.ddb386b.el7.   52/58
+2017-06-23 20:11:46,147 INFO:dlrn-build:DEBUG:   Installing : python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7   53/58
+2017-06-23 20:11:46,321 INFO:dlrn-build:DEBUG:   Installing : python-jsonschema-2.3.0-1.el7.noarch                       54/58
+2017-06-23 20:11:46,519 INFO:dlrn-build:DEBUG:   Installing : python-warlock-1.0.1-1.el7.noarch                          55/58
+2017-06-23 20:11:47,175 INFO:dlrn-build:DEBUG:   Installing : 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el   56/58
+2017-06-23 20:11:47,484 INFO:dlrn-build:DEBUG:   Installing : python-openstackclient-3.11.1-0.20170623200805.5c40202.e   57/58
+2017-06-23 20:11:47,716 INFO:dlrn-build:DEBUG:   Installing : python-openstackclient-doc-3.11.1-0.20170623200805.5c402   58/58
+2017-06-23 20:11:47,774 INFO:dlrn-build:DEBUG:   Verifying  : python-fixtures-3.0.0-2.el7.noarch                          1/58
+2017-06-23 20:11:47,831 INFO:dlrn-build:DEBUG:   Verifying  : python2-openstacksdk-0.9.17-0.20170621195806.7946243.el7    2/58
+2017-06-23 20:11:47,888 INFO:dlrn-build:DEBUG:   Verifying  : python-openstackclient-3.11.1-0.20170623200805.5c40202.e    3/58
+2017-06-23 20:11:47,945 INFO:dlrn-build:DEBUG:   Verifying  : python-unittest2-1.0.1-1.el7.noarch                         4/58
+2017-06-23 20:11:47,999 INFO:dlrn-build:DEBUG:   Verifying  : python2-positional-1.1.1-2.el7.noarch                       5/58
+2017-06-23 20:11:48,056 INFO:dlrn-build:DEBUG:   Verifying  : python-jsonschema-2.3.0-1.el7.noarch                        6/58
+2017-06-23 20:11:48,685 INFO:dlrn-build:DEBUG:   Verifying  : python2-jsonpatch-1.14-1.el7.noarch                         7/58
+2017-06-23 20:11:48,779 INFO:dlrn-build:DEBUG:   Verifying  : python-prettytable-0.7.2-2.el7.centos.noarch                8/58
+2017-06-23 20:11:48,839 INFO:dlrn-build:DEBUG:   Verifying  : python-extras-0.0.3-2.el7.noarch                            9/58
+2017-06-23 20:11:48,894 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-i18n-3.15.3-0.20170529140146.b9eed49.el7.ce   10/58
+2017-06-23 20:11:48,946 INFO:dlrn-build:DEBUG:   Verifying  : python-testtools-1.8.0-2.el7.noarch                        11/58
+2017-06-23 20:11:49,003 INFO:dlrn-build:DEBUG:   Verifying  : python2-pysocks-1.5.6-3.el7.noarch                         12/58
+2017-06-23 20:11:49,071 INFO:dlrn-build:DEBUG:   Verifying  : python-cmd2-0.6.8-8.el7.noarch                             13/58
+2017-06-23 20:11:49,141 INFO:dlrn-build:DEBUG:   Verifying  : python-oslo-i18n-lang-3.15.3-0.20170529140146.b9eed49.el   14/58
+2017-06-23 20:11:49,193 INFO:dlrn-build:DEBUG:   Verifying  : python2-debtcollector-1.15.0-0.20170615195554.d2f3f45.el   15/58
+2017-06-23 20:11:49,263 INFO:dlrn-build:DEBUG:   Verifying  : python2-cinderclient-2.2.0-0.20170608235749.e374362.el7.   16/58
+2017-06-23 20:11:49,325 INFO:dlrn-build:DEBUG:   Verifying  : python-backports-ssl_match_hostname-3.4.0.2-4.el7.noarch   17/58
+2017-06-23 20:11:49,404 INFO:dlrn-build:DEBUG:   Verifying  : python-openstackclient-doc-3.11.1-0.20170623200805.5c402   18/58
+2017-06-23 20:11:49,491 INFO:dlrn-build:DEBUG:   Verifying  : python2-requests-2.11.1-1.el7.noarch                       19/58
+2017-06-23 20:11:49,564 INFO:dlrn-build:DEBUG:   Verifying  : python-netaddr-0.7.18-1.el7.noarch                         20/58
+2017-06-23 20:11:49,615 INFO:dlrn-build:DEBUG:   Verifying  : pyparsing-2.0.7-1.el7.noarch                               21/58
+2017-06-23 20:11:49,672 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-utils-3.26.0-0.20170609001847.15e0140.el7.c   22/58
+2017-06-23 20:11:49,735 INFO:dlrn-build:DEBUG:   Verifying  : python-keyring-5.7.1-1.el7.noarch                          23/58
+2017-06-23 20:11:49,798 INFO:dlrn-build:DEBUG:   Verifying  : python2-iso8601-0.1.11-1.el7.noarch                        24/58
+2017-06-23 20:11:49,862 INFO:dlrn-build:DEBUG:   Verifying  : python-cliff-2.7.0-0.20170511182646.c548b7b.el7.centos.n   25/58
+2017-06-23 20:11:49,925 INFO:dlrn-build:DEBUG:   Verifying  : python-mimeparse-0.1.4-1.el7.noarch                        26/58
+2017-06-23 20:11:49,976 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-novaclient-9.0.1-0.20170621200422.ddb386b.el7.   27/58
+2017-06-23 20:11:50,028 INFO:dlrn-build:DEBUG:   Verifying  : python-ipaddress-1.0.16-3.el7.noarch                       28/58
+2017-06-23 20:11:50,090 INFO:dlrn-build:DEBUG:   Verifying  : python2-rfc3986-0.3.1-1.el7.noarch                         29/58
+2017-06-23 20:11:50,147 INFO:dlrn-build:DEBUG:   Verifying  : python2-appdirs-1.4.0-4.el7.noarch                         30/58
+2017-06-23 20:11:50,204 INFO:dlrn-build:DEBUG:   Verifying  : python2-jsonpointer-1.10-4.el7.noarch                      31/58
+2017-06-23 20:11:50,255 INFO:dlrn-build:DEBUG:   Verifying  : python-simplejson-3.5.3-5.el7.x86_64                       32/58
+2017-06-23 20:11:50,313 INFO:dlrn-build:DEBUG:   Verifying  : python-wrapt-1.10.8-2.el7.x86_64                           33/58
+2017-06-23 20:11:50,365 INFO:dlrn-build:DEBUG:   Verifying  : python2-deprecation-1.0-3.el7.noarch                       34/58
+2017-06-23 20:11:50,416 INFO:dlrn-build:DEBUG:   Verifying  : python-traceback2-1.4.0-2.el7.noarch                       35/58
+2017-06-23 20:11:50,469 INFO:dlrn-build:DEBUG:   Verifying  : python2-funcsigs-1.0.2-1.el7.noarch                        36/58
+2017-06-23 20:11:50,521 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-glanceclient-2.7.0-0.20170622095732.d67b33b.el   37/58
+2017-06-23 20:11:50,581 INFO:dlrn-build:DEBUG:   Verifying  : python2-stevedore-1.23.0-0.20170609002503.91c2e41.el7.ce   38/58
+2017-06-23 20:11:50,644 INFO:dlrn-build:DEBUG:   Verifying  : python-backports-1.0-8.el7.x86_64                          39/58
+2017-06-23 20:11:50,703 INFO:dlrn-build:DEBUG:   Verifying  : python-netifaces-0.10.4-3.el7.x86_64                       40/58
+2017-06-23 20:11:50,759 INFO:dlrn-build:DEBUG:   Verifying  : python-unicodecsv-0.14.1-1.el7.noarch                      41/58
+2017-06-23 20:11:50,811 INFO:dlrn-build:DEBUG:   Verifying  : python2-urllib3-1.16-1.el7.noarch                          42/58
+2017-06-23 20:11:50,858 INFO:dlrn-build:DEBUG:   Verifying  : python-oslo-utils-lang-3.26.0-0.20170609001847.15e0140.e   43/58
+2017-06-23 20:11:50,909 INFO:dlrn-build:DEBUG:   Verifying  : python-warlock-1.0.1-1.el7.noarch                          44/58
+2017-06-23 20:11:50,960 INFO:dlrn-build:DEBUG:   Verifying  : python2-oslo-serialization-2.18.0-0.20170330071128.e6764   45/58
+2017-06-23 20:11:51,008 INFO:dlrn-build:DEBUG:   Verifying  : python2-neutronclient-6.3.0-0.20170601203754.ba535c6.el7   46/58
+2017-06-23 20:11:51,060 INFO:dlrn-build:DEBUG:   Verifying  : python-monotonic-0.6-1.el7.noarch                          47/58
+2017-06-23 20:11:51,113 INFO:dlrn-build:DEBUG:   Verifying  : which-2.20-7.el7.x86_64                                    48/58
+2017-06-23 20:11:51,158 INFO:dlrn-build:DEBUG:   Verifying  : python2-keystoneauth1-2.21.0-0.20170613144756.0be1403.el   49/58
+2017-06-23 20:11:51,215 INFO:dlrn-build:DEBUG:   Verifying  : 2:python2-oslo-config-4.5.0-0.20170615200602.6e420e9.el7   50/58
+2017-06-23 20:11:51,258 INFO:dlrn-build:DEBUG:   Verifying  : python2-os-client-config-1.27.0-0.20170428101737.f6804f6   51/58
+2017-06-23 20:11:51,321 INFO:dlrn-build:DEBUG:   Verifying  : python-msgpack-0.4.6-3.el7.x86_64                          52/58
+2017-06-23 20:11:51,372 INFO:dlrn-build:DEBUG:   Verifying  : python-linecache2-1.0.0-1.el7.noarch                       53/58
+2017-06-23 20:11:51,418 INFO:dlrn-build:DEBUG:   Verifying  : python-chardet-2.2.1-1.el7_1.noarch                        54/58
+2017-06-23 20:11:51,470 INFO:dlrn-build:DEBUG:   Verifying  : python2-osc-lib-1.6.0-0.20170505192114.361789f.el7.cento   55/58
+2017-06-23 20:11:51,527 INFO:dlrn-build:DEBUG:   Verifying  : PyYAML-3.10-11.el7.x86_64                                  56/58
+2017-06-23 20:11:51,581 INFO:dlrn-build:DEBUG:   Verifying  : 1:python2-keystoneclient-3.11.0-0.20170613145143.daa99ed   57/58
+2017-06-23 20:11:51,801 INFO:dlrn-build:DEBUG:   Verifying  : python2-requestsexceptions-1.2.0-0.20170303113339.3eb026   58/58
 2017-06-23 20:11:51,801 INFO:dlrn-build:DEBUG: Installed:
-2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-openstackclient.noarch 0:3.11.1-0.20170623200805.5c40202.el7.centos    
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-openstackclient.noarch 0:3.11.1-0.20170623200805.5c40202.el7.centos
 2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-openstackclient-doc.noarch 0:3.11.1-0.20170623200805.5c40202.el7.centos
 2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG: Dependency Installed:
-2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   PyYAML.x86_64 0:3.10-11.el7                                                   
-2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   pyparsing.noarch 0:2.0.7-1.el7                                                
-2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-backports.x86_64 0:1.0-8.el7                                           
-2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7                    
-2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-chardet.noarch 0:2.2.1-1.el7_1                                         
-2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-cliff.noarch 0:2.7.0-0.20170511182646.c548b7b.el7.centos               
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-cmd2.noarch 0:0.6.8-8.el7                                              
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-extras.noarch 0:0.0.3-2.el7                                            
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-fixtures.noarch 0:3.0.0-2.el7                                          
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-ipaddress.noarch 0:1.0.16-3.el7                                        
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-jsonschema.noarch 0:2.3.0-1.el7                                        
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-keyring.noarch 0:5.7.1-1.el7                                           
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-linecache2.noarch 0:1.0.0-1.el7                                        
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-mimeparse.noarch 0:0.1.4-1.el7                                         
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-monotonic.noarch 0:0.6-1.el7                                           
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-msgpack.x86_64 0:0.4.6-3.el7                                           
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-netaddr.noarch 0:0.7.18-1.el7                                          
-2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-netifaces.x86_64 0:0.10.4-3.el7                                        
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-oslo-i18n-lang.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos     
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-oslo-utils-lang.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos    
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-prettytable.noarch 0:0.7.2-2.el7.centos                                
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-simplejson.x86_64 0:3.5.3-5.el7                                        
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-testtools.noarch 0:1.8.0-2.el7                                         
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-traceback2.noarch 0:1.4.0-2.el7                                        
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-unicodecsv.noarch 0:0.14.1-1.el7                                       
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-unittest2.noarch 0:1.0.1-1.el7                                         
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-warlock.noarch 0:1.0.1-1.el7                                           
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-wrapt.x86_64 0:1.10.8-2.el7                                            
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-appdirs.noarch 0:1.4.0-4.el7                                          
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-cinderclient.noarch 0:2.2.0-0.20170608235749.e374362.el7.centos       
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-debtcollector.noarch 0:1.15.0-0.20170615195554.d2f3f45.el7.centos     
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-deprecation.noarch 0:1.0-3.el7                                        
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-funcsigs.noarch 0:1.0.2-1.el7                                         
-2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-glanceclient.noarch 1:2.7.0-0.20170622095732.d67b33b.el7.centos       
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-iso8601.noarch 0:0.1.11-1.el7                                         
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-jsonpatch.noarch 0:1.14-1.el7                                         
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-jsonpointer.noarch 0:1.10-4.el7                                       
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-keystoneauth1.noarch 0:2.21.0-0.20170613144756.0be1403.el7.centos     
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-keystoneclient.noarch 1:3.11.0-0.20170613145143.daa99ed.el7.centos    
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-neutronclient.noarch 0:6.3.0-0.20170601203754.ba535c6.el7.centos      
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-novaclient.noarch 1:9.0.1-0.20170621200422.ddb386b.el7.centos         
-2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-openstacksdk.noarch 0:0.9.17-0.20170621195806.7946243.el7.centos      
-2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-os-client-config.noarch 0:1.27.0-0.20170428101737.f6804f6.el7.centos  
-2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-osc-lib.noarch 0:1.6.0-0.20170505192114.361789f.el7.centos            
-2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-config.noarch 2:4.5.0-0.20170615200602.6e420e9.el7.centos        
-2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-i18n.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos         
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   PyYAML.x86_64 0:3.10-11.el7
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   pyparsing.noarch 0:2.0.7-1.el7
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-backports.x86_64 0:1.0-8.el7
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-backports-ssl_match_hostname.noarch 0:3.4.0.2-4.el7
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-chardet.noarch 0:2.2.1-1.el7_1
+2017-06-23 20:11:51,802 INFO:dlrn-build:DEBUG:   python-cliff.noarch 0:2.7.0-0.20170511182646.c548b7b.el7.centos
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-cmd2.noarch 0:0.6.8-8.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-extras.noarch 0:0.0.3-2.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-fixtures.noarch 0:3.0.0-2.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-ipaddress.noarch 0:1.0.16-3.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-jsonschema.noarch 0:2.3.0-1.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-keyring.noarch 0:5.7.1-1.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-linecache2.noarch 0:1.0.0-1.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-mimeparse.noarch 0:0.1.4-1.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-monotonic.noarch 0:0.6-1.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-msgpack.x86_64 0:0.4.6-3.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-netaddr.noarch 0:0.7.18-1.el7
+2017-06-23 20:11:51,803 INFO:dlrn-build:DEBUG:   python-netifaces.x86_64 0:0.10.4-3.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-oslo-i18n-lang.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-oslo-utils-lang.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-prettytable.noarch 0:0.7.2-2.el7.centos
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-simplejson.x86_64 0:3.5.3-5.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-testtools.noarch 0:1.8.0-2.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-traceback2.noarch 0:1.4.0-2.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-unicodecsv.noarch 0:0.14.1-1.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-unittest2.noarch 0:1.0.1-1.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-warlock.noarch 0:1.0.1-1.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python-wrapt.x86_64 0:1.10.8-2.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-appdirs.noarch 0:1.4.0-4.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-cinderclient.noarch 0:2.2.0-0.20170608235749.e374362.el7.centos
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-debtcollector.noarch 0:1.15.0-0.20170615195554.d2f3f45.el7.centos
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-deprecation.noarch 0:1.0-3.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-funcsigs.noarch 0:1.0.2-1.el7
+2017-06-23 20:11:51,804 INFO:dlrn-build:DEBUG:   python2-glanceclient.noarch 1:2.7.0-0.20170622095732.d67b33b.el7.centos
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-iso8601.noarch 0:0.1.11-1.el7
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-jsonpatch.noarch 0:1.14-1.el7
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-jsonpointer.noarch 0:1.10-4.el7
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-keystoneauth1.noarch 0:2.21.0-0.20170613144756.0be1403.el7.centos
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-keystoneclient.noarch 1:3.11.0-0.20170613145143.daa99ed.el7.centos
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-neutronclient.noarch 0:6.3.0-0.20170601203754.ba535c6.el7.centos
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-novaclient.noarch 1:9.0.1-0.20170621200422.ddb386b.el7.centos
+2017-06-23 20:11:51,805 INFO:dlrn-build:DEBUG:   python2-openstacksdk.noarch 0:0.9.17-0.20170621195806.7946243.el7.centos
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-os-client-config.noarch 0:1.27.0-0.20170428101737.f6804f6.el7.centos
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-osc-lib.noarch 0:1.6.0-0.20170505192114.361789f.el7.centos
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-config.noarch 2:4.5.0-0.20170615200602.6e420e9.el7.centos
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-i18n.noarch 0:3.15.3-0.20170529140146.b9eed49.el7.centos
 2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-serialization.noarch 0:2.18.0-0.20170330071128.e6764d4.el7.centos
-2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-utils.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos        
-2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-positional.noarch 0:1.1.1-2.el7                                       
-2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-pysocks.noarch 0:1.5.6-3.el7                                          
-2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-requests.noarch 0:2.11.1-1.el7                                        
-2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-requestsexceptions.noarch 0:1.2.0-0.20170303113339.3eb026b.el7.centos 
-2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-rfc3986.noarch 0:0.3.1-1.el7                                          
-2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-stevedore.noarch 0:1.23.0-0.20170609002503.91c2e41.el7.centos         
-2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-urllib3.noarch 0:1.16-1.el7                                           
-2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   which.x86_64 0:2.20-7.el7                                                     
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-oslo-utils.noarch 0:3.26.0-0.20170609001847.15e0140.el7.centos
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-positional.noarch 0:1.1.1-2.el7
+2017-06-23 20:11:51,806 INFO:dlrn-build:DEBUG:   python2-pysocks.noarch 0:1.5.6-3.el7
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-requests.noarch 0:2.11.1-1.el7
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-requestsexceptions.noarch 0:1.2.0-0.20170303113339.3eb026b.el7.centos
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-rfc3986.noarch 0:0.3.1-1.el7
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-stevedore.noarch 0:1.23.0-0.20170609002503.91c2e41.el7.centos
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   python2-urllib3.noarch 0:1.16-1.el7
+2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG:   which.x86_64 0:2.20-7.el7
 2017-06-23 20:11:51,807 INFO:dlrn-build:DEBUG: Complete!
 2017-06-23 20:11:51,838 INFO:dlrn-build:DEBUG: Child return code was: 0
 2017-06-23 20:11:51,838 INFO:dlrn-build:INFO: None

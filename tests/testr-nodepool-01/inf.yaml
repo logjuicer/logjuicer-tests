@@ -10,6 +10,15 @@ anomalies:
   - line: |
       File "nodepool/tests/test_commands.py", line 133, in test_config_validate
 
+  - line: |
+      line 538, in validate_dict
+  - line: |
+      line 370, in validate_mapping
+  - line: |
+      line 538, in validate_dict
+  - line: |
+      line 370, in validate_mapping
+
   # not useful output
   - optional: True
     line: |

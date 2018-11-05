@@ -7,6 +7,8 @@ anomalies:
     - line: |
         ERROR:   pep8: commands failed
     - line: |
+        ERROR: InvocationError
+    - line: |
         Job complete, result: FAILURE
     - optional: True
       line: Ran 2 tests

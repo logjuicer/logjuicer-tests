@@ -5,9 +5,9 @@ Building remotely on bare-centos-7-rdo-cloud-159680 (bare-centos-7) in workspace
 Use default for ZUUL_BRANCH and ZUUL_REF if needed
 + export ZUUL_BRANCH=master
 + ZUUL_BRANCH=master
-+ export ZUUL_REF=refs/zuul/master/Z6546b192211a4531859db9d8b9375154
-+ ZUUL_REF=refs/zuul/master/Z6546b192211a4531859db9d8b9375154
-+ '[' refs/zuul/master/Z6546b192211a4531859db9d8b9375154 = master ']'
++ export ZUUL_REF=refs/zuul/master/6546b192211a4531859db9d8b9375154
++ ZUUL_REF=refs/zuul/master/6546b192211a4531859db9d8b9375154
++ '[' refs/zuul/master/6546b192211a4531859db9d8b9375154 = master ']'
 + echo 'Clean workspace'
 Clean workspace
 + rm -Rf './*'
@@ -323,7 +323,7 @@ DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zu
 2017-06-24 13:36:02,849 INFO:dlrn-build:DEBUG: looking for now-outdated files... none found
 2017-06-24 13:36:02,884 INFO:dlrn-build:DEBUG: pickling environment... done
 2017-06-24 13:36:02,884 INFO:dlrn-build:DEBUG: checking consistency... done
-2017-06-24 13:36:02,885 INFO:dlrn-build:DEBUG: writing... openstack.1 { 
+2017-06-24 13:36:02,885 INFO:dlrn-build:DEBUG: writing... openstack.1 {
 2017-06-24 13:36:02,885 INFO:dlrn-build:DEBUG: Exception occurred:
 2017-06-24 13:36:02,886 INFO:dlrn-build:DEBUG:   File "/usr/lib/python2.7/site-packages/sphinx/environment.py", line 1097, in get_doctree
 2017-06-24 13:36:02,886 INFO:dlrn-build:DEBUG:     f = open(doctree_filename, 'rb')
@@ -376,7 +376,7 @@ DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zu
 2017-06-24 13:36:08,832 INFO:dlrn-build:+ finalize
 2017-06-24 13:36:08,832 INFO:dlrn-build:+ rm -rf /tmp/tmp.IYy49grLPx
 2017-06-24 13:36:08,900 ERROR:dlrn-build:cmd failed. See logs at: /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e/
-2017-06-24 13:36:08,902 INFO:dlrn:Received exception Error in build_rpm_wrapper for python-openstackclient: 
+2017-06-24 13:36:08,902 INFO:dlrn:Received exception Error in build_rpm_wrapper for python-openstackclient:
 
   RAN: /usr/bin/env /home/jenkins/workspace/DLRN-rpmbuild/DLRN/scripts/build_rpm.sh centos python-openstackclient /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data http://trunk.rdoproject.org/centos7/ /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/python-openstackclient_distro
 
@@ -385,7 +385,7 @@ DEBUG:git.repo.base:Cmd(['git', 'clone', '-v', 'https://review.rdoproject.org/zu
 
   STDERR:
 
-2017-06-24 13:36:08,908 ERROR:dlrn:Received exception Error in build_rpm_wrapper for python-openstackclient: 
+2017-06-24 13:36:08,908 ERROR:dlrn:Received exception Error in build_rpm_wrapper for python-openstackclient:
 
   RAN: /usr/bin/env /home/jenkins/workspace/DLRN-rpmbuild/DLRN/scripts/build_rpm.sh centos python-openstackclient /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/repos/c0/71/c0719c36d1a3f268b6bfba4c83aac632f1b546fe_e330b73e /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data http://trunk.rdoproject.org/centos7/ /home/jenkins/workspace/DLRN-rpmbuild/DLRN/data/python-openstackclient_distro
 
