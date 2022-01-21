@@ -60,7 +60,13 @@ def run(case_path, model):
     else:
         stderr = subprocess.PIPE
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=stderr)
-    results = json.loads(p.communicate()[0].decode('utf-8'))
+    outputs = p.communicate()
+    try:
+        results = json.loads(outputs[0].decode('utf-8'))
+    except Exception:
+        print(outputs)
+        raise
+
     accuracy = []
     for anomaly in info["anomalies"]:
         if anomaly["line"][-1] == "\n":
