@@ -1,15 +1,5 @@
 anomalies:
   - line: |
-      error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
-  - line: |
-      Skipping notify email to ['dougal@redhat.com']
-  - optional: True
-    line: |
-      INFO:dlrn-build:ERROR: Command failed
-  - optional: True
-    line: |
-      Received exception Error in build_rpm_wrapper
-  - line: |
       DEBUG:   File "/usr/lib/python2.7/site-packages/sphinx/environment.py", line 1097, in get_doctree
   - line: |
       DEBUG: IOError: [Errno 2] No such file or directory:
@@ -18,9 +8,7 @@ anomalies:
   - line: |
       DEBUG: Please also report this if it was a user error, so that a better error message can be provided next time.
   - line: |
-      DEBUG: A bug report can be filed
-  - line: |
-      DEBUG:     Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
+      error: Bad exit status from /var/tmp/rpm-tmp.rhaVaW (%install)
   - line: |
       INFO: EXCEPTION: [Error()]
   - line: |
@@ -38,16 +26,14 @@ anomalies:
   - line: |
       bash --login -c /usr/bin/rpmbuild -bb --target x86_64 --nodeps /builddir/build/SPECS/python-openstackclient.spec
   - line: |
+      INFO:dlrn-build:ERROR: Command failed
+  - line: |
       cmd failed
+  - line: |
+      Received exception Error in build_rpm_wrapper
   - line: |
       RAN: /usr/bin/env /home/jenkins/workspace/DLRN-rpmbuild/DLRN/scripts/build_rpm.sh centos python-openstackclient
   - line: |
-      STDOUT:
+      Received exception Error in build_rpm_wrapper
   - line: |
-      STDERR:
-  - line: |
-      INFO:dlrn-build:INFO: Cleaning up build root ('cleanup_on_failure=True')
-  - line: |
-      INFO:dlrn-build:ERROR: Exception
-  - line: |
-      INFO:dlrn-build:    result = func(*args, **kw)
+      Skipping notify email to ['dougal@redhat.com']

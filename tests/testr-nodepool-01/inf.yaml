@@ -1,36 +1,10 @@
 anomalies:
-  - optional: True
-    line: |
-      File "nodepool/tests/test_config_validator.py", line 33, in test_good_config
-
-  - optional: True
-    line: |
-      failure: nodepool.tests.test_config_validator.TestConfigValidation.test_good_config
-
   - line: |
-      File "nodepool/tests/test_commands.py", line 133, in test_config_validate
-
-  - line: |
-      line 538, in validate_dict
-  - line: |
-      line 370, in validate_mapping
-  - line: |
-      line 538, in validate_dict
-  - line: |
-      line 370, in validate_mapping
-
-  # not useful output
-  - optional: True
-    line: |
-      nodepool/build1314
+      failure: nodepool.tests.test_commands.TestNodepoolCMD.test_config_validate
 
   - line: |
       Content-Type: text/x-traceback;charset=utf8,language=python
 
-  - line: |
-      traceback
-  - line: |
-      nodepoolcmd.main()
   - line: |
       File "nodepool/cmd/nodepoolcmd.py", line 353, in main
   - line: |
@@ -48,17 +22,11 @@ anomalies:
   - line: |
       return self.run()
   - line: |
-      File "nodepool/cmd/nodepoolcmd.py", line 331, in run
-  - line: |
       return self.args.func()
   - line: |
       File "nodepool/cmd/nodepoolcmd.py", line 314, in config_validate
   - line: |
-      validator.validate()
-  - line: |
       File "nodepool/cmd/config_validator.py", line 144, in validate
-  - line: |
-      schema(config)
   - line: |
       return self._compiled([], data)
   - line: |
@@ -68,18 +36,6 @@ anomalies:
   - line: |
       voluptuous.error.MultipleInvalid: required key not provided @ data['providers'][2]['cloud']
   - line: |
-      validator.validate()
-  - line: |
-      File "nodepool/cmd/config_validator.py", line 144, in validate
-  - line: |
-      schema(config)
-  - line: |
-      return self._compiled([], data)
-  - line: |
-      return base_validate(path, iteritems(data), out)
-  - line: |
-      raise er.MultipleInvalid(errors)
-  - line: |
-      voluptuous.error.MultipleInvalid: required key not provided @ data['providers'][2]['cloud']
+      File "nodepool/build1314
   - line: |
       er.py", line 855, in _uploadImage

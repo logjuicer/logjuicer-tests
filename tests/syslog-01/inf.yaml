@@ -1,7 +1,7 @@
 anomalies:
   - line: |
-      System clock wrong
-  - line: |
       Started Remount Root and Kernel File Systems
   - line: |
       chronyd[637]: Selected source
+  - line: |
+      System clock wrong

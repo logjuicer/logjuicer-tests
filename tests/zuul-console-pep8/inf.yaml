@@ -1,14 +1,13 @@
-threshold: 0.4
 anomalies:
+    - line: |
+        test_filename2modelname
     - line: |
         E305 expected 2 blank lines after class or function definition
     - line: |
         E126 continuation line over-indented for hanging indent
     - line: |
-        ERROR:   pep8: commands failed
-    - line: |
         ERROR: InvocationError
     - line: |
+        ERROR:   pep8: commands failed
+    - line: |
         Job complete, result: FAILURE
-    - optional: True
-      line: Ran 2 tests

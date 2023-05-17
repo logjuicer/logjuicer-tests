@@ -1,11 +1,7 @@
-threshold: 0.4
 anomalies:
     - line: |
         Copying hooks /home/centos/tests//test-element/install.d/80-test
     - line: |
-        cp /tmp/fail /tmp/sucess
-    - optional: True
-      line: |
-        cp: cannot stat '/tmp/fail': No such file or directory
-    - line: |
         Timeout on ftp://ftp.ussg.iu.edu
+    - line: |
+        cp: cannot stat '/tmp/fail': No such file or directory
