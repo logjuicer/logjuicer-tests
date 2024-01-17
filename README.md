@@ -1,7 +1,7 @@
-# logreduce-tests: evaluation datasets
+# logjuicer-tests: evaluation datasets
 
 This repository contains annotated datasets to evaluate
-logreduce anomaly detection capability.
+[logjuicer](https://github.com/logjuicer/logjuicer-tests) anomaly detection capability.
 
 Each dataset contains:
 
@@ -11,8 +11,8 @@ Each dataset contains:
 
 ## Usage
 
-Perform the evaluation using the `test` subcommand, from the logreduce repository:
+Perform the evaluation using the `test` subcommand, from the logjuicer repository:
 
 ```ShellSession
-$ cargo run -p logreduce-cli -- test ../logreduce-tests/datasets/*
+$ cargo run -p logjuicer-cli -- test ../logjuicer-tests/datasets/*
 ```
