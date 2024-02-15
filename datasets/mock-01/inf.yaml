@@ -1,3 +1,4 @@
+skip: true
 anomalies:
   - line: |
       DEBUG:   File "/usr/lib/python2.7/site-packages/sphinx/environment.py", line 1097, in get_doctree

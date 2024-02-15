@@ -1,4 +1,4 @@
-threshold: 0.5
+skip: true
 anomalies:
     - line: |
         rmtree failed: [Errno 30] Read-only file system

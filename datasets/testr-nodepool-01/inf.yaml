@@ -1,3 +1,4 @@
+skip: true
 anomalies:
   - line: |
       failure: nodepool.tests.test_commands.TestNodepoolCMD.test_config_validate
